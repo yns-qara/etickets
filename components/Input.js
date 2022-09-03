@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Input = props => {
 
-  const [isDisabled, setIsDisabled] = useState("");
+  const [isDisabled, setIsDisabled] = useState("false");
 
   const handleClick = () => {
     setIsDisabled(!isDisabled)
@@ -24,7 +24,7 @@ const Input = props => {
           id={props.ID}
           placeholder={props.placeholder}
           readOnly />
-
+ 
         <div className={styles.penHolder} onClick={handleClick}>
             <Pencil className={styles.pencil} />
         </div>
