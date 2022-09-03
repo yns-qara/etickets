@@ -13,7 +13,6 @@ const Input = props => {
 
 
   return (
-    <div className={styles.test}>
 
 
 
@@ -35,7 +34,6 @@ const Input = props => {
 
 
 
-    </div>
   )
 }
 

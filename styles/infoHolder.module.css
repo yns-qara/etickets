@@ -6,3 +6,56 @@
     line-height: 37px;
     color: #000000;
 }
+
+.container {
+    padding: 183px 130px 0;
+    /* display: flex; */
+
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+
+    padding: 52px 71px;
+    background: #85b4fc;
+    background: #FBFBFB;
+    border-radius: 50px;
+    max-width: 1180px;
+    margin: auto;
+}
+
+.button__holder {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__holder button{
+    border-radius: 95px;
+    padding: 14px 65px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.button__holder button:first-child {
+    
+    border: 0;
+   background: #4B2A7B;
+}
+
+.button__holder button:last-child {
+    border: 2px solid #4B2A7B;
+    color: #000000;
+}

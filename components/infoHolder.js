@@ -1,14 +1,20 @@
 import styles from '../styles/infoHolder.module.css'
-const infoHolder = props => {
-  return (
-    <form>
-        <h1 className={styles.h}>Mes informations</h1>
-        {props.children}
-        <button type="submit"></button>
-        <button type="reset"></button>
-    </form>
-  )
+const InfoHolder = props => {
+    return (
+        <div className={styles.container}>
+            <form className={styles.form__container}>
+                <h1 className={styles.h}>Mes informations</h1>
+                {props.children}
+                <div className={styles.button__holder}>
+
+                    <button type="submit">MODIFIER</button>
+                    <button type="reset">ANNULER</button>
+                </div>
+            </form>
+        </div>
+    )
+
 }
 
 
-export default infoHolder
+export default InfoHolder
