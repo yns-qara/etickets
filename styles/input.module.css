@@ -39,11 +39,14 @@
 
 .penHolder{
     margin-left: auto;
-    display: none;
+    opacity: 0;
     cursor: pointer;
+    transition: all .3s ease;
+    width: 25px;
+    padding: 0 5px 0 15px;
+
 }
 
 .input__container:hover .penHolder{
-    display: block;
+    opacity: 1;
 }
-
