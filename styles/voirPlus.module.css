@@ -1,0 +1,24 @@
+.button_parrent{
+    margin-top: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button_child {
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #4B2A7B;
+    border-radius: 95px;
+    padding: 9px 71px;
+    cursor: pointer;
+
+    width: 230px;
+    margin: auto;
+}  

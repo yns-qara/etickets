@@ -1,0 +1,58 @@
+.container {
+    /* padding: 50px; */
+    max-width: 85vw;
+    margin: auto;
+    margin-top: 90px;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 323px);
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.rects {
+    margin-top: 47px;
+    display: flex;
+    gap: 31px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rect1,
+.rect2,
+.rect3 {
+    width: 95px;
+    height: 7px;
+    background: #BEBEBE;
+    opacity: 0.35;
+    border-radius: 50px;
+}
+
+.rect1 {
+    background: #9A9A9A;
+    opacity: 1;
+}
+
+.buttonH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border: 0;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #4B2A7B;
+    border-radius: 95px;
+    padding: 9px 71px;
+    width: 230px;
+    margin-top: 30px;
+}

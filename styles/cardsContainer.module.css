@@ -1,0 +1,10 @@
+.cards{
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,370px);
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 60px;
+
+}

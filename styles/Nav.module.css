@@ -1,0 +1,88 @@
+/*------------MENU SECTION--------------*/
+.navmenu {
+  padding: 36px 70px;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+
+
+.menu__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25.41vw;
+}
+
+.menu__container ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu__container ul li {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4B2A7B;
+}
+
+
+.menu__container ul.menu__left {
+  gap: 46px;
+}
+
+
+.menu__container ul.menu__right {
+  gap: 46px;
+}
+
+.menu__buttons {
+  display: flex;
+  gap: 16px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4B2A7B;
+
+
+}
+
+
+.menu__buttons a:nth-child(1) {
+  padding: 10px 28px;
+  border: 2px solid #4B2A7B;
+  border-radius: 95px;
+}
+
+.menu__buttons a:nth-child(2) {
+  padding: 10px 28px;
+  background: #4B2A7B;
+  border-radius: 95px;
+  color: #FFFFFF;
+}
+
+
+.pannier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  padding: 12px 17.5px;
+  background: #4B2A7B;
+  border-radius: 95px;
+}
+
+.pannier span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+
+}

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.card__container {
+
+    position: relative;
+
+
+    width: 370px;
+    min-height: 319px;
+    
+    background: #FFFFFF;
+    box-shadow: 8px 0px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+}
+
+
+.card__upper {
+    position: relative;
+}
+
+.card__upper::before {
+    content: "";
+    width: 370px;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(75, 42, 123, 0) 35.94%, #4B2A7B 100%);
+    border-radius: 30px 30px 0px 0px;
+    color: red;
+    font-weight: bold;
+    bottom: 0;
+    position: absolute;
+}
+
+.card__upper img {
+    border-radius: 30px 30px 0px 0px;
+    width: 370px;
+    height: 177px;
+    
+}
+
+
+.card__upper div {
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    background: #F0F0F0;
+    border-radius: 100px;
+    color: #363636;
+    padding: 4px 45px;
+    max-width: 140px;
+    margin: auto;
+    text-align: center;
+}
+
+.card__lower {
+    margin-top: 17px;
+    display: flex;
+    gap: 61px;
+    justify-content: center;
+}
+
+.card__lower_left h1 {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #363636;
+}
+
+.card__lower_left .dead_line {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #363636;
+}
+
+.card__lower_left .location_city {
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #363636;
+
+}
+
+.counter {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.counter span#change_c {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #000000;
+    margin: 5px;
+}
+
+.card__button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: #4B2A7B;
+    border-radius: 178px;
+    padding: 5px 18px;
+    position: absolute;
+    bottom: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.card__price_item {
+    margin-top: 31px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #363636;
+}
+
+.card__price_item div {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4B2A7B;
+}
+
+
+
+
+/*--- ANIMATIONS ---*/
+
+
+.card__upper:hover {
+    animation: zoom 5s ease 0s 1 normal forwards;
+}
+
+@keyframes zoom {
+	0% {
+		background-position: center bottom;
+		background-size: 100%;
+	}
+
+	100% {
+		background-position: center bottom;
+		background-size: 150%;
+	}
+}
