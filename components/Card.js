@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import styles from '../styles/card.module.css'
 import SvgHour from '../components/SVGs/hour'
-const Card = ({imgURL}) => {
+
+const Card = ({ imgURL }) => {
     return (
         <div className={styles.card__container}>
 
@@ -35,7 +37,9 @@ const Card = ({imgURL}) => {
                     </div>
                 </div>
             </div>
-            <a className={styles.card__button} href="#">J’achéte</a>
+            <Link href="/jachete">
+                <a className={styles.card__button}>J’achéte</a>
+            </Link>
         </div>
 
     )

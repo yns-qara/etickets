@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.right {
+    background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
+    border-radius: 50px;
+    max-width: 466px;
+    padding: 77px 29px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.right h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.right h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+
+.right select {
+    background: #4B2A7B;
+    border-radius: 77px;
+    border: 0;
+    padding: 13px 19px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.button_holder {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    gap: 29px;
+}
+
+.button_holder input {
+    border: 2px solid #FFFFFF;
+    border-radius: 77px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: transparent;
+    padding: 5px;
+
+    max-width: 190px;
+}
+
+
+.button_holder button {
+    background: #FFFFFF;
+    border-radius: 77px;
+    padding: 10px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.button_holder button span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    color: #4B2A7B;
+}
+
+
+
+.counter {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.counter span#change_c {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+
+.right h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.social_media{
+    display: flex;
+    gap: 18px;
+
+    fill: red;
+    color: red;
+    /* add a background after importing the right svgs */
+}

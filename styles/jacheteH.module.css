@@ -1,0 +1,19 @@
+.title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 55px;
+    color: #000000;
+    text-align: center;
+}
+
+.jachete__container {
+    padding: 167px 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 92px;
+}

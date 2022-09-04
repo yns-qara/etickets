@@ -1,8 +1,10 @@
 import Navbar from "../components/Navbar2"
 import Footer from "../components/Footer"
-import Header from "../components/Header"
 import Input from "../components/Input"
 import InfoHolder from "../components/infoHolder"
+
+
+
 const mesInformations = props => {
     return (
         <>
