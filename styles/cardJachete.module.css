@@ -81,6 +81,9 @@
     max-width: 190px;
 }
 
+.button_holder input::placeholder{
+    color: #FFFFFF;
+}
 
 .button_holder button {
     background: #FFFFFF;
