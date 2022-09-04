@@ -43,15 +43,20 @@ const BodyJachete = props => {
             </div>
 
             <h2>Tarif du Package : </h2>
-            <ul>
-                <li>InterContinental Doha The City 5* : 13.900 Dhs Par Personne en Double / Supplément Single 3.990 Dhs </li>
-                <li>Ezdan Hotel Doha 4* : 11.900 Dhs Par Personne en Double / Supplément Single 2.990 Dhs</li>
+            <ul >
+                <li>
+                    <strong>
+                    InterContinental Doha The City 5* :</strong> 13.900 Dhs Par Personne en Double / Supplément Single 3.990 Dhs 
+                    </li>
+                <li>
+                    <strong>
+                    Ezdan Hotel Doha 4* :</strong> 11.900 Dhs Par Personne en Double / Supplément Single 2.990 Dhs</li>
             </ul>
 
 
             <h2>Notre tarif comprend : </h2>
 
-            <ul>
+            <ul className={styles.list}>
                 <li>Billet d’avion Casablanca –Doha – Casablanca avec Qatar Air Ways</li>
                 <li>05 nuitées en petit déjeuner selon l’hôtel choisi. </li>
                 <li>Ticket de Stade & assistance pour l’obtention du FAN ID.</li>

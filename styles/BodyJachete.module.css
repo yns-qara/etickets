@@ -24,6 +24,7 @@
 }
 
 .container h2 {
+    margin-top: 35px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -52,4 +53,33 @@
     line-height: 35px;
     color: #000000;
 
+}
+
+
+
+
+.container ul li {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #000000;
+}
+
+
+.list{
+    margin-bottom: 200px;
+}
+
+.list li {
+    margin-top: 50px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: #000000;
 }

@@ -15,6 +15,7 @@ const Jachete = props => {
         </JachetHead>
         {/* <Login /> */}
         <BodyJachete />
+        <Footer />
     </>
   )
 }
