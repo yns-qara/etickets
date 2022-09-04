@@ -86,3 +86,15 @@
   color: #FFFFFF;
 
 }
+
+
+
+.pop{
+  display: flex;
+  background-color: #4B2A7B;
+  height: 100px;
+  width: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
