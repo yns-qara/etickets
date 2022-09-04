@@ -1,0 +1,55 @@
+.container {
+    margin-top: 65px;
+    padding: 49px 70px;
+    background: #F7F7F7;
+}
+
+.container h1 {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    color: #4B2A7B;
+}
+
+.container p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+
+    color: #000000;
+}
+
+.container h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
+    color: #000000;
+}
+
+.description dl dt {
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+
+    color: #000000;
+}
+
+.description dl dd {
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: #000000;
+
+}

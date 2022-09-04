@@ -13,7 +13,7 @@ import CardMini from '../components/CardMini'
 import CardMiniHolder from '../components/CardMiniHolder'
 import Footer from '../components/Footer'
 import Link from 'next/link'
-
+import Popup from 'reactjs-popup'
 export default function Home() {
   return (
     <>
@@ -22,9 +22,9 @@ export default function Home() {
         <Navbar />
         <Hero />
       </Header>
-
       <Drop />
 
+        {/* <Popup triger={true} /> */}
       <CardContainer>
         <Card imgURL="/cardB.png" />
         <Card imgURL="/cardB.png" />
