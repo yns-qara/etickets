@@ -3,4 +3,95 @@
     border-radius: 30px;
     Width: 456px;
     Height: 341px;
+
+    padding: 40px 30px;
+}
+
+.container h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+
+    color: #000000;
+}
+
+.container h3 {
+    margin-top: 30px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+
+    text-align: right;
+}
+
+.container hr {
+    margin-top: 36px;
+}
+
+
+.price__border {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    border-style: solid;
+    border-width: 1px 0;
+    /* opacity: 0.25; */
+    border-color: #7070706e;
+    padding: 29px 0;
+
+
+    margin-bottom: 28px;
+
+}
+
+.price__border span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.price__border strong {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+
+    color: #000000;
+
+
+}
+
+.container label {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+}
+
+
+.container label a {
+    font-weight: 500;
+    color: #4908fd;
+    cursor: pointer;
+}
+
+.container label{
+    margin-bottom: 26px;
 }
