@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    padding: 40px 93px;
+
+}
+
+
+.left {
+    max-width: 340px;
+    height: 220px;
+    margin-right: auto;
+}
+
+.right {
+    min-width: 351px;
+    margin-right: auto;
+}
+
+.right h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.right h5 {
+    margin-top: 30px;
+}
+
+.right p {
+    margin-top: 36px;
+}
+
+.right div {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.right div input {
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #BABABA;
+    border-radius: 77px;
+    margin-right: auto;
+
+}
+
+.right div input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #0B0707;
+}
+.right div svg{
+    cursor: pointer;
+}
+.right div svg:hover{
+    
+}

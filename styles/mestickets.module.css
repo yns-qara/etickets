@@ -1,0 +1,27 @@
+
+.container::-webkit-scrollbar {
+    width: 19px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #ddd8e6;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #4B2A7B;
+    border-radius: 20px;
+    border: 5px solid #ddd8e6;
+}
+
+
+
+.container {
+    max-height: 596px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #FAFAFA;
+    border-radius: 40px;
+}
+
+
+
