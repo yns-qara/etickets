@@ -1,0 +1,138 @@
+.container {
+    background: #FAFAFA;
+    border-radius: 40px;
+    padding: 69px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    max-width: 438px;
+
+    margin-top: auto;
+
+}
+
+.left h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.left p {
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.social_media {
+    margin-top: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.social_media div {
+    /* to be changed */
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.right {
+    max-width: 530px;
+}
+
+.right div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.right div input {
+    background: #FFFFFF;
+    border-radius: 60px;
+    padding: 17px 30px;
+    border: 0;
+
+
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.right div input::placeholder {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: rgba(112, 112, 112, 0.8);
+}
+
+.right input {
+    margin-top: 30px;
+    background: #FFFFFF;
+    border-radius: 60px;
+    width: 100%;
+    padding: 17px 30px;
+    border: 0;
+
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+
+.right input::placeholder {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: rgba(112, 112, 112, 0.8);
+}
+
+.right textarea {
+    margin-top: 30px;
+    background: #FFFFFF;
+    border-radius: 29px;
+    border: 0;
+    padding: 18px 30px;
+    max-width: 100%;
+    max-height: 207px;
+    resize: none;
+
+
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+
+.right textarea::placeholder {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: rgba(112, 112, 112, 0.8);
+
+}

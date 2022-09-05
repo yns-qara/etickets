@@ -1,4 +1,4 @@
-.container h1{
+.container h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -6,3 +6,63 @@
     line-height: 30px;
     color: #000000;
 }
+
+.container h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+
+/* .payment{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+} */
+
+.container #f_option,
+.container #s_option,
+.container #t_option {
+    display: none;
+}
+
+.container #cb:checked~#f_option {
+    display: block;
+}
+
+.container #vir:checked~#s_option {
+    display: block;
+}
+
+.container #cashplus:checked~#t_option {
+    display: block;
+}
+
+.container input {
+    margin-right: 24px;
+}
+
+.container label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.container p {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+
+    margin-left: 35px;
+}
+

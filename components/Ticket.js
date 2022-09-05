@@ -19,7 +19,7 @@ const Ticket = props => {
         <h5>{props.sub}</h5>
         <p>Quantité</p>
         <div>
-          <input type="number" placeholder={props.placeholder} min="0" />
+          <input type="number" placeholder={props.placeholder} min="1" />
           <div onClick={onClick}>
             <Trash />
           </div>
