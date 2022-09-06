@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import styles from '../styles/card.module.css'
 import SvgHour from '../components/SVGs/hour'
+// import Countdown from './Countdown'
+import Birthday from '../components/CountDownDL';
 
 const Card = ({ imgURL }) => {
     return (
@@ -19,7 +21,8 @@ const Card = ({ imgURL }) => {
                     <div className={styles.location_city}>
                         <strong>Marrakech,</strong> Cinéma megarama
                     </div>
-                    <div className={styles.counter}>
+
+                    {/* <div className={styles.counter}>
                         <SvgHour />
                         <span>
                             <span className={styles.counter_j} id={styles.change_c}>19</span><span>j</span>
@@ -27,7 +30,9 @@ const Card = ({ imgURL }) => {
                             <span className={styles.counter_m} id={styles.change_c}>19</span><span>m</span>
                             <span className={styles.counter_s} id={styles.change_c}>41</span><span>s</span>
                         </span>
-                    </div>
+                    </div> */}
+
+                    <Birthday name="younes" month="10" day="14" />
                 </div>
                 <div className={styles.card__lower_right}>
                     <img src="/goldLogo.png" alt="" />
