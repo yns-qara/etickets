@@ -3,6 +3,8 @@ import styles from '../styles/Hero.module.css'
 
 
 const Hero = props => {
+
+
     return (
         <section className={styles.hero}>
             <div className={styles.hero__container}>
@@ -46,13 +48,40 @@ const Hero = props => {
                 <div className={styles.hero__right}>
                     <div className={styles.hero__slider}>
                         <div>
-                            <img src="../herocard1.png" alt="" width="100%" />
+                            <img src="../herocard1.png" alt="" />
                         </div>
                         <div>
-                            <img src="../herocard1.png" alt="" width="100%" />
+                            <img src="../herocard1.png" alt="" />
                         </div>
                         <div>
-                            <img src="../herocard1.png" alt="" width="100%" />
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
+                        </div>
+                        <div>
+                            <img src="../herocard1.png" alt="" />
                         </div>
                     </div>
                 </div>

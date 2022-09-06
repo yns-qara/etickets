@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25.41vw;
 }
 
 .menu__container ul {
@@ -89,7 +88,7 @@
 
 
 
-.pop{
+.pop {
   display: flex;
   background-color: #4B2A7B;
   height: 100px;
@@ -97,4 +96,25 @@
   position: sticky;
   top: 0;
   left: 0;
+}
+
+
+
+
+@media all and (max-width: 1012px) {
+  .menu__left li.disapear {
+    display: none;
+  }
+
+  .menu__container {
+    justify-content: center;
+    gap: 5vw;
+  }
+}
+
+@media all and (max-width: 659px) {
+  .menu__buttons{
+    flex-direction: column;
+    gap: 5px;
+  }
 }

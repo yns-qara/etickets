@@ -21,14 +21,15 @@ const Navbar = props => {
                                 <a><LogoNav /></a>
                             </Link>
                         </li>
-                        <li>
+                        <li className={styles.disapear}>
+
                             <Link href="#">
-                                <a>Contactez-nous</a>
+                                <a >Contactez-nous</a>
                             </Link>
                         </li>
-                        <li>
+                        <li className={styles.disapear}>
                             <Link href="#">
-                                <a href="#">Qui nous sommes?</a>
+                                <a >Qui nous sommes?</a>
                             </Link>
                         </li>
                     </ul>
@@ -51,10 +52,19 @@ const Navbar = props => {
                             <Link href="#">
                                 <a>Inscription</a>
                             </Link>
+
+                            {/* <div className={styles.ex}>&times;</div> */}
                         </li>
                     </ul>
                 </nav>
             </menu>
+
+
+            {/* <menu className={styles.mobile}>
+                <nav>
+
+                </nav>
+            </menu> */}
         </>
 
     );
