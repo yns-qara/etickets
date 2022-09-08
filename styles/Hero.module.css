@@ -1,4 +1,4 @@
-/*________________-HERO SECTION__________________*/
+/*________________HERO SECTION__________________*/
 
 .hero__container {
   display: flex;
@@ -11,7 +11,9 @@
 
   position: relative;
   z-index: 9;
-  padding: 228px 73px 211px;
+  /* padding: 228px 73px 211px; */
+  padding: 0 73px 211px;
+  height: 100vh;
   background-color: #292929;
   background-color: #faf9ff;
   max-width: 700px;
@@ -24,6 +26,7 @@
 }
 
 .hero__left h1 {
+  margin-top: 50%;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 800;
