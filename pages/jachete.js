@@ -13,7 +13,6 @@ const Jachete = props => {
         <JachetHead title="FIFA World Cup QATAR 2022">
             <CardJachete />
         </JachetHead>
-        {/* <Login /> */}
         <BodyJachete />
         <Footer />
     </>

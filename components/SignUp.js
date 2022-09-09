@@ -2,11 +2,11 @@ import Link from "next/link"
 import Twitter from './SVGs/twitter'
 import Google from './SVGs/Google'
 import Facebook from "./SVGs/Facebook"
-import styles from '../styles/login.module.css'
+import styles from '../styles/signup.module.css'
 import { motion } from 'framer-motion'
 import Eye from "./SVGs/eye"
 import { useState } from "react"
-const Login = props => {
+const SignUp = props => {
     const [showPassword, setShowPassword] = useState(false)
     const togglePassword = () => {
         setShowPassword(!showPassword);
@@ -22,8 +22,15 @@ const Login = props => {
             <motion.h1
                 initial = {{x : -150}}
                 animate = {{x : 0}}
-            >Connexion</motion.h1>
+            >
+                Nouveau compte
+            </motion.h1>
+            <div className={styles.name}>
+                <input type="text" placeholder="Nom" />
+                <input type="text" placeholder="Prenom" />
+            </div>
             <input className={styles.em} type="email" placeholder="Email" />
+            <input className={styles.em} type="tel" placeholder="Téléphone" />
             <div className={styles.pass}>
                 <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
                 <div onClick={togglePassword}>
@@ -48,4 +55,4 @@ const Login = props => {
 }
 
 
-export default Login
+export default SignUp

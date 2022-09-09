@@ -4,17 +4,29 @@
     gap: 50px;
 }
 
+.left {
+    max-width: 784px;
+    max-height: 478px;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+}
+
+
 .right {
     background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
     border-radius: 50px;
     max-width: 466px;
     padding: 77px 29px;
-
+    max-height: 478px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 28px;
+
 }
 
 .right h1 {
@@ -81,7 +93,7 @@
     max-width: 190px;
 }
 
-.button_holder input::placeholder{
+.button_holder input::placeholder {
     color: #FFFFFF;
 }
 
@@ -141,11 +153,24 @@
     color: #FFFFFF;
 }
 
-.social_media{
+.social_media {
     display: flex;
     gap: 18px;
-
-    fill: red;
-    color: red;
     /* add a background after importing the right svgs */
+}
+
+.social_media svg{
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+
+}
+
+
+@media all and (max-width: 797px) {
+   .left{
+    display: none;
+   }
 }

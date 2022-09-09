@@ -1,3 +1,14 @@
+.wrapper{
+  position: fixed;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+
 /*------------MENU SECTION--------------*/
 .navmenu {
   padding: 36px 70px;

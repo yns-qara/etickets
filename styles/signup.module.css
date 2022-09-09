@@ -1,11 +1,3 @@
-/* .wrapper{
-    position: fixed;
-    z-index: 99;
-    background: rgba(0, 0, 0, 0.6);
-    width: 100vw;
-    height: 100vh;
-
-} */
 
 
 .form__container {
@@ -43,6 +35,18 @@
 
     color: #000000;
 }
+
+.name{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 51px;
+}
+.name input{
+    max-width: 250px;
+}
+
 
 .form__container input::placeholder {
     font-family: 'Inter';

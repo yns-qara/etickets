@@ -1,9 +1,9 @@
 import styles from '../styles/cardJachete.module.css'
-import Messenger from './SVGs/messenger'
-import Watsapp from './SVGs/watsup'
-import Twitter from './SVGs/twitter'
+import MessengerP from './SVGs/MessengerP'
+import WatsappP from './SVGs/WatsappP'
+import TwitterP from './SVGs/TwitterP'
 import Pan from './SVGs/pan'
-import SvgHour from'./SVGs/SvgHour'
+import BigHour from'./SVGs/bigHour'
 const CardJachete = props => {
     return (
         <div className={styles.container}>
@@ -34,7 +34,7 @@ const CardJachete = props => {
 
 
                 <div className={styles.button_holder}>
-                    <input type="number" placeholder="1" />
+                    <input type="number" placeholder="1" min="1" />
                     <button>
                         <Pan />
                         <span>ACHETER MAINTENANT</span>
@@ -42,7 +42,7 @@ const CardJachete = props => {
                 </div>
 
                 <div className={styles.counter}>
-                    <SvgHour />
+                    <BigHour />
                     <span>
                         <span className={styles.counter_j} id={styles.change_c}>19</span><span>j</span>
                         <span className={styles.counter_h} id={styles.change_c}>00</span><span>h</span>
@@ -52,9 +52,9 @@ const CardJachete = props => {
                 </div>
                 <h4>PARTAGEZ CET ÉVÉNEMENT</h4>
                 <div className={styles.social_media}>
-                    <Messenger />
-                    <Watsapp />
-                    <Twitter />
+                    <MessengerP />
+                    <WatsappP />
+                    <TwitterP />
                 </div>
             </div>
         </div>

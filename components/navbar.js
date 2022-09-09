@@ -5,14 +5,27 @@ import Pannier from './SVGs/panier';
 import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
 import Popup from 'reactjs-popup';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'
+import Login from './Login';
+import SignUp from './SignUp';
+
 
 const Navbar = props => {
+    const [visible, setVisible] = useState(false);
+    const [visibleS, setVisibleS] = useState(false)
 
+    const show = () => {
+        setVisible(!visible);
+    }
+    const toggleSignUp = () => {
+        setVisibleS(!visibleS);
+    }
 
     return (
 
         <>
-           
+
             <menu className={styles.navmenu}>
                 <nav className={styles.menu__container}>
                     <ul className={styles.menu__left}>
@@ -46,11 +59,10 @@ const Navbar = props => {
                         </li>
                         <li className={styles.menu__buttons}>
                             <Link href="#">
-                        
-                                <a>Connexion</a>
+                                <a onClick={show}>Connexion</a>
                             </Link>
                             <Link href="#">
-                                <a>Inscription</a>
+                                <a onClick={toggleSignUp}>Inscription</a>
                             </Link>
 
                             {/* <div className={styles.ex}>&times;</div> */}
@@ -58,6 +70,45 @@ const Navbar = props => {
                     </ul>
                 </nav>
             </menu>
+                {
+                    visible &&
+                    <div>
+                        <Login />
+                        <motion.div
+                            onClick={show}
+                            className={styles.wrapper}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+
+                            exit={{ x: 200 }}
+                        >
+
+
+
+                        </motion.div>
+                    </div>
+                }
+
+                {
+                    visibleS &&
+                    <div>
+                        <SignUp />
+                        <motion.div
+                            onClick={toggleSignUp}
+                            className={styles.wrapper}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+
+                            exit={{ x: 200 }}
+                        >
+
+
+
+                        </motion.div>
+                    </div>
+                }
 
 
             {/* <menu className={styles.mobile}>

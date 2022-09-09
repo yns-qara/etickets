@@ -69,7 +69,7 @@
 }
 
 
-.list{
+.list {
     margin-bottom: 200px;
 }
 
@@ -82,4 +82,40 @@
     font-size: 25px;
     line-height: 35px;
     color: #000000;
+}
+
+@media all and (max-width: 922px) {
+    .container h1 {
+        font-size: 35px;
+    }
+    
+    .container p {
+        font-size: 20px;
+    }
+    
+    .container h2 {
+        font-size: 29px;
+    }
+    
+    .description dl dt {
+        font-size: 22px;
+    }
+    
+    .description dl dd {
+        font-size: 18px;
+    
+    }
+    
+    
+    
+    
+    .container ul li {
+        font-size: 20px;
+    }
+    
+    
+    
+    .list li {
+        font-size: 19px;
+    }
 }
