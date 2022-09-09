@@ -14,7 +14,76 @@ import CardMiniHolder from '../components/CardMiniHolder'
 import Footer from '../components/Footer'
 import Link from 'next/link'
 import Popup from 'reactjs-popup'
+import { motion } from 'framer-motion'
+
 export default function Home() {
+  // this object can be passed by props from utils.js when the server delivers the data, also the url of imges is not the only data we work on on cards, date of finish, name of event, price, city,...
+  const imgs = [
+    {
+      "id": "1",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "2",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    },
+    {
+      "id": "3",
+      "url": "/cardB.png"
+    }
+  ]
   return (
     <>
 
@@ -24,26 +93,20 @@ export default function Home() {
       </Header>
       <Drop />
 
-        {/* <Popup triger={true} /> */}
+      {/* <Popup triger={true} /> */}
+
       <CardContainer>
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
-        <Card imgURL="/cardB.png" />
+
+        {
+          imgs.map((img) => {
+            return (
+              <div key={img.id}>
+                <Card imgURL={img.url} />
+              </div>
+            )
+          })
+        }
+
       </CardContainer>
       <VoirPlusButton />
 

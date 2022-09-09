@@ -1,0 +1,52 @@
+.container {
+    padding: 206px 80px;
+}
+
+.container h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.container p {
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+
+
+    max-width: 70vw;
+}
+
+.container h2 {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 43px;
+    color: #4B2A7B;
+}
+
+
+@media all and (max-width: 715px) {
+    .container {
+        padding: 150px 40px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+    
+    .container p {
+        text-align: justify;
+        font-size: 20px;
+        width: 100vw;
+    }
+}
