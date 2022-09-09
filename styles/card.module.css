@@ -105,7 +105,6 @@
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-
     color: #FFFFFF;
     background: #4B2A7B;
     border-radius: 178px;
@@ -114,8 +113,16 @@
     bottom: -4%;
     left: 50%;
     transform: translateX(-50%);
+    
+    transition: all .5s ease;
+    transform-origin: left top;
 }
 
+
+.card__button:hover{
+    padding: 10px 25px;
+    font-size: 19px;
+}
 
 .card__price_item {
     margin-top: 31px;

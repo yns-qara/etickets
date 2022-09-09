@@ -56,6 +56,7 @@
 
 .drop__hidden {
   position: absolute;
+  z-index: 7;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -66,7 +67,7 @@
   /* gap: 15px; */
   width: 100%;
 
-  display: none;
+  /* display: none; */
 
 }
 
@@ -85,7 +86,7 @@
   border-width: 0 0 1px;
   border-style: solid;
   border-color: #A6A6A6;
-  background-color: #bbbbbb;
+  background-color: #ffffff;
   height: 100%;
   font-family: 'Roboto';
   font-style: normal;
@@ -96,7 +97,7 @@
   color: #281641;
   width: 100%;
   cursor: pointer;
-  color: red;
+  color: rgb(0, 0, 0);
 
 }
 
