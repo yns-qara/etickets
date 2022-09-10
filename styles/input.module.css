@@ -1,5 +1,4 @@
-
-.input__container {
+.container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -9,10 +8,10 @@
     padding: 19px 46px;
     width: 100%;
 
-   
+
 }
 
-.input__container label {
+.container label {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -22,7 +21,7 @@
     color: #000000;
 }
 
-.input__container input {
+.container input {
     border: 0;
     padding: 5px;
     font-family: 'Roboto';
@@ -33,11 +32,12 @@
     color: #000000;
     /* border: 0; */
 }
-.input__container input::placeholder{
+
+.container input::placeholder {
     color: #000000;
 }
 
-.penHolder{
+.penHolder {
     margin-left: auto;
     opacity: 0;
     cursor: pointer;
@@ -47,6 +47,27 @@
 
 }
 
-.input__container:hover .penHolder{
+.container:hover .penHolder {
     opacity: 1;
+}
+
+
+
+@media all and (max-width: 1000px) {
+    .container {
+        padding: 10px 25px;
+    }
+
+    .container input {
+        border: 0;
+        padding: 1px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 23px;
+        color: #000000;
+    }
+
+    .container label {
+        font-size: 15px;
+    }
 }

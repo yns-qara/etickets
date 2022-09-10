@@ -5,10 +5,10 @@ import { useState } from 'react';
 
 const Input = props => {
 
-  const [isDisabled, setIsDisabled] = useState("false");
+  const [togle, setTogle] = useState(true)
 
   const handleClick = () => {
-    setIsDisabled(!isDisabled)
+    setTogle(!togle)
   };
 
 
@@ -16,19 +16,21 @@ const Input = props => {
 
 
 
-      <div className={styles.input__container}>
-        <label htmlFor={props.ID}>{props.label} : </label>
-        <input
-          type={props.type}
-          id={props.ID}
-          placeholder={props.placeholder}
-          readOnly />
- 
-        <div className={styles.penHolder} onClick={handleClick}>
-            <Pencil className={styles.pencil} />
-        </div>
+    <div className={styles.container}>
+      <label htmlFor={props.ID}>{props.label} : </label>
+      <input
+        type={props.type}
+        id={props.ID}
+        placeholder={togle && props.placeholder}
 
+        readOnly = {togle && "true"}
+           />
+
+      <div className={styles.penHolder} onClick={handleClick}>
+        <Pencil className={styles.pencil} />
       </div>
+
+    </div>
 
 
 

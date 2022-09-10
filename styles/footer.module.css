@@ -80,6 +80,8 @@
     padding: 70px 60px;
     /* gap: 160px; */
     justify-content: space-around;
+
+    overflow: hidden;
 }
 
 .left_middle {

@@ -6,23 +6,28 @@ import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
 import Pan from './SVGs/pan';
 import Hamberger from './SVGs/hamberger';
-
+import { useState } from 'react';
+import {motion,AnimatePresence} from 'framer-motion'
 const Navbar = props => {
+    const [view, setView] = useState(false)
+    const togleView = () => {
+        setView(!view);
+    }
     return (
         <menu className={styles.navmenu}>
             <nav className={styles.menu__container}>
                 <ul className={styles.menu__left}>
-                    <li className="logo">
+                    <li>
                         <Link href="/">
                             <a><LogoNav /></a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.hide}>
                         <Link href="#">
                             <a>Contactez-nous</a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.hide}>
                         <Link href="#">
                             <a href="#">Qui nous sommes?</a>
                         </Link>
@@ -36,14 +41,45 @@ const Navbar = props => {
                     </li>
                     <li>
                         <Link href="#">
-                            <a><Hamberger /></a>
+                            <div className={styles.popupParent}>
+                                <div onClick={togleView}>
+                                    <Hamberger />
+                                </div>
+                                <AnimatePresence>
+                                {
+                                    view &&
+                                    <motion.div 
+                                        initial = {{opacity : 0}}
+                                        animate = {{opacity : 1}}
+                                        transition = {{ duration : .3}}
+                                        exit = {{ opacity: 0}}
+                                    className={styles.popup}>
+                                        <div className={styles.profile}>
+                                            <img src="" alt="" />
+                                            <span>Profile</span>
+                                        </div>
+                                        <Link href="#">
+                                            <a>Mes commandes</a>
+                                        </Link>
+                                        <Link href="#">
+                                            <a>Mes commandes</a>
+                                        </Link>
+                                        <Link href="#">
+                                            <a>Mes commandes</a>
+                                        </Link>
+
+                                    </motion.div>
+                                }
+                                </AnimatePresence>
+
+                            </div>
                         </Link>
                     </li>
                     <li className={styles.menu__buttons}>
                         <Link href="#">
                             <a className={styles.pannier}>
                                 <Pan />
-                                <span>Connexion</span>
+                                <span>PANIER</span>
                             </a>
                         </Link>
                     </li>
