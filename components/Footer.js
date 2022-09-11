@@ -1,6 +1,6 @@
 import styles from '../styles/footer.module.css'
 import Envoloppe from './SVGs/envolope'
-import Logo from './SVGs/logo'
+import Logof from './SVGs/logoFooter'
 import Apple from './SVGs/apple'
 import Android from './SVGs/android'
 import Messenger from './SVGs/messenger'
@@ -24,7 +24,7 @@ const Footer = props => {
             <div className={styles.middle__footer}>
 
                 <div className={styles.left_middle}>
-                    <Logo />
+                    <Logof />
                     <p>Un site de billetterie nouvelle génération vous offrant la possibilité d’acheter en ligne des tickets pour les événements de votre choix. Sa vocation est de vous proposer l’offre de concerts, sports, spectacles, cinéma, festivals, théâtre, humour, voyages et evasions la plus large du Maroc en collaboration avec les organisateurs d’événements.</p>
                     <h3>NOS APPLICATIONS</h3>
                     <div className={styles.buttonHolder}>
@@ -52,8 +52,8 @@ const Footer = props => {
 
                     <ul className={styles.right_list}>
                         <li><a href="#"><h1>À PROPOS</h1></a></li>
-                        <li><a href="#">Qui sommes nous ?</a></li>
-                        <li><a href="#">Contactez-nous</a></li>
+                        <li><a href="/quiSommesNous">Qui sommes nous ?</a></li>
+                        <li><a href="/contactez">Contactez-nous</a></li>
                         <li><a href="#">Guichet Magazine</a></li>
                         <li><a href="#">Mentions légales</a></li>
                     </ul>

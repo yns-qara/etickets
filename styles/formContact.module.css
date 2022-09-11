@@ -5,13 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 46px;
 }
 
 .left {
     max-width: 438px;
-
-    margin-top: auto;
-
 }
 
 .left h1 {
@@ -44,13 +42,26 @@
 }
 
 
-.social_media div {
+.social_media svg {
     /* to be changed */
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-color: blue;
+    background: #4285F4;
+    padding: 12px;
+    cursor: pointer;
 }
+
+.social_media svg:first-child {
+    background: #55ACEE;
+
+}
+
+.social_media svg:last-child {
+    background: #4B2A7B;
+
+}
+
 
 .right {
     max-width: 530px;
@@ -115,11 +126,9 @@
     border-radius: 29px;
     border: 0;
     padding: 18px 30px;
-    max-width: 100%;
-    max-height: 207px;
+    width: 100%;
+    height: 207px;
     resize: none;
-
-
     font-family: 'Inter';
     font-weight: 400;
     font-size: 22px;
@@ -134,5 +143,98 @@
     font-size: 22px;
     line-height: 27px;
     color: rgba(112, 112, 112, 0.8);
+
+}
+
+.button_holder {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.right button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background: #4B2A7B;
+    border-radius: 60px;
+    padding: 18px 72px;
+    border: 0;
+    cursor: pointer;
+    margin: auto;
+}
+
+
+@media all and (max-width: 1034px) {
+    .left {
+        max-width: 400px;
+    }
+
+    .left h1 {
+        font-size: 35px;
+        font-size: 5vw;
+    }
+
+    .left p {
+        font-size: 19px;
+        font-size: 3vw;
+    }
+
+
+}
+
+@media all and (max-width: 773px) {
+    .container {
+        flex-direction: column;
+    }
+
+
+    .right div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .right div input {
+        border-radius: 60px;
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+    
+    .right div input::placeholder {
+        font-size: 20px;
+    }
+    
+    .right input {
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+    
+    
+    .right input::placeholder {
+        font-size: 20px;
+    }
+
+    .right textarea {
+        padding: 10px 25px;
+        font-size: 20px;
+    }
+
+
+    .right textarea::placeholder {
+        font-size: 20px;
+    }
+
+
+    .right button {
+        font-size: 20px;
+        padding: 10px 50px;
+    }
+
+
+
 
 }

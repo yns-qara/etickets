@@ -23,12 +23,12 @@ const Navbar = props => {
                         </Link>
                     </li>
                     <li className={styles.hide}>
-                        <Link href="#">
+                        <Link href="/contactez">
                             <a>Contactez-nous</a>
                         </Link>
                     </li>
                     <li className={styles.hide}>
-                        <Link href="#">
+                        <Link href="/quiSommesNous">
                             <a href="#">Qui nous sommes?</a>
                         </Link>
                     </li>

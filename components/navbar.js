@@ -36,12 +36,12 @@ const Navbar = props => {
                         </li>
                         <li className={styles.disapear}>
 
-                            <Link href="#">
+                            <Link href="/contactez">
                                 <a >Contactez-nous</a>
                             </Link>
                         </li>
                         <li className={styles.disapear}>
-                            <Link href="#">
+                            <Link href="/quiSommesNous">
                                 <a >Qui nous sommes?</a>
                             </Link>
                         </li>
