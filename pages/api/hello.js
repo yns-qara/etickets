@@ -47,21 +47,21 @@ export default function handler(req, res) {
       url: '/cardB3.png'
   
     },
-    {
-      id: '4',
-      title: 'marvel avengers',
-      genre: 'cinema',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'knetra',
-      lieu: 'Cinema',
-      month: '10',
-      day: '9',
-      price: '200',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB4.png'
+    // {
+    //   id: '4',
+    //   title: 'marvel avengers',
+    //   genre: 'cinema',
+    //   date: 'Samedi 30 Aout 2022 - 16:45',
+    //   city: 'Knetra',
+    //   lieu: 'Cinema',
+    //   month: '10',
+    //   day: '9',
+    //   price: '200',
+    //   sold: 'false',
+    //   reserved: 'false',
+    //   url: '/cardB4.png'
   
-    },
+    // },
     {
       id: '5',
       title: 'Champions league',

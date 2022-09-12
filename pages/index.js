@@ -20,6 +20,8 @@ import Popup from 'reactjs-popup'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
+
+
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:3000/api/hello');
   const data = await res.json();
@@ -40,6 +42,9 @@ export default function Home({ fetchedData }) {
   const [FiltredEvents, setFiltredEvents] = useState([])
 
   const [activeVille, setActiveVille] = useState("")
+  const [activeDate, setActiveDate] = useState("")
+  const [activePrix, setActivePrix] = useState(0)
+  const [expriredSoon, setExpriredSoon] = useState(false)
 
   // this is just a place holder in practice we use the useeffect bellow
   // const fetchedData = [
@@ -185,17 +190,10 @@ export default function Home({ fetchedData }) {
   // end of place holder.
 
   useEffect(() => {
-    // fetchData();
     setAllEvents(fetchedData);
     setFiltredEvents(fetchedData);
   }, []);
 
-  // async function fetchData(){
-  //   const data = await fetch("/api/hello");
-  //   const events = data.json();
-  //   setAllEvents(events);
-  //   setFiltredEvents(events);
-  // }
 
 
 
@@ -214,9 +212,14 @@ export default function Home({ fetchedData }) {
 
         activeVille={activeVille}
         setActiveVille={setActiveVille}
+        activeDate={activeDate}
+        setActiveDate={setActiveDate}
+        activePrix={activePrix}
+        setActivePrix={setActivePrix}
+        expriredSoon={expriredSoon}
+        setExpriredSoon={setExpriredSoon}
       />
 
-      {/* <Popup triger={true} /> */}
 
       <motion.div
         layout
