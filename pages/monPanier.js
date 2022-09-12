@@ -27,6 +27,7 @@ const monPanier = props => {
         <HeadHolder>
 
             <MesTickets>
+                
                 <Ticket imgURL="/final.png" title="Wydad Athletic Club vs Al Ahly" sub="PPC: 200MADSous-total: " placeholder="2" />
                 <Ticket imgURL="/jamal.png" title="Marrakech du rire" sub="PPC: 100MADSous-total: " placeholder="4" />
 

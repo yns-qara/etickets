@@ -1,0 +1,99 @@
+.container {
+    padding: 234px 80px;
+}
+
+
+.container h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.container h1 span {
+    margin-left: 15px;
+}
+
+.container p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    max-width: 1055px;
+    margin: 15px 0;
+}
+
+
+.container_1 h1 {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 43px;
+    color: #4B2A7B;
+    cursor: pointer;
+    margin-bottom: 43px;
+}
+
+.sub_container {
+    margin-left: 45px;
+}
+
+.sub_container h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #4B2A7B;
+}
+
+.sub_container p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    max-width: 987px;
+}
+
+
+
+
+@media all and (max-width: 720px) {
+    .container {
+        padding: 234px 40px;
+    }
+    
+    
+    .container h1 {
+        font-size: 35px;
+    }
+    
+    
+    .container p {
+        font-size: 20px;
+    }
+    
+    
+    .container_1 h1 {
+        font-size: 29px;
+    }
+    
+    
+    .sub_container h2 {
+        font-size: 23px;
+    }
+    
+    .sub_container p {
+        font-size: 22px;
+    }
+    
+    
+}

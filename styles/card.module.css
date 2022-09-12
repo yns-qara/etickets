@@ -73,9 +73,10 @@
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
-    text-align: center;
-
+    text-align: left;
     color: #363636;
+    text-transform: uppercase;
+
 }
 
 .card__lower_left .dead_line {
@@ -85,6 +86,7 @@
     font-size: 12px;
     line-height: 15px;
     color: #363636;
+    text-transform: capitalize;
 }
 
 .card__lower_left .location_city {
@@ -95,7 +97,7 @@
     font-size: 12px;
     line-height: 14px;
     color: #363636;
-
+    text-transform: capitalize;
 }
 
 .card__button {

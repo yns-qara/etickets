@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "dayjs": "^1.11.5",
     "framer-motion": "^7.3.2",
     "jquery": "^3.6.1",

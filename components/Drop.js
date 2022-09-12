@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from '../styles/Drop.module.css'
 import ArrowDown from './SVGs/arrowDown'
@@ -6,36 +6,58 @@ import ArrowDown from './SVGs/arrowDown'
 
 
 
-const Drop = props => {
+const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille }) => {
 
   const [showVille, setShowVille] = useState(false);
   const [showDate, setShowDate] = useState(false);
   const [showPrix, setShowPrix] = useState(false);
-  
+
+
+
+
+
   const villeClick = () => {
     setShowVille(!showVille);
 
-    if( showDate === false && showPrix === false)
+    if (showDate === false && showPrix === false)
       return;
     setShowDate(false);
     setShowPrix(false);
   }
   const dateClick = () => {
     setShowDate(!showDate);
-    if( showVille === false && showPrix === false)
+    if (showVille === false && showPrix === false)
       return;
     setShowVille(false);
     setShowPrix(false);
   }
   const prixClick = () => {
     setShowPrix(!showPrix);
-    if( showDate === false && showVille === false)
+    if (showDate === false && showVille === false)
       return;
     setShowDate(false);
     setShowVille(false);
   }
 
 
+  useEffect(() => {
+    if (activeVille === "") {
+      setFiltredEvents(AllEvents);
+      return;
+    }
+    const filtred = AllEvents.filter((event) => event.city.includes(activeVille));
+    setFiltredEvents(filtred);
+  }, [activeVille])
+
+
+  const rightCity = () =>{
+    if( activeVille === "") return "Ville"
+    else if( activeVille === "Nador") return "Nador"
+    else if( activeVille === "Marrakech") return "Marrakech"
+    else if( activeVille === "Knetra") return "Knetra"
+    else if( activeVille === "Rabat") return "Rabat"
+    else if( activeVille === "Fes") return "Fes"
+  }
 
   return (
     <section className={styles.drop}>
@@ -44,7 +66,11 @@ const Drop = props => {
           <div className={styles.drop__element_container}
             onClick={villeClick}
           >
-            <span>Ville</span>
+            <span>
+              {
+                rightCity()
+              }
+              </span>
             <ArrowDown />
           </div>
           <AnimatePresence>
@@ -58,14 +84,14 @@ const Drop = props => {
                 exit={{ opacity: 0 }}
 
               >
-                <span>Arouit</span>
-                <span>Nador</span>
-                <span>casa</span>
-                <span>knetra</span>
-                <span>tanger</span>
-                <span>rabat</span>
-                <span>fes</span>
-                <span>mohamadea</span>
+                <span onClick={() => {setActiveVille(""); setShowVille(!showVille);}}>Tout les viles</span>
+                <span onClick={() => {setActiveVille("Nador"); setShowVille(!showVille);}}>Nador</span>
+                <span onClick={() => {setActiveVille("Casa"); setShowVille(!showVille);}}>Casa</span>
+                <span onClick={() => {setActiveVille("Knetra"); setShowVille(!showVille);}}>knetra</span>
+                <span onClick={() => {setActiveVille("Tanger"); setShowVille(!showVille);}}>tanger</span>
+                <span onClick={() => {setActiveVille("Rabat"); setShowVille(!showVille);}}>rabat</span>
+                <span onClick={() => {setActiveVille("Fes"); setShowVille(!showVille);}}>fes</span>
+                <span onClick={() => {setActiveVille("Marrakech"); setShowVille(!showVille);}}>Marrakech</span>
               </motion.div>
             }
           </AnimatePresence>
@@ -103,7 +129,7 @@ const Drop = props => {
         </div>
         <div className={styles.drop__element}>
           <div className={styles.drop__element_container}
-            onClick={prixClick} 
+            onClick={prixClick}
           >
             <span>Prix</span>
             <ArrowDown />

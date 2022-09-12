@@ -55,7 +55,7 @@ const Footer = props => {
                         <li><a href="/quiSommesNous">Qui sommes nous ?</a></li>
                         <li><a href="/contactez">Contactez-nous</a></li>
                         <li><a href="#">Guichet Magazine</a></li>
-                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="/mentionsLegals">Mentions légales</a></li>
                     </ul>
                 </div>
             </div>
