@@ -21,8 +21,9 @@ const Input = props => {
       <input
         type={props.type}
         id={props.ID}
-        placeholder={togle && props.placeholder}
+        // placeholder={togle && props.placeholder}
 
+        defaultValue={props.placeholder}
         readOnly = {togle && "true"}
            />
 

@@ -5,24 +5,26 @@ import TwitterP from './SVGs/TwitterP'
 import Pan from './SVGs/pan'
 import CountDownDL2 from './bigCountdown/cdDL'
 import ArrDown from './SVGs/ArrDown'
+import Plus from './SVGs/plus'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 const CardJachete = () => {
     const [show, setShow] = useState(false)
-    const [pack, setPack] = useState("Pack1")
-    const [price, setPrice] = useState("")
+    const [pack, setPack] = useState("pack1")
+    const [price, setPrice] = useState("100")
+    const [increment, setIncrement] = useState(1)
 
-    const rightPack = () =>{
-        if(pack === "pack1") return "Pack1"
-        else if(pack === "pack2") return "Pack2"
-        else if(pack === "pack3") return "Pack3"
-        else if(pack === "pack4") return "Pack4"
+    const rightPack = () => {
+        if (pack === "pack1") return "Pack1"
+        else if (pack === "pack2") return "Pack2"
+        else if (pack === "pack3") return "Pack3"
+        else if (pack === "pack4") return "Pack4"
     }
-    const rightPrice = () =>{
-        if(price === "100") return "100"
-        else if(price === "200") return "200"
-        else if(price === "300") return "300"
-        else if(price === "400") return "400"
+    const rightPrice = () => {
+        if (price === "100") return "100"
+        else if (price === "200") return "200"
+        else if (price === "300") return "300"
+        else if (price === "400") return "400"
     }
 
 
@@ -113,7 +115,28 @@ const CardJachete = () => {
 
 
                 <div className={styles.button_holder}>
-                    <input type="number" placeholder="1" min="1" />
+                    <div>
+                        <span
+                            onClick={
+                                () => {
+                                    if (increment != 1) {
+
+                                        setIncrement(increment - 1)
+                                    }
+                                }
+                            }
+                        >-</span>
+                        <input type="number" value={increment}  min="1" />
+                        <div
+                            onClick={
+                                () => {
+                                    setIncrement(increment + 1)
+                                }
+                            }
+                        >
+                            <Plus />
+                        </div>
+                    </div>
                     <button>
                         <Pan />
                         <span>ACHETER MAINTENANT</span>
