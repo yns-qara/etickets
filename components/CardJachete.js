@@ -3,8 +3,29 @@ import MessengerP from './SVGs/MessengerP'
 import WatsappP from './SVGs/WatsappP'
 import TwitterP from './SVGs/TwitterP'
 import Pan from './SVGs/pan'
-import BigHour from'./SVGs/bigHour'
-const CardJachete = props => {
+import CountDownDL2 from './bigCountdown/cdDL'
+import ArrDown from './SVGs/ArrDown'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+const CardJachete = () => {
+    const [show, setShow] = useState(false)
+    const [pack, setPack] = useState("Pack1")
+    const [price, setPrice] = useState("")
+
+    const rightPack = () =>{
+        if(pack === "pack1") return "Pack1"
+        else if(pack === "pack2") return "Pack2"
+        else if(pack === "pack3") return "Pack3"
+        else if(pack === "pack4") return "Pack4"
+    }
+    const rightPrice = () =>{
+        if(price === "100") return "100"
+        else if(price === "200") return "200"
+        else if(price === "300") return "300"
+        else if(price === "400") return "400"
+    }
+
+
     return (
         <div className={styles.container}>
             <div className={styles.left}>
@@ -16,20 +37,78 @@ const CardJachete = props => {
                 {/* to be changed with checkbox trick or
                     figure out onlclick trick
                 */}
-                <select name="" id="">
-                    <option value="" className={styles.spn}>
-                        <span >Pack 1</span> 
-                        <span>10 000MAD</span>
-                    </option>
-                    <option value="" className={styles.spn}>
-                        <span >Pack 1</span> 
-                        <span>10 000MAD</span>
-                    </option>
-                    <option value="" className={styles.spn}>
-                        <span >Pack 1</span> 
-                        <span>10 000MAD</span>
-                    </option>
-                </select>
+                <div className={styles.select_parent}>
+                    <div className={styles.select}
+                        onClick={() => setShow(!show)}
+                    >
+                        <span>{rightPack()}</span>
+                        <span>{rightPrice()} MAD</span>
+                        <ArrDown />
+
+                    </div>
+                    <AnimatePresence>
+                        {
+                            show &&
+                            <motion.div className={styles.hidden}
+
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: .4 }}
+                            >
+                                <div
+                                    onClick={
+                                        () => {
+                                            setPack("pack1");
+                                            setPrice("100");
+                                            setShow(!show);
+                                        }
+                                    }
+                                >
+                                    <span>pack1</span>
+                                    <span>100 MAD</span>
+                                </div>
+                                <div
+                                    onClick={
+                                        () => {
+                                            setPack("pack2");
+                                            setPrice("200");
+                                            setShow(!show);
+                                        }
+                                    }
+                                >
+                                    <span>pack2</span>
+                                    <span>200 MAD</span>
+                                </div>
+                                <div
+                                    onClick={
+                                        () => {
+                                            setPack("pack3");
+                                            setPrice("300");
+                                            setShow(!show);
+                                        }
+                                    }
+                                >
+                                    <span>pack3</span>
+                                    <span>300 MAD</span>
+                                </div>
+                                <div
+                                    onClick={
+                                        () => {
+                                            setPack("pack4");
+                                            setPrice("400");
+                                            setShow(!show);
+                                        }
+                                    }
+                                >
+                                    <span>pack4</span>
+                                    <span>400 MAD</span>
+                                </div>
+                            </motion.div>
+                        }
+                    </AnimatePresence>
+                </div>
+
                 {/* -------end---------- */}
 
 
@@ -42,13 +121,7 @@ const CardJachete = props => {
                 </div>
 
                 <div className={styles.counter}>
-                    <BigHour />
-                    <span>
-                        <span className={styles.counter_j} id={styles.change_c}>19</span><span>j</span>
-                        <span className={styles.counter_h} id={styles.change_c}>00</span><span>h</span>
-                        <span className={styles.counter_m} id={styles.change_c}>19</span><span>m</span>
-                        <span className={styles.counter_s} id={styles.change_c}>41</span><span>s</span>
-                    </span>
+                    <CountDownDL2 name="younes" month="9" day="30" />
                 </div>
                 <h4>PARTAGEZ CET ÉVÉNEMENT</h4>
                 <div className={styles.social_media}>

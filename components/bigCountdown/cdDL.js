@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Countdown from './Countdown';
+import Countdown from './CD';
 
 const CountDownDL = ({ name, day, month }) => {
   const [state, setState] = useState({

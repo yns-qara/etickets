@@ -3,7 +3,6 @@ import styles from '../styles/card.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import SvgHour from '../components/SVGs/hour'
-// import Countdown from './Countdown'
 import CountDownDL from '../components/CountDownDL';
 
 const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved }) => {
@@ -46,7 +45,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     </div>
                 </div>
             </div>
-            <Link href="/jachete">
+            <Link href="/jachete" >
                 <a className={styles.card__button}>
                     {/* {
                         sold ? "SOLD" : "J’achéte"

@@ -2,6 +2,7 @@
     /* border: 2px solid red; */
     width: 100%;
     margin-bottom: 90px;
+    padding: 25px;
 }
 
 .sub_container {
@@ -15,7 +16,7 @@
     height: 250px;
 }
 
-.sub_container div{
+.sub_container div {
     max-width: 260px;
     display: flex;
     flex-direction: column;
@@ -23,12 +24,63 @@
     justify-content: center;
     gap: 15px;
     padding: 18px 22px;
-
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: #DEDEDE;
     height: 100%;
 }
-.sub_container div:last-child{
+
+.sub_container div:last-child {
     border: 0;
+}
+
+
+
+.sub_container div h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.sub_container div p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+
+
+
+@media all and (max-width: 709px) {
+    .sub_container {
+        flex-direction: column;
+        max-width: 260px;
+        border: 1px solid #DEDEDE;
+        height: 100%;
+    }
+
+
+    .sub_container div {
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: #DEDEDE;
+    }
+
+    .sub_container div:last-child {
+        border: 0;
+    }
+
+
+
 }

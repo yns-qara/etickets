@@ -1,0 +1,17 @@
+
+.counter {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.counter span#change_c {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 16px;
+
+    color: #ffffff;
+    margin: 5px;
+}

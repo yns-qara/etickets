@@ -2,13 +2,20 @@
 
 .drop {
   padding: 33px 20px;
+
 }
 
 .drop__container {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  gap: 26px;
+  gap: 26px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(228px,1fr));
+  place-items: center;
+  column-gap: 26px;
+  row-gap: 26px;
+
 }
 
 .drop__element {
@@ -27,13 +34,16 @@
   cursor: pointer;
 
   position: relative;
-  z-index: 9;
+  /* z-index: 99; */
 
   transition: all .5s ease;
   color: #000000;
 
 
 }
+
+
+
 
 .drop__element .drop__element_container span {
   font-family: 'Roboto';
@@ -58,7 +68,7 @@
 
 .drop__hidden {
   position: absolute;
-  z-index: 7;
+  z-index: 19;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -151,3 +161,5 @@
   line-height: 21px;
 
 }
+
+

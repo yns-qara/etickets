@@ -26,11 +26,21 @@
 // 		</div>
 // 	)
 // };
-
-import FetchPosts from '../components/fetchPosts'
+import { motion } from 'framer-motion'
+import styles from '../styles/Hero.module.css'
 function test() {
   return (
-	<FetchPosts />
+    <motion.div
+      className={styles.center}
+
+      
+      >
+      <motion.h1 drag
+        whileTap={{ cursor: "grabbing" }}
+        className={styles.center}
+      >b</motion.h1>
+
+    </ motion.div>
   )
 }
 

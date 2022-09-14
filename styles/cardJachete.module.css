@@ -52,8 +52,15 @@
     color: #FFFFFF;
 }
 
+.select_parent {
+    width: 100%;
+    position: relative;
+}
 
-.right select {
+
+.select {
+    position: inherit;
+    z-index: 25;
     background: #4B2A7B;
     border-radius: 77px;
     border: 0;
@@ -63,9 +70,57 @@
     font-weight: 400;
     font-size: 19px;
     line-height: 22px;
-
     color: #FFFFFF;
     width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.select span:nth-child(2) {
+    margin-left: auto;
+}
+
+
+
+.hidden {
+    background: #2d1353;
+    border-radius: 0 0 15px 15px;
+    border: 0;
+    padding: 13px 19px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    color: #FFFFFF;
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.hidden div {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #784BBB;
+    padding: 5px 5px 15px;
+}
+
+.hidden div:first-child {
+margin-top: 20px;
+}
+.hidden div:last-child {
+border: 0;
 }
 
 .button_holder {
@@ -75,6 +130,7 @@
     justify-content: center;
     gap: 29px;
 }
+
 
 .button_holder input {
     border: 2px solid #FFFFFF;
@@ -159,7 +215,7 @@
     /* add a background after importing the right svgs */
 }
 
-.social_media svg{
+.social_media svg {
     background: #FFFFFF;
     border-radius: 50%;
     width: 36px;
@@ -170,7 +226,7 @@
 
 
 @media all and (max-width: 797px) {
-   .left{
-    display: none;
-   }
+    .left {
+        display: none;
+    }
 }

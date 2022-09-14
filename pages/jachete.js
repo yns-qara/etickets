@@ -7,21 +7,23 @@ import BodyJachete from "../components/BodyJachete"
 import Login from "../components/Login"
 import { motion, animatePresense } from 'framer-motion'
 
-const Jachete = props => {
+const Jachete = ({month , day}) => {
   return (
     <>
       <animatePresense>
 
-          <Navbar />
+        <Navbar />
         <motion.div
-          initial={{ y: 500 , opacity: 0 }}
-          animate={{ y: 0 , opacity: 1}}
+          initial={{ y: 500, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: .8 , ease: 'easeInOut'}}
+          transition={{ duration: .8, ease: 'easeInOut' }}
 
         >
           <JachetHead title="FIFA World Cup QATAR 2022">
-            <CardJachete />
+            <CardJachete
+                
+            />
           </JachetHead>
           <BodyJachete />
           <Footer />

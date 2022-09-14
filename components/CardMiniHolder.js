@@ -13,7 +13,6 @@ const CardMiniHolder = props => {
             <div className={styles.buttonH}>
                 <button className={styles.button}>Voir plus</button>
             </div>
-            {/* here the weird shape */}
         </>
     )
 }

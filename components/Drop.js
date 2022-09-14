@@ -112,7 +112,10 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
     <section className={styles.drop}>
       <div className={styles.drop__container}>
         <div className={styles.drop__element}>
-          <div className={activeVille === "" ? styles.drop__element_container : styles.active }
+          <motion.div
+            initial={{ zIndex: 1001 }}
+
+            className={activeVille === "" ? styles.drop__element_container : styles.active}
             onClick={villeClick}
           >
             <span>
@@ -121,13 +124,13 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
               }
             </span>
             <ArrowDown />
-          </div>
+          </motion.div>
           <AnimatePresence>
             {
               showVille
               &&
               <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, zIndex: 100 }}
                 animate={{ opacity: 1 }}
                 transition={{ ease: "easeInOut" }}
                 exit={{ opacity: 0 }}
@@ -146,18 +149,20 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
 
         </div>
         <div className={styles.drop__element}>
-          <div className={styles.drop__element_container}
+          <motion.div
+            initial={{ zIndex: 99 }}
+            className={styles.drop__element_container}
             onClick={dateClick}
           >
             <span>Date</span>
             <ArrowDown />
-          </div>
+          </motion.div>
           <AnimatePresence>
             {
               showDate
               &&
               <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, zIndex: 98 }}
                 animate={{ opacity: 1 }}
                 transition={{ ease: "easeInOut" }}
                 exit={{ opacity: 0 }}
@@ -172,7 +177,9 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
           </AnimatePresence>
         </div>
         <div className={styles.drop__element}>
-          <div className={activePrix === 0 ? styles.drop__element_container : styles.active }
+          <motion.div
+            initial={{ zIndex: 97 }}
+            className={activePrix === 0 ? styles.drop__element_container : styles.active}
             onClick={prixClick}
           >
             <span>
@@ -181,36 +188,39 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
               }
             </span>
             <ArrowDown />
-          </div>
+          </motion.div>
           <AnimatePresence>
             {
               showPrix
               &&
               <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, zIndex: 96 }}
                 animate={{ opacity: 1 }}
                 transition={{ ease: "easeInOut" }}
                 exit={{ opacity: 0 }}
 
               >
-                <span onClick={() => {setActivePrix(0);setShowPrix(!showPrix)}}>all</span>
-                <span onClick={() => {setActivePrix(100);setShowPrix(!showPrix)}}>100 MAD</span>
-                <span onClick={() => {setActivePrix(150);setShowPrix(!showPrix)}}>150 MAD</span>
-                <span onClick={() => {setActivePrix(200);setShowPrix(!showPrix)}}>200 MAD</span>
-                <span onClick={() => {setActivePrix(250);setShowPrix(!showPrix)}}>250 MAD</span>
-                <span onClick={() => {setActivePrix(300);setShowPrix(!showPrix)}}>300 MAD</span>
-                <span onClick={() => {setActivePrix(350);setShowPrix(!showPrix)}}>350 MAD</span>
-                <span onClick={() => {setActivePrix(400);setShowPrix(!showPrix)}}>400 MAD</span>
-                <span onClick={() => {setActivePrix(999);setShowPrix(!showPrix)}}>plus de 400 MAD</span>
+                <span onClick={() => { setActivePrix(0); setShowPrix(!showPrix) }}>all</span>
+                <span onClick={() => { setActivePrix(100); setShowPrix(!showPrix) }}>100 MAD</span>
+                <span onClick={() => { setActivePrix(150); setShowPrix(!showPrix) }}>150 MAD</span>
+                <span onClick={() => { setActivePrix(200); setShowPrix(!showPrix) }}>200 MAD</span>
+                <span onClick={() => { setActivePrix(250); setShowPrix(!showPrix) }}>250 MAD</span>
+                <span onClick={() => { setActivePrix(300); setShowPrix(!showPrix) }}>300 MAD</span>
+                <span onClick={() => { setActivePrix(350); setShowPrix(!showPrix) }}>350 MAD</span>
+                <span onClick={() => { setActivePrix(400); setShowPrix(!showPrix) }}>400 MAD</span>
+                <span onClick={() => { setActivePrix(999); setShowPrix(!showPrix) }}>plus de 400 MAD</span>
               </motion.div>
             }
           </AnimatePresence>
         </div>
         <div className={styles.drop__element}>
-          <div className={styles.drop__element_container}>
+          <motion.div
+            initial={{ zIndex: 95 }}
+
+            className={styles.drop__element_container}>
             <span>Bientôt expiré</span>
             <ArrowDown />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
