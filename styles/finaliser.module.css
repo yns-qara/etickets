@@ -1,0 +1,148 @@
+.cont div svg {
+    position: absolute;
+    z-index: 9999;
+    top: 40px;
+    right: 40px;
+    margin: auto;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+.parent {
+    background: #F7F7F7;
+    border-radius: 30px;
+    max-width: 1221px;
+    padding: 61px 51px;
+
+
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+
+
+.parent h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+    text-align: center;
+}
+
+
+.container {
+    margin-top: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.left {
+    max-width: 461px;
+    max-height: 263px;
+
+}
+
+.left img {
+    width: 100%;
+
+}
+
+.right {
+    max-width: 635px;
+    max-height: 263px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.header {
+    background: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+
+.infos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.infos span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #464646;
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+
+
+}
+
+.buttons button {
+    background: #4B2A7B;
+    border-radius: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    border: 0;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.buttons button:last-child {
+    color: #4B2A7B;
+    background: #FFFFFF;
+    border: 2px solid #4B2A7B;
+    border-radius: 40px;
+}
+
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}

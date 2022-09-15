@@ -14,6 +14,7 @@
 
     background: #F5F5F5;
     border: 1px solid #C4C4C4;
+    border-width: 1px 1px 0 1px;
     padding: 21px 70px;
 }
 
@@ -25,8 +26,7 @@
 .tab tr th,
 .tab tr td {
     border: 1px solid #A3A3A3;
-
-    padding: 50px;
+    padding: 33px;
 
 
     font-family: 'Roboto';
@@ -39,6 +39,9 @@
     text-align: center;
 }
 
+.tab tr td{
+    padding: 20px;
+}
 
 .tab tr th {
     font-family: 'Roboto';
@@ -59,14 +62,17 @@
     gap: 23px;
 }
 
+.buttons_holder button{
+    cursor: pointer;
+}
+
 
 .buttons_holder button:first-child {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-
     color: #FFFFFF;
     border: 0;
     cursor: pointer;

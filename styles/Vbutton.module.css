@@ -1,0 +1,11 @@
+.container {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #4B2A7B;
+    border-radius: 95px;
+    padding: 14px 38px;
+}

@@ -1,7 +1,9 @@
 import styles from '../styles/table.module.css'
 import Undo from './SVGs/undo'
-
+import Details from './Details'
+import { useState } from 'react'
 const Table = props => {
+    const [visible, setVisible] = useState(false)
     return (
         <>
             <div className={styles.container}>
@@ -29,7 +31,7 @@ const Table = props => {
                         <td className={styles.buttons_holder}>
                             <button>TÉLÉCHARGER TICKET</button>
                             <Undo />
-                            <button>DÉTAILS</button>
+                            <button onClick={()=> setVisible(!visible)}>DÉTAILS</button>
                         </td>
                     </tr>
                     <tr>
@@ -42,7 +44,7 @@ const Table = props => {
                         <td className={styles.buttons_holder}>
                             <button>TÉLÉCHARGER TICKET</button>
                             <Undo />
-                            <button>DÉTAILS</button>
+                            <button onClick={()=> setVisible(!visible)}>DÉTAILS</button>
                         </td>
                     </tr>
                     <tr>
@@ -55,12 +57,23 @@ const Table = props => {
                         <td className={styles.buttons_holder}>
                             <button className={styles.button_1}>TÉLÉCHARGER TICKET</button>
                             <Undo />
-                            <button className={styles.button_2}>DÉTAILS</button>
+                            <button className={styles.button_2}
+                             onClick={()=> setVisible(!visible)}
+                            
+                            >DÉTAILS</button>
                         </td>
                     </tr>
 
                 </table>
             </div>
+
+
+            {
+                visible && <Details
+                    visible = {visible}
+                    setVisible ={setVisible}
+                />
+            }
         </>
     )
 }

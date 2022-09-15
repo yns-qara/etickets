@@ -2,9 +2,9 @@
     background: #FAFAFA;
     border-radius: 30px;
     Width: 456px;
-    Height: 341px;
+    min-Height: 341px;
 
-    padding: 40px 30px;
+    padding: 40px 30px 26px;
 }
 
 .container h1 {
@@ -18,7 +18,7 @@
 }
 
 .container h3 {
-    margin-top: 30px;
+    margin-top: 20px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -76,6 +76,11 @@
 
 }
 
+
+
+
+
+
 .container label {
     font-family: 'Roboto';
     font-style: italic;
@@ -92,6 +97,31 @@
     cursor: pointer;
 }
 
-.container label{
-    margin-bottom: 26px;
+.inpt{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.circle {
+    width: 12.24px;
+    height: 12.24px;
+    background: #FAFAFA;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.inner_circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #707070;
 }

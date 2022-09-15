@@ -4,10 +4,10 @@ import Link from 'next/link';
 import Pannier from './SVGs/panier';
 import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
-import Pan from './SVGs/pan';
+import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
 import { useState } from 'react';
-import {motion,AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 const Navbar = props => {
     const [view, setView] = useState(false)
     const togleView = () => {
@@ -40,43 +40,41 @@ const Navbar = props => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#">
-                            <div className={styles.popupParent}>
-                                <div onClick={togleView}>
-                                    <Hamberger />
-                                </div>
-                                <AnimatePresence>
+                        <div className={styles.popupParent}>
+                            <div onClick={togleView}>
+                                <Hamberger />
+                            </div>
+                            <AnimatePresence>
                                 {
                                     view &&
-                                    <motion.div 
-                                        initial = {{opacity : 0}}
-                                        animate = {{opacity : 1}}
-                                        transition = {{ duration : .3}}
-                                        exit = {{ opacity: 0}}
-                                    className={styles.popup}>
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: .3 }}
+                                        exit={{ opacity: 0 }}
+                                        className={styles.popup}>
                                         <div className={styles.profile}>
                                             <img src="" alt="" />
                                             <span>Profile</span>
                                         </div>
-                                        <Link href="#">
+                                        <Link href="/mesCommands">
                                             <a>Mes commandes</a>
                                         </Link>
-                                        <Link href="#">
+                                        <Link href="/mesCommands">
                                             <a>Mes commandes</a>
                                         </Link>
-                                        <Link href="#">
+                                        <Link href="/mesCommands">
                                             <a>Mes commandes</a>
                                         </Link>
 
                                     </motion.div>
                                 }
-                                </AnimatePresence>
+                            </AnimatePresence>
 
-                            </div>
-                        </Link>
+                        </div>
                     </li>
                     <li className={styles.menu__buttons}>
-                        <Link href="#">
+                        <Link href="/monPanier">
                             <a className={styles.pannier}>
                                 <Pan />
                                 <span>PANIER</span>

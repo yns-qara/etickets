@@ -1,0 +1,21 @@
+.container {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #4B2A7B;
+    background: #ffffff;
+    border-radius: 95px;
+    padding: 14px 38px;
+    border: 2px solid #4B2A7B;
+    border-radius: 95px;
+}
+
+
+/*------BUTTON HOLDER------*/
+.parent{
+    margin-top: 43px;
+   display: flex; 
+   gap: 82px;
+}

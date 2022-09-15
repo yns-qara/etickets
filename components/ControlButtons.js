@@ -1,7 +1,7 @@
-
+import styles from '../styles/Cbutton.module.css'
 const ControlButtons = props => {
   return (
-    <div>
+    <div className={styles.parent}>
         {props.children}
     </div>
   )

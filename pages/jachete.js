@@ -21,10 +21,9 @@ const Jachete = ({month , day}) => {
 
         >
           <JachetHead title="FIFA World Cup QATAR 2022">
-            <CardJachete
-                
-            />
+            <CardJachete />
           </JachetHead>
+          
           <BodyJachete />
           <Footer />
         </motion.div>

@@ -1,0 +1,137 @@
+.container {
+    background: #F5F5F5;
+    border-radius: 50px;
+    max-width: 1300px;
+    padding: 48px 45px;
+
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+.container h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+}
+
+.details p:first-child {
+    margin-top: 28px;
+}
+.details p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.details p span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+    color: #464646;
+    margin-left: 34px;
+}
+
+
+
+.header {
+    margin-top: 46px;
+    display: flex;
+    align-items: center;
+}
+
+.header+div {
+    margin-top: 25px;
+}
+
+.header span {
+    border: 1px solid rgba(112, 112, 112, 0.35);
+    padding: 27px 47px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 228px;
+}
+
+.header span:first-child {
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main span {
+    padding: 19px 47px;
+    background: #FFFFFF;
+    border: 1px solid #A3A3A3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #464646;
+    width: 228px;
+}
+
+.main span:first-child {
+    flex: 1;
+}
+
+
+.prices {
+    display: flex;
+    align-items: center;
+}
+
+.prices span {
+    padding: 19px 47px;
+    background: #FFFFFF;
+    border: 1px solid #A3A3A3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+    color: #464646;
+    width: 228px;
+}
+
+.prices span:first-child {
+    flex: 1;
+}
+
+.back {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.container div svg{
+    cursor: pointer;
+    position: absolute;
+    right: 48px;
+    top: 48px;
+}

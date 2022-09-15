@@ -1,0 +1,7 @@
+@media all and (max-width: 1440px) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
