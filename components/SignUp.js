@@ -6,6 +6,7 @@ import styles from '../styles/signup.module.css'
 import { motion } from 'framer-motion'
 import Eye from "./SVGs/eye"
 import { useState } from "react"
+
 const SignUp = props => {
     const [showPassword, setShowPassword] = useState(false)
     const togglePassword = () => {
@@ -18,7 +19,8 @@ const SignUp = props => {
             animate={{ opacity: 1, y: "-50%" }}
             transition={{ ease: "easeInOut" }}
 
-            action="" className={styles.form__container}>
+            action="" 
+            className={styles.form__container}>
             <motion.h1
                 initial = {{x : -150}}
                 animate = {{x : 0}}

@@ -13,7 +13,7 @@ import CardMini from '../components/CardMini'
 import CardMiniHolder from '../components/CardMiniHolder'
 import Qualities from '../components/Qualities'
 import Footer from '../components/Footer'
-
+import styles from '../styles/CardMiniHolder.module.css'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Popup from 'reactjs-popup'
@@ -46,7 +46,9 @@ export default function Home({ fetchedData }) {
   const [activePrix, setActivePrix] = useState(0)
   const [expriredSoon, setExpriredSoon] = useState(false)
 
- 
+  const [visible1, setVisible1] = useState(true);
+  const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
 
   useEffect(() => {
     setAllEvents(fetchedData);
@@ -102,7 +104,7 @@ export default function Home({ fetchedData }) {
                       sold={card.sold}
                       reserved={card.reserved}
                       imgURL={card.url}
-
+                      link={'/jachete' + card.id}
 
                     />
                   </div>
@@ -120,12 +122,48 @@ export default function Home({ fetchedData }) {
       <VoirPlusButton />
 
       <Marketplace>
-        <CardMiniHolder>
-          <CardMini imgURL="/cardB8.png" />
-          <CardMini imgURL="/cardB8.png" />
-          <CardMini imgURL="/cardB8.png" />
-          <CardMini imgURL="/cardB8.png" />
-        </CardMiniHolder>
+        <AnimatePresence>
+          <CardMiniHolder
+            visible1={visible1}
+            visible2={visible2}
+            visible3={visible3}
+
+            setVisible1={setVisible1}
+            setVisible2={setVisible2}
+            setVisible3={setVisible3}
+
+          >
+            {
+              visible1 &&
+              <>
+                <CardMini imgURL="/cardB8.png" />
+                <CardMini imgURL="/cardB8.png" />
+                <CardMini imgURL="/cardB8.png" />
+                <CardMini imgURL="/cardB8.png" />
+              </>
+            }
+            {
+              visible2 &&
+              <>
+                <CardMini imgURL="/cardB9.png" />
+                <CardMini imgURL="/cardB9.png" />
+                <CardMini imgURL="/cardB9.png" />
+                <CardMini imgURL="/cardB9.png" />
+              </>
+            }
+            {
+              visible3 &&
+              <>
+                <CardMini imgURL="/cardB3.png" />
+                <CardMini imgURL="/cardB3.png" />
+                <CardMini imgURL="/cardB3.png" />
+                <CardMini imgURL="/cardB3.png" />
+
+              </>
+            }
+
+          </CardMiniHolder>
+        </AnimatePresence>
       </Marketplace>
       <Qualities />
       <Footer />

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import SvgHour from '../components/SVGs/hour'
 import CountDownDL from '../components/CountDownDL';
 
-const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved }) => {
+const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved , link}) => {
     return (
         <motion.div
             layout
@@ -45,7 +45,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     </div>
                 </div>
             </div>
-            <Link href="/jachete" >
+            <Link href={link} >
                 <a className={styles.card__button}>
                     {/* {
                         sold ? "SOLD" : "J’achéte"

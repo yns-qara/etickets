@@ -1,13 +1,28 @@
-.container {
-    /* padding: 50px; */
-    max-width: 85vw;
-    margin: auto;
+.set1 {}
+
+
+.parent {
     margin-top: 90px;
-    /* display: flex; */
-    display: grid;
+    width: 900px;
+    width: 85vw;
+    margin: auto;
+    overflow: hidden;
+    background-color: #b186f1;
+    padding: 25px;
+}
+
+.container {
+    /* max-width: 85vw; */
+    margin: auto;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, 323px);
     gap: 20px;
+    justify-content: center; */
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
+    
 }
 
 
@@ -32,12 +47,23 @@
     cursor: pointer;
 }
 
-.rect1 {
+/* .rect1 {
+    background: #9A9A9A;
+    opacity: 1;
+} */
+
+.active {
+    width: 95px;
+    height: 7px;
+    background: #BEBEBE;
+    opacity: 0.35;
+    border-radius: 50px;
+    cursor: pointer;
     background: #9A9A9A;
     opacity: 1;
 }
 
-.buttonH{
+.buttonH {
     display: flex;
     justify-content: center;
     align-items: center;
