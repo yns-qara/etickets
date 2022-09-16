@@ -1,0 +1,159 @@
+.container {
+    /* max-width: 1033px; */
+    margin: auto;
+    padding: 196px 15vw;
+}
+
+.title {
+    width: 100%;
+    height: 108px;
+    background: #4B2A7B;
+    border-radius: 45.5px 45.5px 0px 0px;
+    padding: 37px 50px;
+}
+
+
+.corp {
+
+    padding: 35px 50px;
+    background: #FFFFFF;
+    border: 3px solid #4B2A7B;
+    border-radius: 0 0 50px 50px;
+}
+
+.detailes {
+    padding: 0 50px;
+}
+
+
+.detailes h1 {
+    margin-top: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    color: #4B2A7B;
+}
+
+.detailes p:first-child {
+    margin-top: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #363636;
+}
+
+.detailes p {
+    margin-top: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    color: #363636;
+}
+
+.detailes p span {
+    font-weight: 500;
+    font-size: 19px;
+
+}
+
+.detailes h5 {
+    margin-top: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #363636;
+}
+
+
+.table {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.table div {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #363636;
+    padding: 30px 13px;
+    border: 1px solid #707070;
+    text-align: center;
+}
+
+div.header {
+
+    background: #4B2A7B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border: 1px solid #707070;
+}
+
+.table .header:first-child {
+    border-radius: 18px 0px 0px 0px;
+}
+
+.table .header:nth-child(5) {
+    border-radius: 0px 18px 0px 0px;
+}
+
+div.span3 {
+    grid-column: 1/4;
+    text-align: left;
+}
+
+div.span4 {
+    grid-column: 1/5;
+    text-align: left;
+}
+
+
+.qrCodeBut {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 167px;
+}
+
+.qrCodeBut div {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+.qrCodeBut button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 49px;
+    padding: 22px 30px;
+    background: #4B2A7B;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+}
+
+.qrCodeBut button span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
