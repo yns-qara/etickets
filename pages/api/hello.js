@@ -9,7 +9,7 @@ export default function handler(req, res) {
       date: 'Samedi 30 Aout 2022 - 16:45',
       city: 'Marrakech',
       lieu: 'Cinema megarama',
-      month: '12',
+      month: '9',
       day: '19',
       price: '200',
       sold: 'false',

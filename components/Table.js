@@ -2,6 +2,7 @@ import styles from '../styles/table.module.css'
 import Undo from './SVGs/undo'
 import Details from './Details'
 import { useState } from 'react'
+import Link from 'next/link'
 const Table = props => {
     const [visible, setVisible] = useState(false)
     return (
@@ -29,9 +30,9 @@ const Table = props => {
                         <td>27/04/2022 23:54:12	</td>
                         <td>100MAD</td>
                         <td className={styles.buttons_holder}>
-                            <button>TÉLÉCHARGER TICKET</button>
+                            <Link href="/ticket"><button>TÉLÉCHARGER TICKET</button></Link>
                             <Undo />
-                            <button onClick={()=> setVisible(!visible)}>DÉTAILS</button>
+                            <button onClick={() => setVisible(!visible)}>DÉTAILS</button>
                         </td>
                     </tr>
                     <tr>
@@ -42,9 +43,9 @@ const Table = props => {
                         <td>27/04/2022 23:54:12	</td>
                         <td>100MAD</td>
                         <td className={styles.buttons_holder}>
-                            <button>TÉLÉCHARGER TICKET</button>
+                            <Link href="/ticket"><button>TÉLÉCHARGER TICKET</button></Link>
                             <Undo />
-                            <button onClick={()=> setVisible(!visible)}>DÉTAILS</button>
+                            <button onClick={() => setVisible(!visible)}>DÉTAILS</button>
                         </td>
                     </tr>
                     <tr>
@@ -55,11 +56,13 @@ const Table = props => {
                         <td>27/04/2022 23:54:12	</td>
                         <td>100MAD</td>
                         <td className={styles.buttons_holder}>
-                            <button className={styles.button_1}>TÉLÉCHARGER TICKET</button>
+                            <Link href="/ticket">
+                                <button className={styles.button_1}>TÉLÉCHARGER TICKET</button>
+                            </Link>
                             <Undo />
                             <button className={styles.button_2}
-                             onClick={()=> setVisible(!visible)}
-                            
+                                onClick={() => setVisible(!visible)}
+
                             >DÉTAILS</button>
                         </td>
                     </tr>
@@ -70,8 +73,8 @@ const Table = props => {
 
             {
                 visible && <Details
-                    visible = {visible}
-                    setVisible ={setVisible}
+                    visible={visible}
+                    setVisible={setVisible}
                 />
             }
         </>

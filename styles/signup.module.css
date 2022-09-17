@@ -1,25 +1,27 @@
 
-
 .form__container {
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     top: 50%;
     left: 0;
     right: 0;
     margin: auto;
     transform: translateY(-50%);
-
     padding: 35px 74px;
+    padding: 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #F7F7F7;
     border-radius: 60px;
-    max-width: 699px;
+    max-width: 500px;
 
     overflow-y: hidden;
 }
+
+
+
 
 .form__container h1 {
 
@@ -27,6 +29,7 @@
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
+    font-size: 36px;
     line-height: 49px;
     display: flex;
     align-items: center;
@@ -37,13 +40,14 @@
 
 .name{
     margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 51px;
 }
 .name input{
-    max-width: 250px;
+    /* max-width: 250px; */
 }
 
 
@@ -51,7 +55,7 @@
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 27px;
     color: rgba(112, 112, 112, 0.8);
 }
@@ -60,18 +64,18 @@
     width: 100%;
     background: #FFFFFF;
     border-radius: 60px;
-    padding: 17px 30px;
+    padding: 14px 25px;
     border: 0;
 }
 
 
 .em {
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 
 .pass {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +93,7 @@
 
 
 .form__container h4 {
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
@@ -101,14 +105,12 @@
 
 
 .social__media {
-    margin-top: 16px;
+    margin-top: 12px;
 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-
-
 }
 
 
@@ -134,7 +136,7 @@
 .form__container input {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
 }
 
@@ -145,11 +147,11 @@
     border: 0;
     background-color: #4B2A7B;
     border-radius: 60px;
-    padding: 17px 52px;
+    padding: 12px 45px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 23px;
+    font-size: 19px;
     line-height: 28px;
     color: #FFFFFF;
     transition: all .6s ease;
@@ -163,11 +165,11 @@
 
 
 .anchor {
-    margin-top: 16px;
+    margin-top: 12px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 14px;
     line-height: 25px;
     color: #4B2A7B;
 }

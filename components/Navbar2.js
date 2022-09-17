@@ -1,5 +1,5 @@
 
-import styles from '../styles/Nav.module.css';
+import styles from '../styles/Nav2.module.css';
 import Link from 'next/link';
 import Pannier from './SVGs/panier';
 import Profile from './SVGs/profile';
@@ -9,9 +9,13 @@ import Hamberger from './SVGs/hamberger';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
 const Navbar = props => {
-    const [view, setView] = useState(false)
+    const [view, setView] = useState(false);
+    const [showMenu, setShowMenu] = useState(false)
     const togleView = () => {
         setView(!view);
+    }
+    const showMenuHandle = () => {
+        setShowMenu(!showMenu);
     }
     return (
         <menu className={styles.navmenu}>
@@ -61,10 +65,10 @@ const Navbar = props => {
                                             <a>Mes commandes</a>
                                         </Link>
                                         <Link href="/mesCommands">
-                                            <a>Mes commandes</a>
+                                            <a>Pannier</a>
                                         </Link>
                                         <Link href="/mesCommands">
-                                            <a>Mes commandes</a>
+                                            <a>Shop</a>
                                         </Link>
 
                                     </motion.div>
@@ -81,8 +85,44 @@ const Navbar = props => {
                             </a>
                         </Link>
                     </li>
+                    <li className={styles.hamburger} onClick={showMenuHandle}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
                 </ul>
             </nav>
+            <AnimatePresence>
+                {showMenu &&
+                    <motion.menu className={styles.mobile}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ ease: "easeIn" }}
+                    >
+
+                        <div className={styles.close} onClick={showMenuHandle}>&times;</div>
+                        <nav>
+
+                            <Link href="/monPannier">
+                                <div>Pannier</div>
+                            </Link>
+                            <Link href="/mesInformations">
+                                <div>profile</div>
+                            </Link>
+                            <Link href="/mesCommandes">
+                                <div>Mes Commandes</div>
+                            </Link>
+                            <Link href="/">
+                                <div>shop</div>
+                            </Link>
+                            <Link href="/contactez"><div>contactez nous</div></Link>
+                            <Link href="/quiSommesNous"><div>qui somme nous</div></Link>
+
+                        </nav>
+                    </motion.menu>
+                }
+            </AnimatePresence>
         </menu>
     );
 }

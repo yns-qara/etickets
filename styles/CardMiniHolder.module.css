@@ -1,7 +1,7 @@
 .set1 {}
 
 
-.parent {
+/* .parent {
     margin-top: 90px;
     width: 900px;
     width: 85vw;
@@ -9,7 +9,7 @@
     overflow: hidden;
     background-color: #b186f1;
     padding: 25px;
-}
+} */
 
 .container {
     /* max-width: 85vw; */
@@ -19,6 +19,7 @@
     gap: 20px;
     justify-content: center; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;

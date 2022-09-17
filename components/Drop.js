@@ -13,6 +13,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
   const [showDate, setShowDate] = useState(false);
   const [showPrix, setShowPrix] = useState(false);
 
+
   const villeClick = () => {
     setShowVille(!showVille);
 
@@ -34,6 +35,10 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
       return;
     setShowDate(false);
     setShowVille(false);
+  }
+
+  const expiredClick = () => {
+    setExpriredSoon(!expriredSoon);
   }
 
   /* -------------------------------------------------------------------------------- */
@@ -213,13 +218,18 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             }
           </AnimatePresence>
         </div>
-        <div className={styles.drop__element}>
+        <div className={styles.drop__element} onClick={expiredClick}>
           <motion.div
             initial={{ zIndex: 95 }}
 
-            className={styles.drop__element_container}>
+            className={expriredSoon ? styles.active : styles.drop__element_container}>
             <span>Bientôt expiré</span>
-            <ArrowDown />
+            <div className={styles.circle}>
+            {
+                expriredSoon &&
+                <div className={styles.inner_c}></div>
+              }
+            </div>
           </motion.div>
         </div>
       </div>

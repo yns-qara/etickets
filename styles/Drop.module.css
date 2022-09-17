@@ -2,7 +2,7 @@
 
 .drop {
   padding: 33px 20px;
-
+  /* max-width: 1000px; */
 }
 
 .drop__container {
@@ -11,8 +11,9 @@
   justify-content: center;
   gap: 26px; */
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(228px,1fr));
-  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(228px, 250px));
+  align-items: center;
+  justify-content: center;
   column-gap: 26px;
   row-gap: 26px;
 
@@ -26,16 +27,12 @@
 .drop__element .drop__element_container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 132px;
+  justify-content: space-between;
   background: #F7F7F7;
   border-radius: 38px;
   padding: 13px 33px;
   cursor: pointer;
-
   position: relative;
-  /* z-index: 99; */
-
   transition: all .5s ease;
   color: #000000;
 
@@ -49,7 +46,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 21px;
 
 }
@@ -61,10 +58,6 @@
   -moz-box-shadow: 0px 0px 0px 6px rgba(247, 247, 247, 0.9);
 }
 
-/* .drop__element .drop__element_container:hover ~ .drop__hidden {
-  
-  display: flex;
-} */
 
 .drop__hidden {
   position: absolute;
@@ -76,11 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 15px; */
   width: 100%;
-
-  /* display: none; */
-
 }
 
 
@@ -132,8 +121,7 @@
 .active {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 132px;
+  justify-content: space-between;
   background: #F7F7F7;
   border-radius: 38px;
   padding: 13px 33px;
@@ -157,9 +145,53 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 21px;
 
 }
 
 
+
+.circle {
+  border: 1px solid #707070;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  padding: 10px;
+}
+.inner_c {
+  content: "";
+  background: #707070;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+
+  position: absolute;
+  
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+/* .inner_c {
+  background: #707070;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  position: absolute;
+  
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+} */
+
+
+/* .drop__element .drop__element_container:last-child {
+  gap: 50px;
+} */

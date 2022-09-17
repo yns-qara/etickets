@@ -2,6 +2,7 @@
     background: #F5F5F5;
     border-radius: 50px;
     max-width: 1300px;
+    max-width: 900px;
     padding: 48px 45px;
 
     position: fixed;
@@ -18,18 +19,20 @@
     font-style: normal;
     font-weight: 800;
     font-size: 30px;
+    font-size: 28px;
     line-height: 37px;
     color: #000000;
 }
 
 .details p:first-child {
-    margin-top: 28px;
+    margin-top: 26px;
 }
+
 .details p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 23px;
     color: #000000;
 }
@@ -38,18 +41,21 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 15px;
     line-height: 22px;
     color: #464646;
-    margin-left: 34px;
+    margin-left: 15px;
 }
 
 
 
 .header {
-    margin-top: 46px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    max-width: 810px;
+    height: 65px;
 }
 
 .header+div {
@@ -58,15 +64,17 @@
 
 .header span {
     border: 1px solid rgba(112, 112, 112, 0.35);
-    padding: 27px 47px;
+    padding: 20px 47px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 18px;
+    font-size: 1em;
     line-height: 23px;
     background-color: #ffffff;
     color: #000000;
-    width: 228px;
+    width: 186px;
+    height: 100%;
 }
 
 .header span:first-child {
@@ -76,6 +84,7 @@
 .main {
     display: flex;
     align-items: center;
+    height: 60px;
 }
 
 .main span {
@@ -86,10 +95,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 19px;
+    font-size: 1em;
     line-height: 22px;
 
     color: #464646;
-    width: 228px;
+    width: 186px;
+    height: 100%;
 }
 
 .main span:first-child {
@@ -110,6 +121,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 19px;
+    font-size: 16px;
     line-height: 22px;
     color: #464646;
     width: 228px;
@@ -129,9 +141,228 @@
     z-index: 99;
 }
 
-.container div svg{
+.container div svg {
     cursor: pointer;
     position: absolute;
     right: 48px;
     top: 48px;
+}
+
+
+@media all and (max-width: 891px) {
+    .container {
+        border-radius: 45px;
+        max-width: 800px;
+        padding: 25px 35px;
+    }
+
+    .container h1 {
+        font-size: 27px;
+    }
+
+    .details p:first-child {
+        margin-top: 25px;
+    }
+
+    .details p {
+        font-size: 15px;
+    }
+
+    .details p span {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+
+
+    .header {
+        margin-top: 18px;
+    }
+
+    .header+div {
+        margin-top: 20px;
+    }
+
+    .header span {
+        padding: 15px 47px;
+        font-size: 15px;
+    }
+
+    .header span:first-child {
+        flex: 1;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+    }
+
+    .main span {
+        /* padding: 19px 47px; */
+        background: #FFFFFF;
+        border: 1px solid #A3A3A3;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        font-size: 1em;
+        line-height: 22px;
+
+        color: #464646;
+        width: 186px;
+    }
+
+    .main span:first-child {
+        flex: 1;
+    }
+
+
+    .prices {
+        display: flex;
+        align-items: center;
+    }
+
+    .prices span {
+        padding: 19px 47px;
+        background: #FFFFFF;
+        border: 1px solid #A3A3A3;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #464646;
+        width: 228px;
+    }
+
+    .prices span:first-child {
+        flex: 1;
+    }
+
+    .back {
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+    }
+
+    .container div svg {
+        cursor: pointer;
+        position: absolute;
+        right: 48px;
+        top: 48px;
+    }
+
+}
+
+
+@media all and (max-width: 687px) {
+    .container {
+        border-radius: 40px;
+        padding: 25px 35px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .details p:first-child {
+        margin-top: 20px;
+    }
+
+    .details p {
+        font-size: 10px;
+    }
+
+    .details p span {
+        font-size: 9px;
+    }
+
+
+
+    .header {
+        margin-top: 10px;
+    }
+
+    .header+div {
+        margin-top: 10px;
+    }
+
+    .header span {
+        padding: 15px 25px;
+        font-size: 15px;
+    }
+
+    .header span:first-child {
+        flex: 1;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+    }
+
+    .main span {
+        padding: 19px 35px;
+        background: #FFFFFF;
+        border: 1px solid #A3A3A3;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        font-size: .8em;
+        line-height: 22px;
+
+        color: #464646;
+        width: 186px;
+    }
+
+    .main span:first-child {
+        flex: 1;
+    }
+
+
+    .prices {
+        display: flex;
+        align-items: center;
+    }
+
+    .prices span {
+        padding: 19px 47px;
+        background: #FFFFFF;
+        border: 1px solid #A3A3A3;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #464646;
+        width: 228px;
+    }
+
+    .prices span:first-child {
+        flex: 1;
+    }
+
+    .back {
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+    }
+
+    .container div svg {
+        cursor: pointer;
+        position: absolute;
+        right: 48px;
+        top: 48px;
+    }
 }

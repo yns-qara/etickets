@@ -56,13 +56,7 @@ const Hero = props => {
     return (
         <section className={styles.hero}>
             <div className={styles.hero__container}>
-                <motion.div className={styles.hero__left}
-                    // initial = {{width : 10}}
-                    // animate = {{width : "100%"}}
-                    // transition = {{ease : 'easeInOut'}}
-                    // animate = {{x : 0}}
-                
-                >
+                <div className={styles.hero__left}>
                     <h1>
                         Plus d’<span>evenements</span> que tu aimes
                     </h1>
@@ -98,7 +92,7 @@ const Hero = props => {
                             SHOPPING
                         </a>
                     </div>
-                </motion.div>
+                </div>
 
                 <motion.div ref={carousel} className={styles.hero__right} whileTap={{ cursor: "grabbing" }}>
 

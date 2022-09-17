@@ -242,13 +242,16 @@
 
 
 @media all and (max-width: 884px) {
-
+    .upper__footer{
+        padding: 15px;
+    }
     .upper__footer h1 {
         display: none;
     }
 
     .text_input {
         margin: auto;
+        
     }
 
     .text_input input {
@@ -270,7 +273,9 @@
         margin: auto;
     }
 
-
+    .left_middle{
+        padding: 0 90px;
+    }
     .left_middle p {
         text-align: justify;
         margin: auto;

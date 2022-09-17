@@ -24,7 +24,7 @@ const Details = ({visible,setVisible}) => {
                         <span>Total</span>
                     </div>
                     <div className={styles.main}>
-                        <span>wydad Athletic Club vs Association sportive FAR</span>
+                        <span>WAC vs ASF</span>
                         <span>30MAD</span>
                         <span>4</span>
                         <span>120MAD</span>

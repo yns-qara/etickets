@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   background: rgba(0, 0, 0, 0.6);
   width: 100vw;
   height: 100vh;
@@ -111,7 +111,7 @@
 
 
 
-
+/* 
 @media all and (max-width: 1012px) {
   .menu__left li.disapear {
     display: none;
@@ -128,7 +128,7 @@
     flex-direction: column;
     gap: 5px;
   }
-}
+} */
 
 
 /*------------*/
@@ -187,20 +187,119 @@
   padding: 21px;
 }
 
+/*------MOBILE--------------*/
 
 
-@media all and (max-width: 803px) {
+.mobile {
+  position: fixed;
+  z-index: 99999;
+  height: 100vh;
+  background-color: rgb(213, 206, 235);
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.close {
+  font-size: 80px;
+  font-weight: 900;
+  position: absolute;
+  cursor: pointer;
+  right: 50px;
+}
+
+.mobile nav {
+  position: fixed;
+  z-index: 999999;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.mobile nav div {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4B2A7B;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.mobile nav div:first-child,
+.mobile nav div:nth-child(2) {
+  display: none;
+}
+
+/*---------------hamberger---------*/
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger div {
+  width: 40px;
+  height: 5px;
+  background-color: #4B2A7B;
+  border-radius: 15px;
+  margin-top: 5px;
+  transition: all .5s ease;
+  opacity: 1;
+  transform-origin: center;
+}
+
+.hamburger div:first-child {
+  margin: 0;
+}
+
+.hamburger:hover div {
+  transform: scale(.9);
+}
+
+
+@media all and (max-width: 1037px) {
+  .navmenu {
+    padding: 25px 15px;
+  }
+
   .menu__container ul.menu__left {
     gap: 15px;
   }
 
-  .hide {
+  /* .hide {
+    display: none;
+  } */
+  .menu__right li:nth-child(1),
+  .menu__right li:nth-child(2),
+  .disapear {
     display: none;
   }
+
+
+  .hamburger {
+    display: block;
+  }
+
+
+
 }
+
 
 @media all and (max-width: 579px) {
   .menu__container ul.menu__right {
     gap: 20px;
+  }
+
+  .menu__right li:nth-child(3) {
+    display: none;
+  }
+
+  .mobile nav div:first-child,
+  .mobile nav div:nth-child(2) {
+    display: block;
   }
 }
