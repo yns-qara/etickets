@@ -126,7 +126,6 @@ const Hero = props => {
                             })
 
                         }
-                        <p>hello</p>
                     </motion.div>
                     <div className={styles.arrow_right}></div>
 
