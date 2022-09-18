@@ -1,7 +1,7 @@
 import {useState , useEffect} from 'react'
 import axios from 'axios'
 
-function fetchPosts() {
+function FetchPosts() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -26,4 +26,4 @@ function fetchPosts() {
   )
 }
 
-export default fetchPosts
+export default FetchPosts

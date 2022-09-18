@@ -1,12 +1,12 @@
 // to be back to this page with motion framer animations
 
-import Nav from '../components/navbar'
-import Footer from '../components/Footer'
-import styles from '../styles/mentionsLegals.module.css'
-import { motion } from 'framer-motion'
-import { useState, animatePresence } from 'react'
-import ArrDwn from '../components/SVGs/arrowDownML'
-const mentionsLegals = props => {
+import Nav from "../components/navbar"
+import Footer from "../components/Footer"
+import styles from "../styles/mentionsLegals.module.css"
+import { motion } from "framer-motion"
+import { useState, animatePresence } from "react"
+import ArrDwn from "../components/SVGs/arrowDownML"
+const MentionsLegals = props => {
 
     const [show, setShow] = useState(true)
     const [show2, setShow2] = useState(false)
@@ -48,7 +48,7 @@ const mentionsLegals = props => {
 
                 <h1>Mentions légales</h1>
                 <p>
-                    ETICKETS est une marque d'une société spécialisée dans les nouvelles technologies et est une plateforme de médiation client-vendeur développée par une société basée à RBAT. Fondée en 2021, c'est une société spécialisée dans la vente et la commercialisation de billets.
+                    ETICKETS est une marque d"une société spécialisée dans les nouvelles technologies et est une plateforme de médiation client-vendeur développée par une société basée à RBAT. Fondée en 2021, c"est une société spécialisée dans la vente et la commercialisation de billets.
                 </p>
 
                 <div className={styles.container_1}>
@@ -71,7 +71,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -100,7 +100,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -128,7 +128,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -139,7 +139,7 @@ const mentionsLegals = props => {
                     }
                 </div>
                 <div className={styles.container_1}>
-                    <h1 onClick={toggleShow4}  >4 - Remise des billets ou des bon d'achats<span><ArrDwn /></span></h1>
+                    <h1 onClick={toggleShow4}  >4 - Remise des billets ou des bon d"achats<span><ArrDwn /></span></h1>
                     <animatePresence>
                         {show4 &&
                             <motion.div className={styles.sub_container}
@@ -161,7 +161,7 @@ const mentionsLegals = props => {
                                 </p>
                                 <h2>1-4 Dispositions contractuelles:</h2>
                                 <p>
-                                    La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                    La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                                 </p>
                                 <h2>1-5 Modification des conditions générales de vente:</h2>
                                 <p>
@@ -191,7 +191,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -202,7 +202,7 @@ const mentionsLegals = props => {
                     }
                 </div>
                 <div className={styles.container_1}>
-                    <h1 onClick={toggleShow6}  >6 – Valeur<span><ArrDwn /></span></h1>
+                    <h1 onClick={toggleShow6}  >6 - Valeur<span><ArrDwn /></span></h1>
                     {show6 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -219,7 +219,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -230,7 +230,7 @@ const mentionsLegals = props => {
                     }
                 </div>
                 <div className={styles.container_1}>
-                    <h1 onClick={toggleShow7}  >7 - Consignation de la valeur du Bon d’achat<span><ArrDwn /></span></h1>
+                    <h1 onClick={toggleShow7}  >7 - Consignation de la valeur du Bon d&lsquo;achat<span><ArrDwn /></span></h1>
                     {show7 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -247,7 +247,7 @@ const mentionsLegals = props => {
                             </p>
                             <h2>1-4 Dispositions contractuelles:</h2>
                             <p>
-                                La nullité d’une clause contractuelle des Conditions Générales de Vente n’entraînera pas la nullité de l’intégralité des présentes.
+                                La nullité d&lsquo;une clause contractuelle des Conditions Générales de Vente n&lsquo;entraînera pas la nullité de l&lsquo;intégralité des présentes.
                             </p>
                             <h2>1-5 Modification des conditions générales de vente:</h2>
                             <p>
@@ -266,6 +266,5 @@ const mentionsLegals = props => {
     )
 }
 
-mentionsLegals.propTypes = {}
 
-export default mentionsLegals
+export default MentionsLegals

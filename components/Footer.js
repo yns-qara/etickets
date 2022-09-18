@@ -6,7 +6,7 @@ import Android from './SVGs/android'
 import Messenger from './SVGs/messenger'
 import Watsapp from './SVGs/watsup'
 import Twitter from './SVGs/twitter'
-
+import Link from 'next/link'
 
 const Footer = props => {
     return (
@@ -16,7 +16,7 @@ const Footer = props => {
                 <div className={styles.text_input}>
                     <Envoloppe />
                     <input type="email" className={styles.input} placeholder="email@gmail.com" />
-                    <button className={styles.button}>S’INSCRIRE</button>
+                    <button className={styles.button}>S'INSCRIRE</button>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@ const Footer = props => {
 
                 <div className={styles.left_middle}>
                     <LogoT />
-                    <p>Un site de billetterie nouvelle génération vous offrant la possibilité d’acheter en ligne des tickets pour les événements de votre choix. Sa vocation est de vous proposer l’offre de concerts, sports, spectacles, cinéma, festivals, théâtre, humour, voyages et evasions la plus large du Maroc en collaboration avec les organisateurs d’événements.</p>
+                    <p>Un site de billetterie nouvelle génération vous offrant la possibilité d'acheter en ligne des tickets pour les événements de votre choix. Sa vocation est de vous proposer l'offre de concerts, sports, spectacles, cinéma, festivals, théâtre, humour, voyages et evasions la plus large du Maroc en collaboration avec les organisateurs d'événements.</p>
                     <h3>NOS APPLICATIONS</h3>
                     <div className={styles.buttonHolder}>
                         <button >
@@ -40,29 +40,29 @@ const Footer = props => {
                 </div>
                 <div className={styles.right_middle}>
                     <ul className={styles.right_list}>
-                        <li><a href="#"><h1>GUICHET</h1></a></li>
-                        <li><a href="#">Concerts &Festivals</a></li>
-                        <li><a href="#">Théâtre & Humour</a></li>
-                        <li><a href="#">Formations</a></li>
-                        <li><a href="#">Salons et congrès</a></li>
-                        <li><a href="#">Famille & Loisirs</a></li>
-                        <li><a href="#">Sport</a></li>
-                        <li><a href="#">Cinéma</a></li>
+                        {/* <li> <a><Link href="#"> <h1>GUICHET</h1>  </Link> </a></li> */}
+                        {/* <li> <Link href="#"> <a>Concerts &Festivals</a>  </Link> </li>
+                        <li> <Link href="#"> <a>Théâtre & Humour</a>  </Link> </li>
+                        <li> <Link href="#"> <a>Formations</a>  </Link> </li> */}
+                        {/* <li> <Link href="#"> <a>Salons et congrès</a>  </Link> </li>
+                        <li> <Link href="#"> <a>Famille & Loisirs</a>  </Link> </li>
+                        <li> <Link href="#"> <a>Sport</a>  </Link> </li>
+                        <li> <Link href="#"> <a>Cinéma</a>  </Link> </li> */}
                     </ul>
 
                     <ul className={styles.right_list}>
-                        <li><a href="#"><h1>À PROPOS</h1></a></li>
-                        <li><a href="/quiSommesNous">Qui sommes nous ?</a></li>
-                        <li><a href="/contactez">Contactez-nous</a></li>
-                        <li><a href="#">Guichet Magazine</a></li>
-                        <li><a href="/mentionsLegals">Mentions légales</a></li>
+                        {/* <li> <a><Link href="#"> <h1>À PROPOS</h1> </Link> </a></li>
+                        <li> <Link href="/quiSommesNous"> <a>Qui sommes nous ?</a> </Link> </li>
+                        <li> <Link href="/contactez"> <a>Contactez-nous</a> </Link> </li>
+                        <li> <Link href="#"> <a>Guichet Magazine</a> </Link> </li>
+                        <li> <Link href="/mentionsLegals"> <a>Mentions légales</a> </Link> </li> */}
                     </ul>
                 </div>
             </div>
 
 
             <div className={styles.lower__footer}>
-                <h1>Restez à l’écoute:</h1>
+                <h1>Restez à l'écoute:</h1>
                 <div className={styles.social_media}>
                     <Messenger />
                     <Watsapp />
