@@ -7,7 +7,6 @@ import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image';
 const Navbar = props => {
     const [view, setView] = useState(false);
     const [showMenu, setShowMenu] = useState(false)
@@ -37,9 +36,10 @@ const Navbar = props => {
                         </Link>
                     </li>
                 </ul>
+
                 <ul className={styles.menu__right}>
                     <li>
-                        <Link href="#">
+                        <Link href="/monPanier">
                             <a><Pannier /></a>
                         </Link>
                     </li>
@@ -61,13 +61,13 @@ const Navbar = props => {
                                             <span>Profile</span>
                                         </div>
                                         <Link href="/mesCommands">
-                                            <a>Mes commandes</a>
+                                            Mes commandes
+                                        </Link>
+                                        <Link href="/monPanier">
+                                            Pannierr
                                         </Link>
                                         <Link href="/mesCommands">
-                                            <a>Pannier</a>
-                                        </Link>
-                                        <Link href="/mesCommands">
-                                            <a>Shop</a>
+                                            Shop
                                         </Link>
 
                                     </motion.div>
@@ -103,7 +103,7 @@ const Navbar = props => {
                         <div className={styles.close} onClick={showMenuHandle}>&times;</div>
                         <nav>
 
-                            <Link href="/monPannier">
+                            <Link href="/monPanier">
                                 <div>Pannier</div>
                             </Link>
                             <Link href="/mesInformations">
