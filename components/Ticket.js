@@ -2,7 +2,7 @@ import styles from '../styles/ticket.module.css'
 import Trash from './SVGs/trash'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import Image from 'next/image'
 
 const Ticket = props => {
   const [showResults, setShowResults] = useState(true)
@@ -19,7 +19,8 @@ const Ticket = props => {
             exit = {{opacity : 0}}
           >
             <div className={styles.left}>
-              <img src={props.imgURL} alt="" />
+              {/* <img src={props.imgURL} alt="" /> */}
+              <Image src={props.imgURL} width={340} height={220} alt="card" />
             </div>
             {/*  */}
             <div className={styles.right}>

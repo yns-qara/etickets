@@ -9,6 +9,7 @@ import Plus from './SVGs/plus'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Finaliser from './Finaliser'
+import Image from 'next/image'
 const CardJachete = () => {
     const [show, setShow] = useState(false)
     const [pack, setPack] = useState("pack1")
@@ -35,7 +36,7 @@ const CardJachete = () => {
         <>
             <div className={styles.container}>
                 <div className={styles.left}>
-                    <img src="/qatar.png" alt="" />
+                <Image src="/qatar.png" width={784} height={478} alt="bigCard" />
                 </div>
                 <div className={styles.right}>
                     <h1>Mardi 30 Novembre 2021</h1>

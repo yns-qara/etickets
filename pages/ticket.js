@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import styles from '../styles/ticketInfos.module.css'
 import LogoT from '../components/SVGs/logoT'
 import Download from '../components/SVGs/download'
-const ticket = props => {
+const ticket = () => {
     return (
         <>
             <Nav />

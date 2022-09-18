@@ -1,45 +1,45 @@
 import styles from '../styles/Hero.module.css'
 import { motion } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
-
+import Image from 'next/image'
 // todo : map the images in
 
 const imgs = [
     {
         "id": "1",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "2",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "3",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "4",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "5",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "6",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "7",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "8",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
     {
         "id": "9",
-        "url": "../herocard1.png"
+        "url": "/herocard1.png"
     },
 ]
 
@@ -119,7 +119,8 @@ const Hero = props => {
                             imgs.map((img) => {
                                 return (
                                     <div className={styles.imgC} key={img.id}>
-                                        <img src={img.url} alt="" />
+                                        {/* <img src={img.url} alt="" /> */}
+                                        <Image src={img.url} width={274} height={552} alt="heroCard" />
                                         <button>ACHETER MAINTENANT</button>
                                     </div>
                                 )

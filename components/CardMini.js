@@ -1,5 +1,6 @@
 import styles from '../styles/cardMini.module.css'
 import SvgHour from '../components/SVGs/hour'
+import Image from 'next/image'
 
 const CardMini = ({ imgURL }) => {
 
@@ -8,7 +9,7 @@ const CardMini = ({ imgURL }) => {
             <div className={styles.card__container}>
 
                 <div className={styles.card__upper}>
-                    <img src={imgURL} alt="" />
+                    <Image src={imgURL} width={323} height={155} alt="MiniCard" />
                     <div>sport</div>
                 </div>
 

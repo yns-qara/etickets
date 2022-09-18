@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 import Table from "../components/Table"
 
 
-const mesCommands = props => {
+const mesCommands = () => {
     return (
         <>
             <Navbar />

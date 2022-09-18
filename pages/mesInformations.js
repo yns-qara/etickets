@@ -5,7 +5,7 @@ import InfoHolder from "../components/infoHolder"
 
 
 
-const mesInformations = props => {
+const mesInformations = () => {
     return (
         <>
             <Navbar />

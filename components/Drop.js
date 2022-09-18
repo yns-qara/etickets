@@ -71,7 +71,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
     setFiltredEvents(filtred);
 
 
-  }, [activeVille, activePrix])
+  }, [activeVille, activePrix ,AllEvents , setFiltredEvents])
 
 
   /*

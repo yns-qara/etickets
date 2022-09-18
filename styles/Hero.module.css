@@ -171,6 +171,7 @@
   font-weight: bold;
   bottom: 5px;
   position: absolute;
+  z-index: 9;
   transition: all .5s ease;
 
 }

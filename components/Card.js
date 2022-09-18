@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/card.module.css'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion} from 'framer-motion'
+import Image from 'next/image'
 
 import SvgHour from '../components/SVGs/hour'
 import CountDownDL from '../components/CountDownDL';
@@ -19,7 +20,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
         >
 
             <div className={styles.card__upper}>
-                <img src={imgURL} alt="" />
+                <Image src={imgURL} width={370} height={177} alt="card" />
                 <div>{genre}</div>
             </div>
 
@@ -38,7 +39,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
 
                 </div>
                 <div className={styles.card__lower_right}>
-                    <img src="/goldLogo.png" alt="" />
+                    <Image src="/goldLogo.png" width={68} height={13} alt="logo" />
                     <div className={styles.card__price_item}>
                         <span>À partir de :</span>
                         <div>{price} <span>MAD</span></div>

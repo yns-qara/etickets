@@ -1,6 +1,7 @@
 import styles from '../styles/finaliser.module.css'
 import Cross from '../components/SVGs/cross'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 const Finaliser = ({ toggle, setToggle }) => {
 
     return (
@@ -16,7 +17,7 @@ const Finaliser = ({ toggle, setToggle }) => {
                 <h1>FIFA World Cup QATAR 2022</h1>
                 <div className={styles.container}>
                     <div className={styles.left}>
-                        <img src="/qatar.png" alt="" />
+                        <Image src="/qatar.png" width={461} height={263} alt="finaliser" />
                     </div>
                     <div className={styles.right}>
                         <div className={styles.header}>

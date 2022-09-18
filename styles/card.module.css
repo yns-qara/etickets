@@ -28,6 +28,7 @@
     font-weight: bold;
     bottom: 0;
     position: absolute;
+    z-index: 9;
 }
 
 .card__upper img {
@@ -40,6 +41,7 @@
 
 .card__upper div {
     position: absolute;
+    z-index: 99;
     bottom: -5%;
     left: 50%;
     transform: translateX(-50%);
@@ -120,6 +122,7 @@
     transform-origin: left top;
     width: 97px;
     height: 27px;
+
 
 }
 

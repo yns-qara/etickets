@@ -1,16 +1,13 @@
 import Navbar from "../components/navbar"
 import Navbar2 from "../components/Navbar2"
-
 import Footer from "../components/Footer"
-
-
 import HoldContact from "../components/HoldContact"
 import FormContact from "../components/FormContact"
 
 
 
 
-const monPanier = props => {
+const monPanier = () => {
     const logedIn = false;
     return (
         <>

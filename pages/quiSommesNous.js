@@ -1,8 +1,7 @@
 import styles from '../styles/QuiSommesNous.module.css'
-
 import Footer from '../components/Footer'
 import Nav from '../components/navbar'
-const quiSommesNous = props => {
+const quiSommesNous = () => {
 
     return (
         <>

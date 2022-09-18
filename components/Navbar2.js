@@ -2,12 +2,12 @@
 import styles from '../styles/Nav2.module.css';
 import Link from 'next/link';
 import Pannier from './SVGs/panier';
-import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
 import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image';
 const Navbar = props => {
     const [view, setView] = useState(false);
     const [showMenu, setShowMenu] = useState(false)
@@ -58,7 +58,6 @@ const Navbar = props => {
                                         exit={{ opacity: 0 }}
                                         className={styles.popup}>
                                         <div className={styles.profile}>
-                                            <img src="" alt="" />
                                             <span>Profile</span>
                                         </div>
                                         <Link href="/mesCommands">

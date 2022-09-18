@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar2"
 import Footer from "../components/Footer"
-
-
 import H1 from "../components/H1"
 import HeadHolder from "../components/HeadHolder"
 import MesTickets from "../components/MesTickets"
@@ -20,7 +18,7 @@ import s from '../styles/s.module.css'
 
 
 
-const monPanier = props => {
+const monPanier = () => {
     return (
         <>
             <Navbar />
