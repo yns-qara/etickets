@@ -85,7 +85,7 @@
 }
 
 .left_middle {
-    width: 493px;
+    max-width: 493px;
 }
 
 .left_middle p {
@@ -96,6 +96,8 @@
     font-size: 19px;
     line-height: 22px;
     color: #FFFFFF;
+    width: 100%;
+
 }
 
 .left_middle h3 {
@@ -202,7 +204,7 @@
 
     .left_middle p {
         font-size: 15px;
-        width: 400px;
+        max-width: 400px;
         text-align: justify;
     }
 
@@ -220,13 +222,14 @@
 
     .buttonHolder button {
         gap: 35px;
-        padding: 10px 23px;
+        padding: 10px 35px;
     }
 
     .buttonHolder button span {
 
         font-weight: 700;
         font-size: 14px;
+        line-height: 15px;
     }
 
     .right_list li a {

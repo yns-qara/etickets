@@ -157,3 +157,112 @@ div.span4 {
     line-height: 30px;
     color: #FFFFFF;
 }
+
+@media all and (max-width: 1118px) {
+    .container {
+        padding: 196px 15px;
+    }
+
+
+
+    .title {
+        height: 80px;
+    }
+
+    .corp {
+
+        padding: 25px 15px;
+    }
+
+    .detailes {
+        padding: 0 50px;
+    }
+
+
+    .detailes h1 {
+        font-size: 25px;
+    }
+
+    .detailes p:first-child {
+        font-size: 19px;
+    }
+
+    .detailes p {
+        font-size: 20px;
+    }
+
+    .detailes p span {
+        font-size: 17px;
+
+    }
+
+    .detailes h5 {
+        font-size: 18px;
+    }
+
+    .table div {
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+
+    div.header {
+
+        font-size: 15px;
+    }
+
+
+
+    .qrCodeBut {
+        gap: 60px;
+    }
+
+
+    .qrCodeBut button {
+        gap: 30px;
+        padding: 15px 25px;
+    }
+
+    .qrCodeBut button span {
+        font-size: 20px;
+    }
+}
+
+
+@media all and (max-width: 800px) {
+    .title {
+        height: 60px;
+        padding: 25px;
+    }
+
+
+    .table {
+        margin-top: 35px;
+        gap: 2px;
+    }
+
+    .table div {
+        font-size: 12px;
+        padding: 7px 2px;
+    }
+
+    div.header {
+
+        font-size: 12px;
+    }
+
+
+
+    .qrCodeBut {
+        gap: 25px;
+    }
+
+
+    .qrCodeBut button {
+        gap: 25px;
+        padding: 15px 25px;
+    }
+
+    .qrCodeBut button span {
+        font-size: 18px;
+    }
+}

@@ -47,11 +47,19 @@ const imgs = [
 const Hero = props => {
 
     const [width, setWidth] = useState(0);
+    // const [click, setClick] = useState(false)
     const carousel = useRef();
 
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, [])
+
+    // useEffect( () => {
+    //     var maxWidth = carousel.current.scrollWidth - carousel.current.offsetWidth;
+    //     if( carousel.current.scrollWidth > maxWidth){
+    //             moving.current.ttranslateX
+    //     }
+    // }, [click]);
 
     return (
         <section className={styles.hero}>
@@ -96,6 +104,7 @@ const Hero = props => {
 
                 <motion.div ref={carousel} className={styles.hero__right} whileTap={{ cursor: "grabbing" }}>
 
+                    {/* <div className={styles.arrow_left}></div> */}
                     <motion.div
                         drag="x"
                         dragConstraints={{
@@ -103,12 +112,13 @@ const Hero = props => {
                             left: -width
                         }}
 
-                        className={styles.hero__slider}>
+                        className={styles.hero__slider}
+                        >
 
                         {
                             imgs.map((img) => {
                                 return (
-                                    <div className={styles.imgC} key = {img.id}>
+                                    <div className={styles.imgC} key={img.id}>
                                         <img src={img.url} alt="" />
                                         <button>ACHETER MAINTENANT</button>
                                     </div>
@@ -116,8 +126,9 @@ const Hero = props => {
                             })
 
                         }
-
+                        <p>hello</p>
                     </motion.div>
+                    <div className={styles.arrow_right}></div>
 
                 </motion.div>
             </div>
