@@ -52,9 +52,10 @@ const MentionsLegals = () => {
                     ETICKETS est une marque d&apos;une société spécialisée dans les nouvelles technologies et est une plateforme de médiation client-vendeur développée par une société basée à RBAT. Fondée en 2021, c&apos;est une société spécialisée dans la vente et la commercialisation de billets.
                 </p>
 
-                <div className={styles.container_1}>
+                <div className={styles.wrapper}>
                     <h1 onClick={toggleShow}  >1 - Dispositions générales
-                        <span><ArrDwn /></span>
+                        <span className={styles.arrow}
+                        ><ArrDwn /></span>
                     </h1>
                     {show &&
                         <div className={styles.sub_container}>
@@ -82,9 +83,9 @@ const MentionsLegals = () => {
                         </div>
                     }
                 </div>
-                <div className={styles.container_1}>
+                <div className={styles.wrapper}>
                     <h1 onClick={toggleShow2}  >2 - Commandes
-                        <span><ArrDwn /></span></h1>
+                        <span className={styles.arrow}><ArrDwn /></span></h1>
                     {show2 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -111,8 +112,8 @@ const MentionsLegals = () => {
                         </div>
                     }
                 </div>
-                <div className={styles.container_1}>
-                    <h1 onClick={toggleShow3}  >3 - Le prix du billet <span><ArrDwn /></span></h1>
+                <div className={styles.wrapper}>
+                    <h1 onClick={toggleShow3}  >3 - Le prix du billet <span className={styles.arrow}><ArrDwn /></span></h1>
                     {show3 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -139,8 +140,8 @@ const MentionsLegals = () => {
                         </div>
                     }
                 </div>
-                <div className={styles.container_1}>
-                    <h1 onClick={toggleShow4}  >4 - Remise des billets ou des bon d&apos;achats<span><ArrDwn /></span></h1>
+                <div className={styles.wrapper}>
+                    <h1 onClick={toggleShow4}  >4 - Remise des billets ou des bon d&apos;achats<span className={styles.arrow}><ArrDwn /></span></h1>
                     <animatePresence>
                         {show4 &&
                             <motion.div className={styles.sub_container}
@@ -174,8 +175,8 @@ const MentionsLegals = () => {
                     </animatePresence>
 
                 </div>
-                <div className={styles.container_1}>
-                    <h1 onClick={toggleShow5}  >5 - Annulation, Remboursement, Utilisation<span><ArrDwn /></span></h1>
+                <div className={styles.wrapper}>
+                    <h1 onClick={toggleShow5}  >5 - Annulation, Remboursement, Utilisation<span className={styles.arrow}><ArrDwn /></span></h1>
                     {show5 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -202,8 +203,8 @@ const MentionsLegals = () => {
                         </div>
                     }
                 </div>
-                <div className={styles.container_1}>
-                    <h1 onClick={toggleShow6}  >6 - Valeur<span><ArrDwn /></span></h1>
+                <div className={styles.wrapper}>
+                    <h1 onClick={toggleShow6}  >6 - Valeur<span className={styles.arrow}><ArrDwn /></span></h1>
                     {show6 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>
@@ -230,8 +231,8 @@ const MentionsLegals = () => {
                         </div>
                     }
                 </div>
-                <div className={styles.container_1}>
-                    <h1 onClick={toggleShow7}  >7 - Consignation de la valeur du Bon d&lsquo;achat<span><ArrDwn /></span></h1>
+                <div className={styles.wrapper}>
+                    <h1 onClick={toggleShow7}  >7 - Consignation de la valeur du Bon d&lsquo;achat<span className={styles.arrow}><ArrDwn /></span></h1>
                     {show7 &&
                         <div className={styles.sub_container}>
                             <h2>1-1 Société:</h2>

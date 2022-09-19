@@ -1,5 +1,7 @@
 .container {
     padding: 234px 80px;
+    transition: all .6s ease;
+
 }
 
 
@@ -28,7 +30,7 @@
 }
 
 
-.container_1 h1 {
+.wrapper h1 {
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 800;
@@ -66,9 +68,12 @@
 
 
 
+
+
+
 @media all and (max-width: 720px) {
     .container {
-        padding: 234px 40px;
+        padding: 234px 35px;
     }
     
     
@@ -82,10 +87,13 @@
     }
     
     
-    .container_1 h1 {
-        font-size: 29px;
+    .wrapper h1 {
+        font-size: 22px;
     }
     
+    .arrow  svg{
+        width: 22px;
+    }
     
     .sub_container h2 {
         font-size: 23px;
