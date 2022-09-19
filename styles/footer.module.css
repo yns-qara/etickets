@@ -294,6 +294,12 @@
         /* padding: 10px; */
     }
 
+    .right_middle{
+        margin-top: 35px;
+        justify-content: space-between;
+
+    }
+
     .buttonHolder {
         margin-top: 20px;
         display: flex;
@@ -301,8 +307,9 @@
         justify-content: center;
     }
 
-    .right_list li a h1 {
-        margin-top: 35px;
+
+    .right_list li h1 a {
+        font-size: 25px
     }
 
 }
