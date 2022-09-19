@@ -1,5 +1,18 @@
-.container{
+.container {
     padding: 200px 60px;
     max-width: 1106px;
     margin: auto;
+}
+
+@media all and (max-width: 1016px) {
+    .container {
+        padding: 200px 25px;
+    }
+
+}
+
+@media all and (max-width: 634px) {
+    .container {
+        padding: 200px 10px;
+    }
 }

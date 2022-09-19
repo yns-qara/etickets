@@ -169,16 +169,14 @@
 
 @media all and (max-width: 1034px) {
     .left {
-        max-width: 400px;
+        max-width: 300px;
     }
 
     .left h1 {
-        font-size: 35px;
         font-size: 5vw;
     }
 
     .left p {
-        font-size: 19px;
         font-size: 3vw;
     }
 

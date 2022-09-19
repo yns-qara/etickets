@@ -7,7 +7,10 @@ import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
-const Navbar = props => {
+
+
+
+const Navbar = () => {
     const [view, setView] = useState(false);
     const [showMenu, setShowMenu] = useState(false)
     const togleView = () => {
@@ -18,7 +21,7 @@ const Navbar = props => {
     }
     return (
         <menu className={styles.navmenu}>
-            <nav className={styles.menu__container}>
+            <nav className={styles.container}>
                 <ul className={styles.menu__left}>
                     <li>
                         <Link href="/">
@@ -58,7 +61,7 @@ const Navbar = props => {
                                         exit={{ opacity: 0 }}
                                         className={styles.popup}>
                                         <div className={styles.profile}>
-                                            <span>Profile</span>
+                                            <Link href="/mesInformations">Profile</Link>
                                         </div>
                                         <Link href="/mesCommands">
                                             Mes commandes

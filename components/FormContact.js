@@ -2,7 +2,7 @@ import styles from '../styles/formContact.module.css'
 import Twitter from './SVGs/twitter'
 import Google from './SVGs/Google'
 import Instagram from './SVGs/Instagram'
-const FormContact = props => {
+const FormContact = () => {
     return (
         <div className={styles.container}>
             <div className={styles.left}>

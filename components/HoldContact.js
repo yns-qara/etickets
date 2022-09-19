@@ -1,8 +1,8 @@
 import styles from '../styles/HoldContact.module.css'
-const HoldContact = props => {
+const HoldContact = ({children}) => {
   return (
     <div className={styles.container}>
-        {props.children}
+        {children}
     </div>
   )
 }
