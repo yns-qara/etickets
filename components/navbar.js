@@ -1,7 +1,7 @@
 
 import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
-import Shop from './SVGs/Shop';
+import Shop from './SVGs/ShopIcon';
 import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
 import { useState } from 'react';

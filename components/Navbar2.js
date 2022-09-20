@@ -1,7 +1,7 @@
 
 import styles from '../styles/Nav2.module.css';
 import Link from 'next/link';
-import Pannier from './SVGs/shop';
+import Pannier from './SVGs/ShopIcon';
 import LogoNav from './SVGs/logoNav';
 import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
