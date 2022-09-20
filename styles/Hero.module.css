@@ -106,7 +106,7 @@
 .hero__right {
   overflow: hidden;
   width: 50vw;
-  cursor: grab;
+  /* cursor: grab; */
 }
 
 .hero__slider {
@@ -218,7 +218,7 @@
     padding: 15px;
   }
 
-  .hero__slider{
+  .hero__slider {
     height: 60vh;
   }
 
@@ -284,19 +284,115 @@
   cursor: grab;
 }
 
-.hero__right .arrow_left{
+.arrow_left {
   width: 50px;
   height: 50px;
-  background: rgb(245, 52, 52);
+  background: rgb(238, 222, 222);
   border-radius: 50%;
-  
+  opacity: .7;
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 45px;
   right: 0;
   margin: auto;
   transform: translateY(-50%);
-  z-index: 9;
+  z-index: 99999;
   cursor: pointer;
-  /* font-size: 45px; */
+  transition: all .5s ease;
+
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.arrow_left span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-weight: 700;
+  font-family: 'roboto';
+  font-size: 25px;
+  line-height: 45px;
+  color: #4b2a7b;
+  transition: all .6s ease;
+  
+}
+
+.arrow_left:hover {
+  opacity: 1;
+  left: 40px;
+}
+
+.arrow_left:hover span {
+  transform: translateY(-50%) translateX(-56%)scale(1.5);
+}
+.arrow_left:active {
+  transform: translateY(-50%) translateX(-44%)scale(.8);
+
+}
+
+.arrow_right {
+  width: 50px;
+  height: 50px;
+  background: rgb(238, 222, 222);
+  border-radius: 50%;
+  opacity: .7;
+  position: absolute;
+  top: 50%;
+  /* right: 45px;
+  left: 0; */
+  right: 45px;
+  margin: auto;
+  transform: translateY(-50%);
+  z-index: 99999;
+  cursor: pointer;
+  transition: all .5s ease;
+  
+  
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.arrow_right span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-weight: 700;
+  font-family: 'roboto';
+  font-size: 25px;
+  line-height: 45px;
+  color: #4b2a7b;
+  transition: all .6s ease;
+
+}
+
+.arrow_right:hover {
+  opacity: 1;
+  right: 40px;
+}
+.arrow_right:active {
+  transform: translateY(-50%) translateX(56%)scale(.8);
+
+}
+
+.arrow_right:hover span {
+  transform: translateY(-50%) translateX(-44%)scale(1.5);
+}
+
+.arrow_left span::selection{
+  background-color: transparent;
+}
+.arrow_right span::selection{
+  background-color: transparent;
+}
+.arrow_left span::-moz-selection{
+  background-color: transparent;
+}
+.arrow_right span::-moz-selection{
+  background-color: transparent;
 }

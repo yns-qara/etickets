@@ -44,22 +44,38 @@ const imgs = [
 ]
 
 
-const Hero = props => {
+const Hero = () => {
 
     const [width, setWidth] = useState(0);
-    // const [click, setClick] = useState(false)
     const carousel = useRef();
+    const [moveArrow, setMoveArrow] = useState(false)
+    const [count, setCount] = useState(0);
+    const [activateLeftArrow, setActivateLeftArrow] = useState(false)
+
 
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, [])
 
-    // useEffect( () => {
-    //     var maxWidth = carousel.current.scrollWidth - carousel.current.offsetWidth;
-    //     if( carousel.current.scrollWidth > maxWidth){
-    //             moving.current.ttranslateX
-    //     }
-    // }, [click]);
+
+    const moveImagesToLeft = () => { 
+        setActivateLeftArrow(true);
+
+        if(  carousel.current.scrollWidth - carousel.current.offsetWidth){
+            setMoveArrow(true); 
+            setCount(count - 282);
+        }
+        return;
+    }
+    const moveImagesToRight = () => { 
+        if(count < 0){
+            setMoveArrow(true); 
+            setCount(count + 282);
+        }
+        else{
+            setActivateLeftArrow(false)
+        }
+    }
 
     return (
         <section className={styles.hero}>
@@ -102,33 +118,43 @@ const Hero = props => {
                     </div>
                 </div>
 
-                <motion.div ref={carousel} className={styles.hero__right} whileTap={{ cursor: "grabbing" }}>
+                <motion.div
+                    ref={carousel}
+                    className={styles.hero__right}
+                    // whileTap={{ cursor: "grabbing" }}
+                >
 
-                    {/* <div className={styles.arrow_left}></div> */}
+                    <motion.div className={styles.arrow_left} onClick={moveImagesToRight} animate = {{ opacity : activateLeftArrow ? 1 : 0}}><span>&lt;</span></motion.div>
+                    <div className={styles.arrow_right} onClick={moveImagesToLeft}><span>&gt;</span></div>
+
+
                     <motion.div
-                        drag="x"
-                        dragConstraints={{
-                            right: 0,
-                            left: -width
-                        }}
+                        // drag="x"
+                        // dragConstraints={{
+                        //     right: 0,
+                        //     left: -width
+                        // }}
 
                         className={styles.hero__slider}
-                        >
+                    >
 
                         {
                             imgs.map((img) => {
                                 return (
-                                    <div className={styles.imgC} key={img.id}>
+                                    <motion.div
+                                        className={styles.imgC}
+                                        key={img.id}
+                                        animate={{ translateX: moveArrow ? count : 0 , transition: { ease : 'easeOut'}}}
+                                    >
                                         {/* <img src={img.url} alt="" /> */}
                                         <Image src={img.url} width={274} height={552} alt="heroCard" />
                                         <button>ACHETER MAINTENANT</button>
-                                    </div>
+                                    </motion.div>
                                 )
                             })
 
                         }
                     </motion.div>
-                    <div className={styles.arrow_right}></div>
 
                 </motion.div>
             </div>
