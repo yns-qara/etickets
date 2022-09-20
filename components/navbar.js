@@ -58,7 +58,10 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link href="/mesInformations">
-                                <Profile />
+                                <a>
+
+                                    <Profile />
+                                </a>
                             </Link>
                         </li>
                         <li className={styles.menu__buttons}>

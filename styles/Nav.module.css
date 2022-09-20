@@ -56,6 +56,9 @@
 .menu__right li svg:hover {
   transform: scale(1.2);
 }
+.menu__right li svg:active {
+  transform: scale(.8);
+}
 
 
 

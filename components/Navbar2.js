@@ -25,17 +25,17 @@ const Navbar = () => {
                 <ul className={styles.menu__left}>
                     <li>
                         <Link href="/">
-                            <LogoNav />
+                            <a><LogoNav /></a>
                         </Link>
                     </li>
                     <li className={styles.hide}>
                         <Link href="/contactez">
-                            Contactez-nous
+                            <a>Contactez-nous</a>
                         </Link>
                     </li>
                     <li className={styles.hide}>
                         <Link href="/quiSommesNous">
-                            Qui nous sommes?
+                            <a href="#">Qui nous sommes?</a>
                         </Link>
                     </li>
                 </ul>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <ul className={styles.menu__right}>
                     <li>
                         <Link href="/monPanier">
-                            <Pannier />
+                            <a><Pannier /></a>
                         </Link>
                     </li>
                     <li>
