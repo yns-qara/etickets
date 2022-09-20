@@ -58,21 +58,21 @@ const Hero = () => {
     }, [])
 
 
-    const moveImagesToLeft = () => { 
+    const moveImagesToLeft = () => {
         setActivateLeftArrow(true);
 
-        if(  carousel.current.scrollWidth - carousel.current.offsetWidth){
-            setMoveArrow(true); 
+        if (carousel.current.scrollWidth - carousel.current.offsetWidth) {
+            setMoveArrow(true);
             setCount(count - 282);
         }
         return;
     }
-    const moveImagesToRight = () => { 
-        if(count < 0){
-            setMoveArrow(true); 
+    const moveImagesToRight = () => {
+        if (count < 0) {
+            setMoveArrow(true);
             setCount(count + 282);
         }
-        else{
+        else {
             setActivateLeftArrow(false)
         }
     }
@@ -121,11 +121,10 @@ const Hero = () => {
                 <motion.div
                     ref={carousel}
                     className={styles.hero__right}
-                    // whileTap={{ cursor: "grabbing" }}
+                // whileTap={{ cursor: "grabbing" }}
                 >
 
-                    <motion.div className={styles.arrow_left} onClick={moveImagesToRight} animate = {{ opacity : activateLeftArrow ? 1 : 0}}><span>&lt;</span></motion.div>
-                    <div className={styles.arrow_right} onClick={moveImagesToLeft}><span>&gt;</span></div>
+
 
 
                     <motion.div
@@ -137,14 +136,15 @@ const Hero = () => {
 
                         className={styles.hero__slider}
                     >
-
+                        <motion.p className={styles.arrow_left} onClick={moveImagesToRight} animate={{ opacity: activateLeftArrow ? 1 : 0 }}><span>&lt;</span></motion.p>
+                        <p className={styles.arrow_right} onClick={moveImagesToLeft}><span>&gt;</span></p>
                         {
                             imgs.map((img) => {
                                 return (
                                     <motion.div
                                         className={styles.imgC}
                                         key={img.id}
-                                        animate={{ translateX: moveArrow ? count : 0 , transition: { ease : 'easeOut'}}}
+                                        animate={{ translateX: moveArrow ? count : 0, transition: { ease: 'easeOut' } }}
                                     >
                                         {/* <img src={img.url} alt="" /> */}
                                         <Image src={img.url} width={274} height={552} alt="heroCard" />

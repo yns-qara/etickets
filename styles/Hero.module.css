@@ -293,7 +293,7 @@
   position: absolute;
   top: 50%;
   left: 45px;
-  right: 0;
+  /* right: 0; */
   margin: auto;
   transform: translateY(-50%);
   z-index: 99999;
