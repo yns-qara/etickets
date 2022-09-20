@@ -48,6 +48,14 @@
   gap: 46px;
 }
 
+.menu__right li svg {
+  cursor: pointer;
+
+  color: #4B2A7B;
+}
+
+
+
 .menu__buttons {
   display: flex;
   gap: 16px;
@@ -63,6 +71,10 @@
 }
 
 
+.menu__buttons a {
+  transition: all .5s ease
+}
+
 .menu__buttons a:nth-child(1) {
   padding: 10px 28px;
   border: 2px solid #4B2A7B;
@@ -72,9 +84,41 @@
 .menu__buttons a:nth-child(2) {
   padding: 10px 28px;
   background: #4B2A7B;
+  border: 2px solid #4B2A7B;
   border-radius: 95px;
   color: #FFFFFF;
 }
+
+.menu__buttons a:nth-child(1):hover,
+.menu__buttons a:nth-child(2):hover {
+  box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
+}
+
+.menu__buttons a:nth-child(2):hover {
+  border-color: #ffffff;
+
+}
+
+
+.menu__buttons a:nth-child(1):active,
+.menu__buttons a:nth-child(2):active {
+  transform: scale(.8);
+  color: #4B2A7B;
+}
+
+
+
+/* 
+@keyframes zoomInOut {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+} */
 
 
 .pannier {

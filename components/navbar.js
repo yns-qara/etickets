@@ -1,10 +1,9 @@
 
 import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
-import Pannier from './SVGs/panier';
+import Shop from './SVGs/Shop';
 import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
-import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
 import Login from './Login';
@@ -12,7 +11,7 @@ import SignUp from './SignUp';
 
 
 
-const Navbar = props => {
+const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const [visibleS, setVisibleS] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
@@ -54,12 +53,12 @@ const Navbar = props => {
                     <ul className={styles.menu__right}>
                         <li>
                             <Link href="#">
-                                <a><Pannier /></a>
+                                <Shop />
                             </Link>
                         </li>
                         <li>
                             <Link href="/mesInformations">
-                                <a><Profile /></a>
+                                <Profile />
                             </Link>
                         </li>
                         <li className={styles.menu__buttons}>
@@ -131,8 +130,8 @@ const Navbar = props => {
                         <div className={styles.close} onClick={showMenuHandle}>&times;</div>
                         <nav>
 
-                            <div onClick={() => {setVisible(!visible); setShowMenu(false)}}>connextion</div>
-                            <div onClick={() => {setVisibleS(!visibleS);setShowMenu(false)}}>Inscription</div>
+                            <div onClick={() => { setVisible(!visible); setShowMenu(false) }}>connextion</div>
+                            <div onClick={() => { setVisibleS(!visibleS); setShowMenu(false) }}>Inscription</div>
                             <Link href="/mesInformations">
                                 <div>profile</div>
                             </Link>
@@ -141,7 +140,7 @@ const Navbar = props => {
                             </Link>
                             <Link href="/contactez"><div>contactez nous</div></Link>
                             <Link href="/quiSommesNous"><div>qui somme nous</div></Link>
-                            
+
                         </nav>
                     </motion.menu>
                 }
