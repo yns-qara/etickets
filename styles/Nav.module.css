@@ -50,9 +50,13 @@
 
 .menu__right li svg {
   cursor: pointer;
-
+  transition: all .5s ease;
   color: #4B2A7B;
 }
+.menu__right li svg:hover {
+  transform: scale(1.2);
+}
+
 
 
 

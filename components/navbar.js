@@ -41,7 +41,7 @@ const Navbar = () => {
                         <li className={styles.disapear}>
 
                             <Link href="/contactez">
-                                <a >Contactez-nous</a>
+                                Contactez-nous
                             </Link>
                         </li>
                         <li className={styles.disapear}>

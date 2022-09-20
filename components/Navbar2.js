@@ -1,7 +1,7 @@
 
 import styles from '../styles/Nav2.module.css';
 import Link from 'next/link';
-import Pannier from './SVGs/panier';
+import Pannier from './SVGs/shop';
 import LogoNav from './SVGs/logoNav';
 import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
@@ -25,17 +25,17 @@ const Navbar = () => {
                 <ul className={styles.menu__left}>
                     <li>
                         <Link href="/">
-                            <a><LogoNav /></a>
+                            <LogoNav />
                         </Link>
                     </li>
                     <li className={styles.hide}>
                         <Link href="/contactez">
-                            <a>Contactez-nous</a>
+                            Contactez-nous
                         </Link>
                     </li>
                     <li className={styles.hide}>
                         <Link href="/quiSommesNous">
-                            <a href="#">Qui nous sommes?</a>
+                            Qui nous sommes?
                         </Link>
                     </li>
                 </ul>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <ul className={styles.menu__right}>
                     <li>
                         <Link href="/monPanier">
-                            <a><Pannier /></a>
+                            <Pannier />
                         </Link>
                     </li>
                     <li>
