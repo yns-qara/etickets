@@ -5,9 +5,10 @@ import Facebook from "./SVGs/Facebook"
 import styles from '../styles/signup.module.css'
 import { motion } from 'framer-motion'
 import Eye from "./SVGs/eye"
+import EyeOpen from './SVGs/eyeOpen'
 import { useState } from "react"
 
-const SignUp = props => {
+const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false)
     const togglePassword = () => {
         setShowPassword(!showPassword);
@@ -39,7 +40,7 @@ const SignUp = props => {
                 <div className={styles.pass}>
                     <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
                     <div onClick={togglePassword}>
-                        <Eye />
+                    { showPassword ? <EyeOpen /> :<Eye /> }
                     </div>
                 </div>
                 <h4>Ou</h4>

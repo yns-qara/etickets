@@ -5,6 +5,7 @@ import Facebook from "./SVGs/Facebook"
 import styles from '../styles/login.module.css'
 import { motion } from 'framer-motion'
 import Eye from "./SVGs/eye"
+import EyeOpen from './SVGs/eyeOpen'
 import { useState } from "react"
 const Login = props => {
     const [showPassword, setShowPassword] = useState(false)
@@ -27,7 +28,7 @@ const Login = props => {
             <div className={styles.pass}>
                 <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
                 <div onClick={togglePassword}>
-                    <Eye />
+                    { showPassword ? <EyeOpen /> :<Eye /> }
                 </div>
             </div>
             <h4>Ou</h4>

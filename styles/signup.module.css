@@ -1,7 +1,7 @@
 
 .form__container {
     position: fixed;
-    z-index: 99999;
+    z-index: 9999999;
     top: 50%;
     left: 0;
     right: 0;
@@ -90,6 +90,14 @@
     cursor: pointer;
 }
 
+
+.pass div svg{
+    width: 24px;
+    height: 24px;
+    color: #000000;
+    opacity: 0.456;
+    margin-top: 5px;
+}
 
 
 .form__container h4 {
