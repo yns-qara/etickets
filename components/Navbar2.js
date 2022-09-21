@@ -42,7 +42,7 @@ const Navbar = () => {
 
                 <ul className={styles.menu__right}>
                     <li>
-                        <Link href="/monPanier">
+                        <Link href="/panier">
                             <a><Pannier /></a>
                         </Link>
                     </li>
@@ -61,12 +61,12 @@ const Navbar = () => {
                                         exit={{ opacity: 0 }}
                                         className={styles.popup}>
                                         <div className={styles.profile}>
-                                            <Link href="/mesInformations">Profile</Link>
+                                            <Link href="/informations">Profile</Link>
                                         </div>
-                                        <Link href="/mesCommands">
+                                        <Link href="/commands">
                                             Mes commandes
                                         </Link>
-                                        <Link href="/monPanier">
+                                        <Link href="/panier">
                                             Pannierr
                                         </Link>
                                         <Link href="/mesCommands">
@@ -80,7 +80,7 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className={styles.menu__buttons}>
-                        <Link href="/monPanier">
+                        <Link href="/panier">
                             <a className={styles.pannier}>
                                 <Pan />
                                 <span>PANIER</span>
@@ -106,13 +106,13 @@ const Navbar = () => {
                         <div className={styles.close} onClick={showMenuHandle}>&times;</div>
                         <nav>
 
-                            <Link href="/monPanier">
+                            <Link href="/panier">
                                 <div>Pannier</div>
                             </Link>
-                            <Link href="/mesInformations">
+                            <Link href="/informations">
                                 <div>profile</div>
                             </Link>
-                            <Link href="/mesCommandes">
+                            <Link href="/commandes">
                                 <div>Mes Commandes</div>
                             </Link>
                             <Link href="/">

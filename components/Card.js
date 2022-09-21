@@ -2,8 +2,6 @@ import Link from 'next/link'
 import styles from '../styles/card.module.css'
 import { motion} from 'framer-motion'
 import Image from 'next/image'
-
-import SvgHour from '../components/SVGs/hour'
 import CountDownDL from '../components/CountDownDL';
 
 const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved , link}) => {

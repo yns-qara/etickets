@@ -238,7 +238,7 @@ export default function Home() {
                       sold={card.sold}
                       reserved={card.reserved}
                       imgURL={card.url}
-                      link={'/jachete' + card.id}
+                      link={'/id ' + card.title}
 
                     />
                   </div>

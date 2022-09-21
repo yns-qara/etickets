@@ -57,7 +57,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/mesInformations">
+                            <Link href="/informations">
                                 <a>
 
                                     <Profile />
@@ -135,7 +135,7 @@ const Navbar = () => {
 
                             <div onClick={() => { setVisible(!visible); setShowMenu(false) }}>connextion</div>
                             <div onClick={() => { setVisibleS(!visibleS); setShowMenu(false) }}>Inscription</div>
-                            <Link href="/mesInformations">
+                            <Link href="/informations">
                                 <div>profile</div>
                             </Link>
                             <Link href="/">
