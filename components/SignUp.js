@@ -16,45 +16,40 @@ const SignUp = () => {
     return (
 
 
-            <motion.form
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: "-50%" }}
-                transition={{ ease: "easeInOut" }}
+        <motion.form
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: "-50%" }}
+            transition={{ ease: "easeInOut" }}
 
-                action=""
-                className={styles.form__container}>
+            action=""
+            className={styles.form__container}>
 
-                    
-                <motion.h1
-                    initial={{ x: -150 }}
-                    animate={{ x: 0 }}
-                >
-                    Nouveau compte
-                </motion.h1>
-                <div className={styles.name}>
-                    <input type="text" placeholder="Nom" />
-                    <input type="text" placeholder="Prenom" />
-                </div>
-                <input className={styles.em} type="email" placeholder="Email" />
-                <input className={styles.em} type="tel" placeholder="Téléphone" />
-                <div className={styles.pass}>
-                    <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
-                    <div onClick={togglePassword}>
-                    { showPassword ? <EyeOpen /> :<Eye /> }
-                    </div>
-                </div>
-                <h4>Ou</h4>
-                <div className={styles.social__media}>
-                    <Twitter />
-                    <Google />
-                    <Facebook />
-                </div>
-                <button type="submit">Connexion</button>
 
-                <Link href="#">
-                    <a className={styles.anchor}> Mot de passe oublie?</a>
-                </Link>
-            </motion.form>
+            <h1>Nouveau compte</h1>
+            <div className={styles.name}>
+                <input type="text" placeholder="Nom" />
+                <input type="text" placeholder="Prenom" />
+            </div>
+            <input className={styles.em} type="email" placeholder="Email" />
+            <input className={styles.em} type="tel" placeholder="Téléphone" />
+            <div className={styles.pass}>
+                <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
+                <div onClick={togglePassword}>
+                    {showPassword ? <EyeOpen /> : <Eye />}
+                </div>
+            </div>
+            <h4>Ou</h4>
+            <div className={styles.social__media}>
+                <Twitter />
+                <Google />
+                <Facebook />
+            </div>
+            <button type="submit">Connexion</button>
+
+            <Link href="#">
+                <a className={styles.anchor}> Mot de passe oublie?</a>
+            </Link>
+        </motion.form>
 
     );
 

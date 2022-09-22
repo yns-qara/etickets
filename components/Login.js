@@ -3,11 +3,11 @@ import Twitter from './SVGs/twitter'
 import Google from './SVGs/Google'
 import Facebook from "./SVGs/Facebook"
 import styles from '../styles/login.module.css'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Eye from "./SVGs/eye"
 import EyeOpen from './SVGs/eyeOpen'
 import { useState } from "react"
-const Login = props => {
+const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
     const togglePassword = () => {
         setShowPassword(!showPassword);
@@ -20,15 +20,13 @@ const Login = props => {
             transition={{ ease: "easeInOut" }}
 
             action="" className={styles.form__container}>
-            <motion.h1
-                initial = {{x : -150}}
-                animate = {{x : 0}}
-            >Connexion</motion.h1>
+
+            <h1>Connexion</h1>
             <input className={styles.em} type="email" placeholder="Email" />
             <div className={styles.pass}>
                 <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
                 <div onClick={togglePassword}>
-                    { showPassword ? <EyeOpen /> :<Eye /> }
+                    {showPassword ? <EyeOpen /> : <Eye />}
                 </div>
             </div>
             <h4>Ou</h4>
