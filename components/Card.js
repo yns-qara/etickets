@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import styles from '../styles/card.module.css'
-import { motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import CountDownDL from '../components/CountDownDL';
-
-const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved , link}) => {
+import { useState } from 'react';
+const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold, reserved, link }) => {
+    const [dateExpired, setDateExpired] = useState(false)
     return (
         <motion.div
             layout
@@ -32,7 +33,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     </div>
 
 
-                    <CountDownDL name="younes" month={month} day={day} />
+                    <CountDownDL dateExpired={dateExpired} setDateExpired={setDateExpired} name="younes" month={month} day={day} />
 
 
                 </div>
@@ -44,16 +45,24 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     </div>
                 </div>
             </div>
-            <Link href={link} >
-                <a className={styles.card__button}>
-                    {/* {
-                        sold ? "SOLD" : "J’achéte"
-                    } */}
 
-                    J’achéte
+            {
+                dateExpired ?
 
+                    <a className={styles.card__button_sold}>SOLD</a>
+
+                    :
+                    <Link href={link} >
+                        <a className={styles.card__button}>
+                            J'achéte
+                        </a>
+                    </Link>
+            }
+            {/* <Link href={link} >
+                <a className={dateExpired ? styles.card__button_sold : styles.card__button}>
+                    {dateExpired ? "SOLD" : "J'achéte"}
                 </a>
-            </Link>
+            </Link> */}
         </motion.div>
 
     )

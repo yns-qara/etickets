@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Countdown from './Countdown';
 
-const CountDownDL = ({ name, day, month }) => {
+const CountDownDL = ({ name, day, month ,dateExpired , setDateExpired}) => {
   const [state, setState] = useState({
     seconds: 0,
     hours: 0,
@@ -9,14 +9,13 @@ const CountDownDL = ({ name, day, month }) => {
     days: 0,
     isItBday: false,
   });
-
+  
 
   // get current time
   const currentTime = new Date();
   // get current year
   const currentYear = currentTime.getFullYear();
 
-  // Getting the Birthday in Data Object
   // WE subtract 1 from momnth ; Months start from 0 in Date Object
   // Bithday Boolean
   const isItBday =
@@ -32,7 +31,10 @@ const CountDownDL = ({ name, day, month }) => {
         // then set the Birthday countdown for next year
         let birthdayDay = new Date(currentYear, month - 1, day);
         if (dateAtm > birthdayDay) {
-          birthdayDay = new Date(currentYear + 1, month - 1, day);
+          // birthdayDay = new Date(currentYear + 1, month - 1, day);
+          birthdayDay = new Date(0, 0, 0);
+          setDateExpired(!dateExpired);
+          return; 
         } else if (dateAtm.getFullYear() === birthdayDay.getFullYear() + 1) {
           birthdayDay = new Date(currentYear, month - 1, day);
         }
