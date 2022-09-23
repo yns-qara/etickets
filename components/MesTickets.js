@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styles from '../styles/mestickets.module.css'
 
 const MesTickets = props => {
