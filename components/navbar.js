@@ -56,14 +56,7 @@ const Navbar = () => {
                                 <Shop />
                             </Link>
                         </li>
-                        <li>
-                            <Link href="/informations">
-                                <a>
-
-                                    <Profile />
-                                </a>
-                            </Link>
-                        </li>
+                      
                         <li className={styles.menu__buttons}>
                             <Link href="#">
                                 <a onClick={show}>Connexion</a>

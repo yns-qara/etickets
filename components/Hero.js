@@ -80,6 +80,7 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.hero__container}>
+
                 <div className={styles.hero__left}>
                     <h1>
                         Plus d’<span>evenements</span> que tu aimes
@@ -121,23 +122,23 @@ const Hero = () => {
                 <motion.div
                     ref={carousel}
                     className={styles.hero__right}
-                // whileTap={{ cursor: "grabbing" }}
+                    whileTap={{ cursor: "grabbing" }}
                 >
 
 
 
 
                     <motion.div
-                        // drag="x"
-                        // dragConstraints={{
-                        //     right: 0,
-                        //     left: -width
-                        // }}
+                        drag="x"
+                        dragConstraints={{
+                            right: 0,
+                            left: -width
+                        }}
 
                         className={styles.hero__slider}
                     >
-                        <motion.p className={styles.arrow_left} onClick={moveImagesToRight} animate={{ opacity: activateLeftArrow ? 1 : 0 }}><span>&lt;</span></motion.p>
-                        <p className={styles.arrow_right} onClick={moveImagesToLeft}><span>&gt;</span></p>
+                        {/* <motion.p className={styles.arrow_left} onClick={moveImagesToRight} animate={{ opacity: activateLeftArrow ? 1 : 0 }}><span>&lt;</span></motion.p>
+                        <p className={styles.arrow_right} onClick={moveImagesToLeft}><span>&gt;</span></p> */}
                         {
                             imgs.map((img) => {
                                 return (

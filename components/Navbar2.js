@@ -5,6 +5,7 @@ import Pannier from './SVGs/ShopIcon';
 import LogoNav from './SVGs/logoNav';
 import Pan from './SVGs/Pan2';
 import Hamberger from './SVGs/hamberger';
+import Profile from './SVGs/profile';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -46,6 +47,13 @@ const Navbar = () => {
                             <a><Pannier /></a>
                         </Link>
                     </li>
+                    <li>
+                            <Link href="/informations">
+                                <a>
+                                    <Profile />
+                                </a>
+                            </Link>
+                        </li>
                     <li>
                         <div className={styles.popupParent}>
                             <div onClick={togleView}>

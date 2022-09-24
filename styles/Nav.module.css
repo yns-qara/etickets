@@ -53,11 +53,13 @@
   transition: all .5s ease;
   color: #4B2A7B;
 }
+
 .menu__right li svg:hover {
-  transform: scale(1.2);
+  
+  color: #1f0842;
 }
+
 .menu__right li svg:active {
-  transform: scale(.8);
 }
 
 
@@ -66,7 +68,6 @@
 .menu__buttons {
   display: flex;
   gap: 16px;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -79,6 +80,7 @@
 
 
 .menu__buttons a {
+  box-shadow: 0 0px 0 #2a1052;
   transition: all .5s ease
 }
 
@@ -98,34 +100,17 @@
 
 .menu__buttons a:nth-child(1):hover,
 .menu__buttons a:nth-child(2):hover {
-  box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
-  -webkit-box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
-  -moz-box-shadow: 0px 0px 11px 0px rgba(75, 42, 123, 0.75);
-}
-
-.menu__buttons a:nth-child(2):hover {
-  border-color: #ffffff;
-
+  box-shadow: 0 7px 0 #2a1052;
+  transform: translateY(-7px);
 }
 
 
 .menu__buttons a:nth-child(1):active,
 .menu__buttons a:nth-child(2):active {
-  transform: scale(.8);
-  color: #4B2A7B;
+  box-shadow: 0 0px 0 #2a1052;
+  transform: translateY(0px);
 }
 
-
-
-/* 
-@keyframes zoomInOut {
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(1.1);
-  }
-} */
 
 
 .pannier {
