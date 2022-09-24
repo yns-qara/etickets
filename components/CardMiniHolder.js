@@ -1,5 +1,6 @@
 import styles from '../styles/CardMiniHolder.module.css'
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 const CardMiniHolder = ({ children, visible1, setVisible1, visible2, setVisible2, visible3, setVisible3 }) => {
 
     const show1 = () => {
@@ -17,6 +18,24 @@ const CardMiniHolder = ({ children, visible1, setVisible1, visible2, setVisible2
         setVisible2(false);
         setVisible3(true);
     }
+
+    useEffect(()=>{
+        if(visible1){
+            setTimeout(() => {
+                show2();
+            }, 10000);
+        }
+        if(visible2){
+            setTimeout(() => {
+                show3();
+            }, 10000);
+        }
+        if(visible3){
+            setTimeout(() => {
+                show1();
+            }, 10000);
+        }
+    },[visible1,visible2,visible3])
 
 
     return (
