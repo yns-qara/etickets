@@ -74,7 +74,7 @@ const CountDownDL = ({ name, day, month ,dateExpired , setDateExpired}) => {
         }));
       }
     }, 1000);
-  }, [currentYear, day, isItBday, month]);
+  }, [currentYear, day, isItBday, month , dateExpired , setDateExpired]);
 
 
   return (
