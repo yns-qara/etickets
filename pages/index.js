@@ -389,6 +389,7 @@ export default function Home() {
 
 
       {
+        // this logic .lenght migh change cause the data fetched is .json maybe
         (limit < fetchedData.length) &&
         <VoirPlusButton limit={limit} setLimit={setLimit} />
       }
