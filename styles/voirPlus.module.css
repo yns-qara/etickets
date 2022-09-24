@@ -1,4 +1,4 @@
-.button_parrent{
+.button_parrent {
     margin-top: 76px;
     display: flex;
     justify-content: center;
@@ -21,4 +21,21 @@
 
     width: 230px;
     margin: auto;
-}  
+
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease
+}
+
+
+
+.button_child:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+
+.button_child:active
+ {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
