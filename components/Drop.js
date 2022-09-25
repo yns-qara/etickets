@@ -173,10 +173,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
                 exit={{ opacity: 0 }}
 
               >
-                <span onClick={() => setActiveDate("")}>this week</span>
-                <span onClick={() => setActiveDate("")}>this month</span>
-                <span onClick={() => setActiveDate("")}>next month</span>
-                <span onClick={() => setActiveDate("")}>next 2 months</span>
+                <span className={styles.comming_soon} onClick={() => setActiveDate("")}>comming soon</span>
               </motion.div>
             }
           </AnimatePresence>
