@@ -68,67 +68,67 @@ export default function Home() {
 
     },
     {
-      id: '2',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
-
-    },
-    {
-      id: '2',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
-
-    },
-    {
-      id: '2',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
-
-    },
-    {
-      id: '2',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
-
-    },
-    {
       id: '3',
+      title: 'mawazine',
+      genre: 'music',
+      date: 'Samedi 30 Aout 2022 - 16:45',
+      city: 'Rabat',
+      lieu: 'Cinema rabat',
+      month: '11',
+      day: '19',
+      price: '250',
+      sold: 'false',
+      reserved: 'false',
+      url: '/cardB2.png'
+
+    },
+    {
+      id: '4',
+      title: 'mawazine',
+      genre: 'music',
+      date: 'Samedi 30 Aout 2022 - 16:45',
+      city: 'Rabat',
+      lieu: 'Cinema rabat',
+      month: '11',
+      day: '19',
+      price: '250',
+      sold: 'false',
+      reserved: 'false',
+      url: '/cardB2.png'
+
+    },
+    {
+      id: '5',
+      title: 'mawazine',
+      genre: 'music',
+      date: 'Samedi 30 Aout 2022 - 16:45',
+      city: 'Rabat',
+      lieu: 'Cinema rabat',
+      month: '11',
+      day: '19',
+      price: '250',
+      sold: 'false',
+      reserved: 'false',
+      url: '/cardB2.png'
+
+    },
+    {
+      id: '6',
+      title: 'mawazine',
+      genre: 'music',
+      date: 'Samedi 30 Aout 2022 - 16:45',
+      city: 'Rabat',
+      lieu: 'Cinema rabat',
+      month: '11',
+      day: '19',
+      price: '250',
+      sold: 'false',
+      reserved: 'false',
+      url: '/cardB2.png'
+
+    },
+    {
+      id: '7',
       title: 'Coup de monde',
       genre: 'sport',
       date: 'Samedi 31 Aout 2022 - 12:45',
@@ -143,7 +143,7 @@ export default function Home() {
 
     },
     {
-      id: '3',
+      id: '8',
       title: 'Coup de monde',
       genre: 'sport',
       date: 'Samedi 31 Aout 2022 - 12:45',
@@ -158,7 +158,7 @@ export default function Home() {
 
     },
     {
-      id: '1',
+      id: '9',
       title: 'jamal humour',
       genre: 'humour',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -172,23 +172,8 @@ export default function Home() {
       url: '/cardB.png'
 
     },
-    // {
-    //   id: '4',
-    //   title: 'marvel avengers',
-    //   genre: 'cinema',
-    //   date: 'Samedi 30 Aout 2022 - 16:45',
-    //   city: 'Knetra',
-    //   lieu: 'Cinema',
-    //   month: '10',
-    //   day: '9',
-    //   price: '200',
-    //   sold: 'false',
-    //   reserved: 'false',
-    //   url: '/cardB4.png'
-
-    // },
     {
-      id: '5',
+      id: '10',
       title: 'Champions league',
       genre: 'sport',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -202,7 +187,7 @@ export default function Home() {
       url: '/cardB5.png'
     },
     {
-      id: '6',
+      id: '11',
       title: 'dizzy dross',
       genre: 'music',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -217,7 +202,7 @@ export default function Home() {
 
     },
     {
-      id: '7',
+      id: '12',
       title: 'festival',
       genre: 'entertainment',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -232,7 +217,7 @@ export default function Home() {
 
     },
     {
-      id: '1',
+      id: '13',
       title: 'jamal humour',
       genre: 'humour',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -247,7 +232,7 @@ export default function Home() {
 
     },
     {
-      id: '8',
+      id: '14',
       title: 'Jamal',
       genre: 'humour',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -262,7 +247,7 @@ export default function Home() {
 
     },
     {
-      id: '6',
+      id: '15',
       title: 'dizzy dross',
       genre: 'music',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -277,7 +262,7 @@ export default function Home() {
 
     },
     {
-      id: '5',
+      id: '16',
       title: 'Champions league',
       genre: 'sport',
       date: 'Samedi 30 Aout 2022 - 16:45',
@@ -291,7 +276,7 @@ export default function Home() {
       url: '/cardB5.png'
     },
     {
-      id: '9',
+      id: '17',
       title: 'Sanae jabrane',
       genre: 'gala',
       date: 'Samedi 30 Aout 2022 - 16:45',
