@@ -9,7 +9,6 @@ import Twitter from './SVGs/twitter'
 import Link from 'next/link'
 import CommingSoon from './CommingSoon'
 import { useState } from 'react'
-import Login from '../components/Login'
 const Footer = () => {
     const [active, setActive] = useState(false)
     return (
