@@ -12,7 +12,7 @@ const Jachete = () => {
 
         <Navbar />
         <motion.div
-          initial={{ y: 500, opacity: 0 }}
+          initial={{ y: 150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .8, ease: 'easeInOut' }}

@@ -73,7 +73,7 @@
   visibility: hidden;
 }
 
-.hero__buttons> * {
+.hero__buttons>* {
   visibility: visible;
 }
 
@@ -97,18 +97,12 @@
 }
 
 
-/* .hero__buttons a:hover {
-  box-shadow: 0 7px 0 #2a1052;
-  transform: translateY(-7px);
-
-}
-*/
 
 .hero__buttons a:active {
   box-shadow: 0 0 0 #2a1052;
   transform: translateY(2px);
 
-} 
+}
 
 
 .hero__buttons:hover>* {
@@ -216,12 +210,6 @@
 
 
 
-@media all and (max-width: 1382px) {
-  .hero__slider div img {
-    /* width: 90%; */
-  }
-}
-
 
 
 
@@ -244,7 +232,18 @@
 
   .hero__right {
     width: 100%;
-    height: 60vh;
+    height: 70vh;
+  }
+
+  .hero__slider div {
+    margin-top: 45px;
+    min-width: 180px;
+  }
+
+  .hero__slider div:hover button {
+
+    padding: 11px 26px;
+    font-size: 9px;
   }
 
   .hero__left h1 {

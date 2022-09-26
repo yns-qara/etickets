@@ -1,8 +1,8 @@
 import styles from '../styles/cardsContainer.module.css'
-const CardContainer = props => {
+const CardContainer = ({children}) => {
   return (
     <section className={styles.cards}>
-        {props.children}
+        {children}
     </section>
   )
 }

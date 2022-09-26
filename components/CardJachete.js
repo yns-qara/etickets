@@ -36,7 +36,7 @@ const CardJachete = () => {
         <>
             <div className={styles.container}>
                 <div className={styles.left}>
-                <Image src="/qatar.png" width={784} height={478} alt="bigCard" />
+                    <Image src="/qatar.png" width={784} height={478} alt="bigCard" />
                 </div>
                 <div className={styles.right}>
                     <h1>Mardi 30 Novembre 2021</h1>
@@ -138,8 +138,8 @@ const CardJachete = () => {
                                 <Plus />
                             </div>
                         </div>
-                        <button 
-                            onClick={()=> setToggle(!toggle)}  
+                        <button
+                            onClick={() => setToggle(!toggle)}
                         >
                             <Pan />
                             <span>ACHETER MAINTENANT</span>
@@ -163,7 +163,7 @@ const CardJachete = () => {
                 <Finaliser
                     toggle={toggle}
                     setToggle={setToggle}
-                
+
                 />
             }
         </>

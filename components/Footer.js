@@ -8,7 +8,7 @@ import Watsapp from './SVGs/watsup'
 import Twitter from './SVGs/twitter'
 import Link from 'next/link'
 
-const Footer = props => {
+const Footer = () => {
     return (
         <>
             <div className={styles.upper__footer}>
@@ -40,7 +40,7 @@ const Footer = props => {
                 </div>
                 <div className={styles.right_middle}>
                     <ul className={styles.right_list}>
-                        <li> <h1><Link href="#"> GUICHET </Link> </h1> </li>
+                        <li> <h1> GUICHET  </h1> </li>
                         <li> <Link href="#"> Concerts & Festivals  </Link> </li>
                         <li> <Link href="#"> Théâtre &  Humour  </Link> </li>
                         <li> <Link href="#"> Formations  </Link> </li>
@@ -51,7 +51,7 @@ const Footer = props => {
                     </ul>
 
                     <ul className={styles.right_list}>
-                        <li> <h1><Link href="#"> À PROPOS </Link> </h1> </li>
+                        <li> <h1> À PROPOS </h1> </li>
                         <li>  <Link href="/quiSommesNous"> Qui sommes nous ? </Link> </li>
                         <li>  <Link href="/contactez"> Contactez-nous </Link> </li>
                         <li>  <Link href="#"> Guichet Magazine </Link> </li>

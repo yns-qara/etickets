@@ -1,14 +1,14 @@
 import styles from '../styles/jacheteH.module.css'
 
 
-const JachetHead = props => {
+const JachetHead = ({ title , children}) => {
   return (
     <div className={styles.jachete__container}>
 
-      <h1 className={styles.title}>{props.title}</h1>
+      <h1 className={styles.title}>{title}</h1>
 
 
-      {props.children}
+      {children}
 
     </div>
   )

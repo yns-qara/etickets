@@ -118,7 +118,12 @@
     gap: 30px;
 }
 
+
 .buttonHolder button {
+    box-shadow: 0 0px 0 #979797;
+    transition: all .5s ease;
+
+
     display: flex;
     align-items: center;
     gap: 44px;
@@ -127,6 +132,16 @@
     background: #FFFFFF;
     border-radius: 95px;
     cursor: pointer;
+}
+
+.buttonHolder button:hover {
+    box-shadow: 0 7px 0 #979797;
+    transform: translateY(-7px);
+}
+
+.buttonHolder button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
 }
 
 .buttonHolder button span {
@@ -154,7 +169,8 @@
     color: #FFFFFF;
 }
 
-.right_list li h1 a{
+
+.right_list li h1 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -164,6 +180,10 @@
     margin-bottom: 23px;
 }
 
+
+.right_list li a:hover {
+    color: #b0e9ff
+}
 
 
 /*---------------LOWER FOOTER----------------*/
@@ -245,16 +265,17 @@
 
 
 @media all and (max-width: 884px) {
-    .upper__footer{
+    .upper__footer {
         padding: 15px;
     }
+
     .upper__footer h1 {
         display: none;
     }
 
     .text_input {
         margin: auto;
-        
+
     }
 
     .text_input input {
@@ -276,9 +297,10 @@
         margin: auto;
     }
 
-    .left_middle{
+    .left_middle {
         padding: 0 90px;
     }
+
     .left_middle p {
         text-align: justify;
         margin: auto;
@@ -294,7 +316,7 @@
         /* padding: 10px; */
     }
 
-    .right_middle{
+    .right_middle {
         margin-top: 35px;
         justify-content: space-between;
 
