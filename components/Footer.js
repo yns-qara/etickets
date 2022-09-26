@@ -8,9 +8,7 @@ import Watsapp from './SVGs/watsup'
 import Twitter from './SVGs/twitter'
 import Link from 'next/link'
 import CommingSoon from './CommingSoon'
-import { useState } from 'react'
-const Footer = () => {
-    const [active, setActive] = useState(false)
+const Footer = ({active , setActive}) => {
     return (
         <>
             <div className={styles.upper__footer}>

@@ -304,6 +304,7 @@ export default function Home() {
   const [visible3, setVisible3] = useState(false);
 
   const [limit, setLimit] = useState(8);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     setAllEvents(fetchedData);
@@ -334,6 +335,9 @@ export default function Home() {
         setActivePrix={setActivePrix}
         expriredSoon={expriredSoon}
         setExpriredSoon={setExpriredSoon}
+
+        active = {active}
+        setActive = {setActive}
       />
 
 
@@ -424,7 +428,7 @@ export default function Home() {
         </AnimatePresence>
       </Marketplace>
       <Qualities />
-      <Footer />
+      <Footer active = {active} setActive = {setActive} />
 
     </>
   )

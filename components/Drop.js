@@ -7,14 +7,13 @@ import CommingSoon from './CommingSoon'
 
 
 
-const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, activeDate, setActiveDate, activePrix, setActivePrix, expriredSoon, setExpriredSoon }) => {
+const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, activeDate, setActiveDate, activePrix, setActivePrix, expriredSoon, setExpriredSoon , active , setActive }) => {
   /* -------------------------------------------------------------------------------- */
 
   const [showVille, setShowVille] = useState(false);
   const [showDate, setShowDate] = useState(false);
   const [showPrix, setShowPrix] = useState(false);
 
-  const [active, setActive] = useState(false)
 
   const villeClick = () => {  
     setShowVille(!showVille);
@@ -219,7 +218,8 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
         </div>
         <div className={styles.drop__element} 
         
-         onClick={expiredClick}
+        //  onClick={expiredClick}
+         onClick={()=> setActive(true)}
         >
           <motion.div
             initial={{ zIndex: 95 }}
@@ -227,11 +227,15 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             className={expriredSoon ? styles.active : styles.drop__element_container}>
             <span>Bientôt expiré</span>
             <div className={styles.circle}>
-              {
+              {/* {
                 expriredSoon &&
                 <div className={styles.inner_c}></div>
-              }
+              } */}
 
+
+              {
+                active && <CommingSoon />
+              }
             </div>
           </motion.div>
         </div>
