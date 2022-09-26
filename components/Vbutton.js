@@ -1,5 +1,5 @@
 import styles from '../styles/Vbutton.module.css'
-const Vbutton = props => {
+const Vbutton = () => {
   return (
     <div className={styles.container}>CONFIRME DACHAT</div>
   )

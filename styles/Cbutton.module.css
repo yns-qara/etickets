@@ -10,8 +10,24 @@
     padding: 14px 38px;
     border: 2px solid #4B2A7B;
     border-radius: 95px;
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease;
+    cursor: pointer;
 }
 
+
+
+
+.container:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+
+.container:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
 
 /*------BUTTON HOLDER------*/
 .parent{
@@ -19,3 +35,5 @@
    display: flex; 
    gap: 82px;
 }
+
+

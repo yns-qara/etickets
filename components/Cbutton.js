@@ -1,5 +1,5 @@
 import styles from '../styles/Cbutton.module.css'
-const Cbutton = props => {
+const Cbutton = () => {
   return (
     <div className={styles.container}>ANNULER</div>
   )
