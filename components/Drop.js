@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from '../styles/Drop.module.css'
 import ArrowDown from './SVGs/arrowDown'
+import CommingSoon from './CommingSoon'
 
 
 
@@ -13,8 +14,9 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
   const [showDate, setShowDate] = useState(false);
   const [showPrix, setShowPrix] = useState(false);
 
+  const [active, setActive] = useState(false)
 
-  const villeClick = () => {
+  const villeClick = () => {  
     setShowVille(!showVille);
 
     if (showDate === false && showPrix === false)
@@ -71,7 +73,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
     setFiltredEvents(filtred);
 
 
-  }, [activeVille, activePrix ,AllEvents , setFiltredEvents])
+  }, [activeVille, activePrix, AllEvents, setFiltredEvents])
 
 
   /*
@@ -215,17 +217,21 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             }
           </AnimatePresence>
         </div>
-        <div className={styles.drop__element} onClick={expiredClick}>
+        <div className={styles.drop__element} 
+        
+         onClick={expiredClick}
+        >
           <motion.div
             initial={{ zIndex: 95 }}
 
             className={expriredSoon ? styles.active : styles.drop__element_container}>
             <span>Bientôt expiré</span>
             <div className={styles.circle}>
-            {
+              {
                 expriredSoon &&
                 <div className={styles.inner_c}></div>
               }
+
             </div>
           </motion.div>
         </div>

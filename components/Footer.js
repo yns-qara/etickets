@@ -7,8 +7,11 @@ import Messenger from './SVGs/messenger'
 import Watsapp from './SVGs/watsup'
 import Twitter from './SVGs/twitter'
 import Link from 'next/link'
-
+import CommingSoon from './CommingSoon'
+import { useState } from 'react'
+import Login from '../components/Login'
 const Footer = () => {
+    const [active, setActive] = useState(false)
     return (
         <>
             <div className={styles.upper__footer}>
@@ -28,33 +31,36 @@ const Footer = () => {
                     <p>Un site de billetterie nouvelle génération vous offrant la possibilité d&apos;acheter en ligne des tickets pour les événements de votre choix. Sa vocation est de vous proposer l&apos;offre de concerts, sports, spectacles, cinéma, festivals, théâtre, humour, voyages et evasions la plus large du Maroc en collaboration avec les organisateurs d&apos;événements.</p>
                     <h3>NOS APPLICATIONS</h3>
                     <div className={styles.buttonHolder}>
-                        <button >
+                        <button onClick={() => setActive(true)}>
                             <Apple />
                             <span>App Store</span>
                         </button>
-                        <button>
+                        <button onClick={() => setActive(true)}>
                             <Android />
                             <span>Play Store</span>
                         </button>
+                        {
+                            active && <CommingSoon setActive={setActive} />
+                        }
                     </div>
                 </div>
                 <div className={styles.right_middle}>
                     <ul className={styles.right_list}>
                         <li> <h1> GUICHET  </h1> </li>
-                        <li> <Link href="#"> Concerts & Festivals  </Link> </li>
-                        <li> <Link href="#"> Théâtre &  Humour  </Link> </li>
-                        <li> <Link href="#"> Formations  </Link> </li>
-                        <li> <Link href="#"> Salons et congrès  </Link> </li>
-                        <li> <Link href="#"> Famille &  Loisirs  </Link> </li>
-                        <li> <Link href="#"> Sport  </Link> </li>
-                        <li> <Link href="#"> Cinéma  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Concerts & Festivals  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Théâtre &  Humour  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Formations  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Salons et congrès  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Famille &  Loisirs  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Sport  </Link> </li>
+                        <li onClick={() => setActive(true)}> <Link href="#"> Cinéma  </Link> </li>
                     </ul>
 
                     <ul className={styles.right_list}>
                         <li> <h1> À PROPOS </h1> </li>
                         <li>  <Link href="/quiSommesNous"> Qui sommes nous ? </Link> </li>
                         <li>  <Link href="/contactez"> Contactez-nous </Link> </li>
-                        <li>  <Link href="#"> Guichet Magazine </Link> </li>
+                        <li onClick={() => setActive(true)}>  <Link href="#"> Guichet Magazine </Link> </li>
                         <li>  <Link href="/mentionsLegals"> Mentions légales </Link> </li>
                     </ul>
                 </div>
@@ -69,6 +75,8 @@ const Footer = () => {
                     <Twitter />
                 </div>
             </div>
+
+
         </>
     )
 }
