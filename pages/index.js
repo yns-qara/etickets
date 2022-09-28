@@ -14,7 +14,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
-
 // this is commented because we still finding a way to replace the local host api with the actual api,
 // when deploying and after finding out how to use the api with env variables we uncomment the below code and delete the array fetshed Data we also make sure toadd fetshed data as props
 
@@ -316,6 +315,7 @@ export default function Home() {
 
   return (
     <>
+
 
       <Header>
         <Navbar />
