@@ -37,7 +37,6 @@
     border: 0;
     padding: 19px;
     background-color: #FFFFFF;
-
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 400;
@@ -78,9 +77,7 @@
     background: #4B2A7B;
     display: flex;
     padding: 70px 60px;
-    /* gap: 160px; */
     justify-content: space-around;
-
     overflow: hidden;
 }
 
@@ -122,8 +119,6 @@
 .buttonHolder button {
     box-shadow: 0 0px 0 #979797;
     transition: all .5s ease;
-
-
     display: flex;
     align-items: center;
     gap: 44px;
@@ -145,7 +140,6 @@
 }
 
 .buttonHolder button span {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -313,7 +307,6 @@
     .middle__footer {
         flex-direction: column;
         align-items: center;
-        /* padding: 10px; */
     }
 
     .right_middle {

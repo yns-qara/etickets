@@ -13,9 +13,7 @@
 .parent {
     background: #F7F7F7;
     border-radius: 30px;
-    /* max-width: 1221px; */
     max-width: 89vw;
-    /* height: 39vw; */
     padding: 61px 51px;
     padding: 5vw 4vw;
 
@@ -145,8 +143,6 @@
     padding: 1vw 1.6vw;
     border: 0;
     cursor: pointer;
-    /* max-width: 300px; */
-    /* max-width: 25vw; */
 }
 
 .buttons button:last-child {

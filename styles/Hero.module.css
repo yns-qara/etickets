@@ -2,14 +2,11 @@
 
 .hero__container {
   display: flex;
-  /* height: 100vh; */
-
 }
 
 
 
 .hero__left {
-
   position: relative;
   z-index: 9;
   padding: 0 73px 211px;

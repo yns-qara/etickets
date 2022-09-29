@@ -4,7 +4,6 @@
     max-width: 1300px;
     max-width: 900px;
     padding: 48px 45px;
-
     position: fixed;
     z-index: 999;
     top: 50%;
@@ -173,8 +172,6 @@
         line-height: 22px;
     }
 
-
-
     .header {
         margin-top: 18px;
     }
@@ -198,7 +195,6 @@
     }
 
     .main span {
-        /* padding: 19px 47px; */
         background: #FFFFFF;
         border: 1px solid #A3A3A3;
         font-family: 'Roboto';
@@ -207,7 +203,6 @@
         font-size: 19px;
         font-size: 1em;
         line-height: 22px;
-
         color: #464646;
         width: 186px;
     }
