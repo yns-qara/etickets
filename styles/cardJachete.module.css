@@ -46,8 +46,6 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
-    /* identical to box height */
-
 
     color: #FFFFFF;
 }
@@ -106,7 +104,7 @@
 }
 
 .hidden div {
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -118,18 +116,19 @@
     transition: all .3s ease;
 }
 
-.hidden div span{
+.hidden div span {
     margin-top: auto;
 }
 
 .hidden div:first-child {
-margin-top: 20px;
-}
-.hidden div:last-child {
-border: 0;
+    margin-top: 20px;
 }
 
-.hidden div:hover{
+.hidden div:last-child {
+    border: 0;
+}
+
+.hidden div:hover {
     background: #a16eee;
     border-radius: 15px;
 }
@@ -142,18 +141,20 @@ border: 0;
     gap: 29px;
 }
 
-.button_holder div{
+.button_holder div {
     position: relative;
 }
+
 .button_holder div div,
-.button_holder div span{
+.button_holder div span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
     cursor: pointer;
 }
-.button_holder div span{
+
+.button_holder div span {
     color: #FFFFFF;
     right: 90%;
 }
@@ -180,13 +181,13 @@ border: 0;
 /* Chrome, Safari, Edge, Opera */
 .button_holder input::-webkit-outer-spin-button,
 .button_holder input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 .button_holder input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 
@@ -235,8 +236,6 @@ border: 0;
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
-    /* identical to box height */
-
 
     color: #FFFFFF;
     margin: 5px;
@@ -255,7 +254,6 @@ border: 0;
 .social_media {
     display: flex;
     gap: 18px;
-    /* add a background after importing the right svgs */
 }
 
 .social_media svg {

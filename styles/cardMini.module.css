@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 .card__container {
-
     position: relative;
-
-
     width: 323px;
     min-height: 286.33px;
-
     background: #FFFFFF;
     box-shadow: 8px 0px 24px rgba(0, 0, 0, 0.06);
     border-radius: 30px;
@@ -149,24 +144,3 @@
     color: #4B2A7B;
 }
 
-
-
-
-/*--- ANIMATIONS ---*/
-
-
-.card__upper:hover {
-    animation: zoom 5s ease 0s 1 normal forwards;
-}
-
-@keyframes zoom {
-    0% {
-        background-position: center bottom;
-        background-size: 100%;
-    }
-
-    100% {
-        background-position: center bottom;
-        background-size: 150%;
-    }
-}

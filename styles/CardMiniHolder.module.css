@@ -1,23 +1,6 @@
-.set1 {}
-
-
-/* .parent {
-    margin-top: 90px;
-    width: 900px;
-    width: 85vw;
-    margin: auto;
-    overflow: hidden;
-    background-color: #b186f1;
-    padding: 25px;
-} */
 
 .container {
-    /* max-width: 85vw; */
     margin: auto;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, 323px);
-    gap: 20px;
-    justify-content: center; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -48,10 +31,6 @@
     cursor: pointer;
 }
 
-/* .rect1 {
-    background: #9A9A9A;
-    opacity: 1;
-} */
 
 .active {
     width: 95px;
