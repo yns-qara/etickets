@@ -1,13 +1,9 @@
 .container {
-
     margin-top: 35px;
-
-
     background: #FAFAFA;
     border-radius: 30px;
     padding: 30px;
 }
-
 
 .container h1 {
     font-family: 'Roboto';
@@ -15,15 +11,12 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 30px;
-
     color: #000000;
 
 }
 
 .entries {
-
     margin-top: 77px ;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,24 +48,17 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
-
     color: #FFFFFF;
-
     padding: 11px 30px;
-
     background: #4B2A7B;
     border-radius: 50px;
     border: 0;
-
     box-shadow: 0 0px 0 #2a1052;
     transition: all .5s ease;
     cursor: pointer;
 
 }
 
-
-
-  
 
 .entries button:hover {
     box-shadow: 0 7px 0 #2a1052;
