@@ -37,7 +37,7 @@ const Footer = ({active , setActive}) => {
                             <span>Play Store</span>
                         </button>
                         {
-                            active && <CommingSoon setActive={setActive} />
+                            active && <CommingSoon setActive={setActive} title="this page is under construction" />
                         }
                     </div>
                 </div>

@@ -234,7 +234,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
 
 
               {
-                active && <CommingSoon setActive={setActive}  />
+                active && <CommingSoon setActive={setActive} title="this feature is not yet implemented" />
               }
             </div>
           </motion.div>
