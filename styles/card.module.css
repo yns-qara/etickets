@@ -1,4 +1,3 @@
-
 .card__container {
     position: relative;
     width: 370px;
@@ -9,7 +8,7 @@
 }
 
 
-.card__container_expired{
+.card__container_expired {
     position: relative;
     width: 370px;
     min-height: 319px;
@@ -134,18 +133,23 @@
     bottom: -4%;
     left: 50%;
     transform: translateX(-50%);
-    transition: all .5s ease;
     transform-origin: left top;
     width: 97px;
     height: 27px;
 
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease
 }
 
 
 .card__button:hover {
-    padding: 10px 18px;
-    width: 120px;
-    height: 35px;
+    box-shadow: 0 5px 0 #2a1052;
+    transform: translateX(-50%) translateY(-7px);
+}
+
+.card__button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateX(-50%) translateY(0px);
 }
 
 
@@ -189,6 +193,3 @@
     line-height: 21px;
     color: #4B2A7B;
 }
-
-
-
