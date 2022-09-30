@@ -16,18 +16,24 @@
     right: 0;
     margin: auto;
     transform: translateY(-50%);
-
-    padding: 35px 74px;
+    padding: 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #F7F7F7;
     border-radius: 60px;
-    max-width: 500px;
+    max-width: 420px;
 
 
     overflow-y: hidden;
+}
+
+
+.form__container input:focus {
+    box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
 }
 
 .form__container h1 {
@@ -35,13 +41,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 49px;
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #000000;
 }
 
@@ -49,7 +53,7 @@
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 27px;
     color: rgba(112, 112, 112, 0.8);
 }
@@ -58,7 +62,7 @@
     width: 100%;
     background: #FFFFFF;
     border-radius: 60px;
-    padding: 14px 25px;
+    padding: 10px 20px;
     border: 0;
 }
 
@@ -85,8 +89,8 @@
 }
 
 .pass div svg {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
     margin-top: 5px;
     color: #000;
     opacity: 0.456;
@@ -99,32 +103,28 @@
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 15px;
     line-height: 31px;
-
     color: #707070;
 }
 
 
 .social__media {
-    margin-top: 16px;
-
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-
-
 }
 
 
 
 .social__media svg {
     background: #4285F4;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    padding: 17px;
+    padding: 10px;
 
     cursor: pointer;
 }
@@ -140,9 +140,10 @@
 .form__container input {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 27px;
 }
+
 
 
 .form__container button {
@@ -151,22 +152,26 @@
     border: 0;
     background-color: #4B2A7B;
     border-radius: 60px;
-    padding: 12px 45px;
+    padding: 10px 29px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 28px;
     color: #FFFFFF;
-    transition: all .6s ease;
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease;
 }
 
 .form__container button:hover {
-    /* font-size: 25px; */
-    background-color: #7630df;
-    transform: scale(1.2);
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
 }
 
+.form__container button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
 
 .anchor {
     margin-top: 12px;

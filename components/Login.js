@@ -3,7 +3,7 @@ import Twitter from './SVGs/twitter'
 import Google from './SVGs/Google'
 import Facebook from "./SVGs/Facebook"
 import styles from '../styles/login.module.css'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Eye from "./SVGs/eye"
 import EyeOpen from './SVGs/eyeOpen'
 import { useState } from "react"
@@ -29,13 +29,13 @@ const Login = () => {
                     {showPassword ? <EyeOpen /> : <Eye />}
                 </div>
             </div>
+            <button type="submit">Connexion</button>
             <h4>Ou</h4>
             <div className={styles.social__media}>
                 <Twitter />
                 <Google />
                 <Facebook />
             </div>
-            <button type="submit">Connexion</button>
 
             <Link href="#">
                 <a className={styles.anchor}> Mot de passe oublie?</a>

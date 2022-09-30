@@ -6,7 +6,6 @@
     right: 0;
     margin: auto;
     transform: translateY(-50%);
-    padding: 35px 74px;
     padding: 25px 25px;
     display: flex;
     flex-direction: column;
@@ -20,8 +19,10 @@
 }
 
 
-.form__container input{
-    
+.form__container input:focus {
+    box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
 }
 
 
@@ -111,7 +112,6 @@
 
 .social__media {
     margin-top: 12px;
-
     display: flex;
     align-items: center;
     justify-content: center;

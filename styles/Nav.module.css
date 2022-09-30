@@ -260,6 +260,7 @@
   color: #4B2A7B;
   text-align: center;
   margin-top: 45px;
+  cursor: pointer;
 }
 
 .mobile nav div:first-child,
