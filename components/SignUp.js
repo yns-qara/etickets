@@ -38,13 +38,13 @@ const SignUp = () => {
                     {showPassword ? <EyeOpen /> : <Eye />}
                 </div>
             </div>
+            <button type="submit">Connexion</button>
             <h4>Ou</h4>
             <div className={styles.social__media}>
                 <Twitter />
                 <Google />
                 <Facebook />
             </div>
-            <button type="submit">Connexion</button>
 
             <Link href="#">
                 <a className={styles.anchor}> Mot de passe oublie?</a>
