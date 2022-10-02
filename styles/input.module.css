@@ -11,6 +11,22 @@
 
 }
 
+
+.active {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #EAEAEA;
+    border-radius: 62px;
+    padding: 19px 46px;
+    width: 100%;
+    box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(75, 42, 123, 0.83);
+}
+
+
 .container label {
     font-family: 'Roboto';
     font-style: normal;
@@ -50,6 +66,7 @@
 .container:hover .penHolder {
     opacity: 1;
 }
+
 
 
 

@@ -22,7 +22,6 @@ const Input = props => {
         type={props.type}
         id={props.ID}
         // placeholder={togle && props.placeholder}
-
         defaultValue={props.placeholder}
         readOnly = {togle && "true"}
            />
