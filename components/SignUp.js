@@ -4,9 +4,9 @@ import Google from './SVGs/Google'
 import Facebook from "./SVGs/Facebook"
 import styles from '../styles/signup.module.css'
 import { motion } from 'framer-motion'
+import { useState } from "react"
 import Eye from "./SVGs/eye"
 import EyeOpen from './SVGs/eyeOpen'
-import { useState } from "react"
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -20,20 +20,19 @@ const SignUp = () => {
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: "-50%" }}
             transition={{ ease: "easeInOut" }}
-
             action=""
-            className={styles.form__container}>
-
+            className={styles.form__container}
+            >
 
             <h1>Nouveau compte</h1>
             <div className={styles.name}>
-                <input type="text" placeholder="Nom" />
-                <input type="text" placeholder="Prenom" />
+                <input type="text" placeholder="Nom" required />
+                <input type="text" placeholder="Prenom"  required />
             </div>
-            <input className={styles.em} type="email" placeholder="Email" />
-            <input className={styles.em} type="tel" placeholder="Téléphone" />
+            <input className={styles.em} type="email" placeholder="Email" required/>
+            <input className={styles.em} type="tel" placeholder="Téléphone" required/>
             <div className={styles.pass}>
-                <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" />
+                <input type={showPassword ? "text" : "password"} placeholder="Mot de passe" required/>
                 <div onClick={togglePassword}>
                     {showPassword ? <EyeOpen /> : <Eye />}
                 </div>

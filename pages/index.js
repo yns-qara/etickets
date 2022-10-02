@@ -326,7 +326,6 @@ export default function Home() {
         setAllEvents={setAllEvents}
         filtredEvents={FiltredEvents}
         setFiltredEvents={setFiltredEvents}
-
         activeVille={activeVille}
         setActiveVille={setActiveVille}
         activeDate={activeDate}
@@ -335,7 +334,6 @@ export default function Home() {
         setActivePrix={setActivePrix}
         expriredSoon={expriredSoon}
         setExpriredSoon={setExpriredSoon}
-
         active = {active}
         setActive = {setActive}
       />
