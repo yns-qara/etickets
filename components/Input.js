@@ -2,8 +2,7 @@
 import Pencil from './SVGs/pencil'
 import styles from '../styles/input.module.css'
 import { useState } from 'react';
-
-const Input = props => {
+const Input = ({ID,label,type,placeholder}) => {
 
   const [togle, setTogle] = useState(true)
 
@@ -17,12 +16,12 @@ const Input = props => {
 
 
     <div className={styles.container}>
-      <label htmlFor={props.ID}>{props.label} : </label>
+      <label htmlFor={ID}>{label} : </label>
       <input
-        type={props.type}
-        id={props.ID}
-        // placeholder={togle && props.placeholder}
-        defaultValue={props.placeholder}
+        type={type}
+        id={ID}
+        // placeholder={togle && placeholder}
+        defaultValue={placeholder}
         readOnly = {togle && "true"}
            />
 
