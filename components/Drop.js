@@ -4,8 +4,9 @@ import styles from '../styles/Drop.module.css'
 import ArrowDown from './SVGs/arrowDown'
 import CommingSoon from './CommingSoon'
 
-
-
+import Ville from './drops/Ville'
+import DateDrop from './drops/Date'
+import Prix from './drops/Prix'
 
 const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, activeDate, setActiveDate, activePrix, setActivePrix, expriredSoon, setExpriredSoon , active , setActive }) => {
   /* -------------------------------------------------------------------------------- */
@@ -131,27 +132,8 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             </span>
             <ArrowDown />
           </motion.div>
-          <AnimatePresence>
-            {
-              showVille
-              &&
-              <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0, zIndex: 100 }}
-                animate={{ opacity: 1 }}
-                transition={{ ease: "easeInOut" }}
-                exit={{ opacity: 0 }}
 
-              >
-                <span onClick={() => { setActiveVille(""); setShowVille(!showVille); }}>Tout les viles</span>
-                <span onClick={() => { setActiveVille("Nador"); setShowVille(!showVille); }}>Nador</span>
-                <span onClick={() => { setActiveVille("Casa"); setShowVille(!showVille); }}>Casa</span>
-                <span onClick={() => { setActiveVille("Tanger"); setShowVille(!showVille); }}>tanger</span>
-                <span onClick={() => { setActiveVille("Rabat"); setShowVille(!showVille); }}>rabat</span>
-                <span onClick={() => { setActiveVille("Fes"); setShowVille(!showVille); }}>fes</span>
-                <span onClick={() => { setActiveVille("Marrakech"); setShowVille(!showVille); }}>Marrakech</span>
-              </motion.div>
-            }
-          </AnimatePresence>
+          <Ville showVille = { showVille} setShowVille={setShowVille} setActiveVille={setActiveVille} />
 
         </div>
         <div className={styles.drop__element}>
@@ -163,21 +145,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             <span>Date</span>
             <ArrowDown />
           </motion.div>
-          <AnimatePresence>
-            {
-              showDate
-              &&
-              <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0, zIndex: 98 }}
-                animate={{ opacity: 1 }}
-                transition={{ ease: "easeInOut" }}
-                exit={{ opacity: 0 }}
-
-              >
-                <span className={styles.comming_soon} onClick={() => setActiveDate("")}>comming soon</span>
-              </motion.div>
-            }
-          </AnimatePresence>
+          <DateDrop showDate={showDate} setActiveDate={setActiveDate} />
         </div>
         <div className={styles.drop__element}>
           <motion.div
@@ -192,29 +160,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             </span>
             <ArrowDown />
           </motion.div>
-          <AnimatePresence>
-            {
-              showPrix
-              &&
-              <motion.div className={styles.drop__hidden}
-                initial={{ opacity: 0, zIndex: 96 }}
-                animate={{ opacity: 1 }}
-                transition={{ ease: "easeInOut" }}
-                exit={{ opacity: 0 }}
-
-              >
-                <span onClick={() => { setActivePrix(0); setShowPrix(!showPrix) }}>all</span>
-                <span onClick={() => { setActivePrix(100); setShowPrix(!showPrix) }}>100 MAD</span>
-                <span onClick={() => { setActivePrix(150); setShowPrix(!showPrix) }}>150 MAD</span>
-                <span onClick={() => { setActivePrix(200); setShowPrix(!showPrix) }}>200 MAD</span>
-                <span onClick={() => { setActivePrix(250); setShowPrix(!showPrix) }}>250 MAD</span>
-                <span onClick={() => { setActivePrix(300); setShowPrix(!showPrix) }}>300 MAD</span>
-                <span onClick={() => { setActivePrix(350); setShowPrix(!showPrix) }}>350 MAD</span>
-                <span onClick={() => { setActivePrix(400); setShowPrix(!showPrix) }}>400 MAD</span>
-                <span onClick={() => { setActivePrix(999); setShowPrix(!showPrix) }}>plus de 400 MAD</span>
-              </motion.div>
-            }
-          </AnimatePresence>
+          <Prix showPrix={showPrix} setActivePrix={setActivePrix} setShowPrix={setShowPrix} />
         </div>
         <div className={styles.drop__element} 
         
