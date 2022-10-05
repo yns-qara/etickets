@@ -134,7 +134,6 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
           </motion.div>
 
           <Ville showVille = { showVille} setShowVille={setShowVille} setActiveVille={setActiveVille} />
-
         </div>
         <div className={styles.drop__element}>
           <motion.div
@@ -145,6 +144,7 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
             <span>Date</span>
             <ArrowDown />
           </motion.div>
+
           <DateDrop showDate={showDate} setActiveDate={setActiveDate} />
         </div>
         <div className={styles.drop__element}>
