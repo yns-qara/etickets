@@ -115,9 +115,20 @@
 /*------------------------------------------*/
 
 .hero__right {
-  overflow: hidden;
+  overflow-x: scroll;
   width: 50vw;
   cursor: grab;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hero__right::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hero__right {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .hero__slider {
