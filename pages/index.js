@@ -17,279 +17,281 @@ import { motion, AnimatePresence } from 'framer-motion'
 // this is commented because we still finding a way to replace the local host api with the actual api,
 // when deploying and after finding out how to use the api with env variables we uncomment the below code and delete the array fetshed Data we also make sure toadd fetshed data as props
 
-// export const getStaticProps = async () => {
-//   const res = await fetch('http://localhost:3000/api/hello');
-//   // const res = await fetch('/api/hello');
-//   // const res = await fetch('http://127.0.0.1:3000/api/hello');
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       fetchedData: data
-//     }
-//   }
-// }
+export const getStaticProps = async () => {
+  const res = await fetch('https://api-end-point-for-testing.vercel.app/api/events');
+  // const res = await fetch('/api/hello');
+  // const res = await fetch('http://127.0.0.1:3000/api/hello');
+  const data = await res.json();
+  return {
+    props: {
+      fetchedData: data
+    }
+  }
+}
 
 
 
 // Home({ fetchedData  })
 
-export default function Home() {
-  const fetchedData = [
-    {
-      id: '1',
-      title: 'jamal humour',
-      genre: 'humour',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '19',
-      price: '200',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB.png'
+export default function Home({ fetchedData }) {
+  // const fetchedData = [
+  //   {
+  //     id: '1',
+  //     title: 'jamal humour',
+  //     genre: 'humour',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '19',
+  //     price: '200',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB.png'
 
-    },
-    {
-      id: '2',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
+  //   },
+  //   {
+  //     id: '2',
+  //     title: 'mawazine',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Rabat',
+  //     lieu: 'Cinema rabat',
+  //     month: '11',
+  //     day: '19',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB2.png'
 
-    },
-    {
-      id: '3',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
+  //   },
+  //   {
+  //     id: '3',
+  //     title: 'mawazine',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Rabat',
+  //     lieu: 'Cinema rabat',
+  //     month: '11',
+  //     day: '19',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB2.png'
 
-    },
-    {
-      id: '4',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
+  //   },
+  //   {
+  //     id: '4',
+  //     title: 'mawazine',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Rabat',
+  //     lieu: 'Cinema rabat',
+  //     month: '11',
+  //     day: '19',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB2.png'
 
-    },
-    {
-      id: '5',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
+  //   },
+  //   {
+  //     id: '5',
+  //     title: 'mawazine',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Rabat',
+  //     lieu: 'Cinema rabat',
+  //     month: '11',
+  //     day: '19',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB2.png'
 
-    },
-    {
-      id: '6',
-      title: 'mawazine',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Rabat',
-      lieu: 'Cinema rabat',
-      month: '11',
-      day: '19',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB2.png'
+  //   },
+  //   {
+  //     id: '6',
+  //     title: 'mawazine',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Rabat',
+  //     lieu: 'Cinema rabat',
+  //     month: '11',
+  //     day: '19',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB2.png'
 
-    },
-    {
-      id: '7',
-      title: 'Coup de monde',
-      genre: 'sport',
-      date: 'Samedi 31 Aout 2022 - 12:45',
-      city: 'Qatar',
-      lieu: 'stadium',
-      month: '10',
-      day: '19',
-      price: '300',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB3.png'
+  //   },
+  //   {
+  //     id: '7',
+  //     title: 'Coup de monde',
+  //     genre: 'sport',
+  //     date: 'Samedi 31 Aout 2022 - 12:45',
+  //     city: 'Qatar',
+  //     lieu: 'stadium',
+  //     month: '10',
+  //     day: '19',
+  //     price: '300',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB3.png'
 
-    },
-    {
-      id: '8',
-      title: 'Coup de monde',
-      genre: 'sport',
-      date: 'Samedi 31 Aout 2022 - 12:45',
-      city: 'Qatar',
-      lieu: 'stadium',
-      month: '10',
-      day: '19',
-      price: '300',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB3.png'
+  //   },
+  //   {
+  //     id: '8',
+  //     title: 'Coup de monde',
+  //     genre: 'sport',
+  //     date: 'Samedi 31 Aout 2022 - 12:45',
+  //     city: 'Qatar',
+  //     lieu: 'stadium',
+  //     month: '10',
+  //     day: '19',
+  //     price: '300',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB3.png'
 
-    },
-    {
-      id: '9',
-      title: 'jamal humour',
-      genre: 'humour',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '19',
-      price: '200',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB.png'
+  //   },
+  //   {
+  //     id: '9',
+  //     title: 'jamal humour',
+  //     genre: 'humour',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '19',
+  //     price: '200',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB.png'
 
-    },
-    {
-      id: '10',
-      title: 'Champions league',
-      genre: 'sport',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'stadium',
-      month: '9',
-      day: '25',
-      price: '350',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB5.png'
-    },
-    {
-      id: '11',
-      title: 'dizzy dross',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Casa blanca',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '20',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB6.png'
+  //   },
+  //   {
+  //     id: '10',
+  //     title: 'Champions league',
+  //     genre: 'sport',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'stadium',
+  //     month: '9',
+  //     day: '25',
+  //     price: '350',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB5.png'
+  //   },
+  //   {
+  //     id: '11',
+  //     title: 'dizzy dross',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Casa blanca',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '20',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB6.png'
 
-    },
-    {
-      id: '12',
-      title: 'festival',
-      genre: 'entertainment',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'Cinema megarama',
-      month: '12',
-      day: '9',
-      price: '50',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB7.png'
+  //   },
+  //   {
+  //     id: '12',
+  //     title: 'festival',
+  //     genre: 'entertainment',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'Cinema megarama',
+  //     month: '12',
+  //     day: '9',
+  //     price: '50',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB7.png'
 
-    },
-    {
-      id: '13',
-      title: 'jamal humour',
-      genre: 'humour',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '19',
-      price: '200',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB.png'
+  //   },
+  //   {
+  //     id: '13',
+  //     title: 'jamal humour',
+  //     genre: 'humour',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '19',
+  //     price: '200',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB.png'
 
-    },
-    {
-      id: '14',
-      title: 'Jamal',
-      genre: 'humour',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'Cinema megarama',
-      month: '10',
-      day: '1',
-      price: '100',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB8.png'
+  //   },
+  //   {
+  //     id: '14',
+  //     title: 'Jamal',
+  //     genre: 'humour',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'Cinema megarama',
+  //     month: '10',
+  //     day: '1',
+  //     price: '100',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB8.png'
 
-    },
-    {
-      id: '15',
-      title: 'dizzy dross',
-      genre: 'music',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Casa blanca',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '20',
-      price: '250',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB6.png'
+  //   },
+  //   {
+  //     id: '15',
+  //     title: 'dizzy dross',
+  //     genre: 'music',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Casa blanca',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '20',
+  //     price: '250',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB6.png'
 
-    },
-    {
-      id: '16',
-      title: 'Champions league',
-      genre: 'sport',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Marrakech',
-      lieu: 'stadium',
-      month: '9',
-      day: '25',
-      price: '350',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB5.png'
-    },
-    {
-      id: '17',
-      title: 'Sanae jabrane',
-      genre: 'gala',
-      date: 'Samedi 30 Aout 2022 - 16:45',
-      city: 'Nador',
-      lieu: 'Cinema megarama',
-      month: '9',
-      day: '15',
-      price: '300',
-      sold: 'false',
-      reserved: 'false',
-      url: '/cardB9.png'
+  //   },
+  //   {
+  //     id: '16',
+  //     title: 'Champions league',
+  //     genre: 'sport',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Marrakech',
+  //     lieu: 'stadium',
+  //     month: '9',
+  //     day: '25',
+  //     price: '350',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB5.png'
+  //   },
+  //   {
+  //     id: '17',
+  //     title: 'Sanae jabrane',
+  //     genre: 'gala',
+  //     date: 'Samedi 30 Aout 2022 - 16:45',
+  //     city: 'Nador',
+  //     lieu: 'Cinema megarama',
+  //     month: '9',
+  //     day: '15',
+  //     price: '300',
+  //     sold: 'false',
+  //     reserved: 'false',
+  //     url: '/cardB9.png'
 
-    }
-  ]
+  //   }
+  // ]
+
+
+
   const [AllEvents, setAllEvents] = useState([]) // this is the state where to save the fetched data
   const [FiltredEvents, setFiltredEvents] = useState([])
 
@@ -308,7 +310,7 @@ export default function Home() {
   useEffect(() => {
     setAllEvents(fetchedData);
     setFiltredEvents(fetchedData);
-  }, []);
+  }, [fetchedData]);
   // add fetchedData as a dependency to the useeffect above when fetching from an api
 
 
@@ -334,8 +336,8 @@ export default function Home() {
         setActivePrix={setActivePrix}
         expriredSoon={expriredSoon}
         setExpriredSoon={setExpriredSoon}
-        active = {active}
-        setActive = {setActive}
+        active={active}
+        setActive={setActive}
       />
 
 
@@ -377,7 +379,7 @@ export default function Home() {
 
       {
         // this logic .lenght migh change cause the data fetched is .json maybe
-        (limit < fetchedData.length) &&
+        (limit <  fetchedData.length) &&
         <VoirPlusButton limit={limit} setLimit={setLimit} />
       }
 
@@ -426,7 +428,7 @@ export default function Home() {
         </AnimatePresence>
       </Marketplace>
       <Qualities />
-      <Footer active = {active} setActive = {setActive} />
+      <Footer active={active} setActive={setActive} />
 
     </>
   )
