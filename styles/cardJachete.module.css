@@ -16,9 +16,8 @@
     border-radius: 50px;
 }
 
-
-.right {
-    background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
+.right_cont{
+   background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
     border-radius: 50px;
     max-width: 466px;
     padding: 77px 29px;
@@ -28,6 +27,10 @@
     align-items: center;
     justify-content: center;
     gap: 28px;
+}
+
+.right {
+ 
 
 }
 

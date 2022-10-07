@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Finaliser from './Finaliser'
 import Image from 'next/image'
 
-const CardJachete = ({ month, day, date, lieu, prix, detailsImg ,title}) => {
+const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
     const [show, setShow] = useState(false)
     const [pack, setPack] = useState("pack1")
     const [price, setPrice] = useState("100")
@@ -39,29 +39,30 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg ,title}) => {
                     <Image src={detailsImg} width={784} height={478} alt={detailsImg} />
                 </div>
                 <div className={styles.right}>
-                    <h1>{date}</h1>
-                    <h2>{lieu} / Ouverture des portes à 15:42</h2>
-                    <div className={styles.select_parent}>
-                        <div className={styles.select}
-                            onClick={() => setShow(!show)}
-                        >
-                            <span>{rightPack()}</span>
-                            <span>{rightPrice()} MAD</span>
-                            <ArrDown />
+                    <div className={styles.right_cont}>
+                        <h1>{date}</h1>
+                        <h2>{lieu} / Ouverture des portes à 15:42</h2>
+                        <div className={styles.select_parent}>
+                            <div className={styles.select}
+                                onClick={() => setShow(!show)}
+                            >
+                                <span>{rightPack()}</span>
+                                <span>{rightPrice()} MAD</span>
+                                <ArrDown />
 
-                        </div>
-                        <AnimatePresence>
-                            {
-                                show &&
-                                <motion.div className={styles.hidden}
+                            </div>
+                            <AnimatePresence>
+                                {
+                                    show &&
+                                    <motion.div className={styles.hidden}
 
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: .4 }}
-                                >
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: .4 }}
+                                    >
 
-                                    {/* {
+                                        {/* {
                                         prix.map((price) => {
                                             setCount(count + 1);
                                             return (
@@ -83,100 +84,101 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg ,title}) => {
                                     } */}
 
 
-                                    <div
-                                        onClick={
-                                            () => {
-                                                setPack("pack1");
-                                                setPrice(prix.pack1);
-                                                setShow(!show);
+                                        <div
+                                            onClick={
+                                                () => {
+                                                    setPack("pack1");
+                                                    setPrice(prix.pack1);
+                                                    setShow(!show);
+                                                }
                                             }
-                                        }
-                                    >
-                                        <span>pack1</span>
-                                        <span>{prix.pack1} MAD</span>
-                                    </div>
-                                    <div
-                                        onClick={
-                                            () => {
-                                                setPack("pack2");
-                                                setPrice("200");
-                                                setShow(!show);
+                                        >
+                                            <span>pack1</span>
+                                            <span>{prix.pack1} MAD</span>
+                                        </div>
+                                        <div
+                                            onClick={
+                                                () => {
+                                                    setPack("pack2");
+                                                    setPrice("200");
+                                                    setShow(!show);
+                                                }
                                             }
-                                        }
-                                    >
-                                        <span>pack2</span>
-                                        <span>{prix.pack2} MAD</span>
-                                    </div>
-                                    <div
-                                        onClick={
-                                            () => {
-                                                setPack("pack3");
-                                                setPrice("300");
-                                                setShow(!show);
+                                        >
+                                            <span>pack2</span>
+                                            <span>{prix.pack2} MAD</span>
+                                        </div>
+                                        <div
+                                            onClick={
+                                                () => {
+                                                    setPack("pack3");
+                                                    setPrice("300");
+                                                    setShow(!show);
+                                                }
                                             }
-                                        }
-                                    >
-                                        <span>pack3</span>
-                                        <span>{prix.pack3} MAD</span>
-                                    </div>
-                                    <div
-                                        onClick={
-                                            () => {
-                                                setPack("pack4");
-                                                setPrice("400");
-                                                setShow(!show);
+                                        >
+                                            <span>pack3</span>
+                                            <span>{prix.pack3} MAD</span>
+                                        </div>
+                                        <div
+                                            onClick={
+                                                () => {
+                                                    setPack("pack4");
+                                                    setPrice("400");
+                                                    setShow(!show);
+                                                }
                                             }
-                                        }
-                                    >
-                                        <span>pack4</span>
-                                        <span>{prix.pack4} MAD</span>
-                                    </div>
-                                </motion.div>
-                            }
-                        </AnimatePresence>
-                    </div>
-
-
-
-                    <div className={styles.button_holder}>
-                        <div>
-                            <span
-                                onClick={
-                                    () => {
-                                        if (increment != 1) {
-
-                                            setIncrement(increment - 1)
-                                        }
-                                    }
+                                        >
+                                            <span>pack4</span>
+                                            <span>{prix.pack4} MAD</span>
+                                        </div>
+                                    </motion.div>
                                 }
-                            >-</span>
-                            <input type="number" value={increment} min="1" />
-                            <div
-                                onClick={
-                                    () => {
-                                        setIncrement(increment + 1)
-                                    }
-                                }
-                            >
-                                <Plus />
-                            </div>
+                            </AnimatePresence>
                         </div>
-                        <button
-                            onClick={() => setToggle(!toggle)}
-                        >
-                            <Pan />
-                            <span>ACHETER MAINTENANT</span>
-                        </button>
-                    </div>
 
-                    <div className={styles.counter}>
-                        <CountDownDL2 name="younes" month={month} day={day} />
-                    </div>
-                    <h4>PARTAGEZ CET ÉVÉNEMENT</h4>
-                    <div className={styles.social_media}>
-                        <MessengerP />
-                        <WatsappP />
-                        <TwitterP />
+
+
+                        <div className={styles.button_holder}>
+                            <div>
+                                <span
+                                    onClick={
+                                        () => {
+                                            if (increment != 1) {
+
+                                                setIncrement(increment - 1)
+                                            }
+                                        }
+                                    }
+                                >-</span>
+                                <input type="number" value={increment} min="1" />
+                                <div
+                                    onClick={
+                                        () => {
+                                            setIncrement(increment + 1)
+                                        }
+                                    }
+                                >
+                                    <Plus />
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setToggle(!toggle)}
+                            >
+                                <Pan />
+                                <span>ACHETER MAINTENANT</span>
+                            </button>
+                        </div>
+
+                        <div className={styles.counter}>
+                            <CountDownDL2 name="younes" month={month} day={day} />
+                        </div>
+                        <h4>PARTAGEZ CET ÉVÉNEMENT</h4>
+                        <div className={styles.social_media}>
+                            <MessengerP />
+                            <WatsappP />
+                            <TwitterP />
+                        </div>
                     </div>
                 </div>
             </div>
