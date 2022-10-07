@@ -10,7 +10,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Finaliser from './Finaliser'
 import Image from 'next/image'
-const CardJachete = () => {
+
+const CardJachete = ({month,day,date,lieu,prix}) => {
     const [show, setShow] = useState(false)
     const [pack, setPack] = useState("pack1")
     const [price, setPrice] = useState("100")
@@ -25,7 +26,7 @@ const CardJachete = () => {
         else if (pack === "pack4") return "Pack4"
     }
     const rightPrice = () => {
-        if (price === "100") return "100"
+        if (price === "100") return prix
         else if (price === "200") return "200"
         else if (price === "300") return "300"
         else if (price === "400") return "400"
@@ -39,8 +40,8 @@ const CardJachete = () => {
                     <Image src="/qatar.png" width={784} height={478} alt="bigCard" />
                 </div>
                 <div className={styles.right}>
-                    <h1>Mardi 30 Novembre 2021</h1>
-                    <h2>Doha / Ouverture des portes à 15:42</h2>
+                    <h1>{date}</h1>
+                    <h2>{lieu} / Ouverture des portes à 15:42</h2>
                     <div className={styles.select_parent}>
                         <div className={styles.select}
                             onClick={() => setShow(!show)}
@@ -70,7 +71,7 @@ const CardJachete = () => {
                                         }
                                     >
                                         <span>pack1</span>
-                                        <span>100 MAD</span>
+                                        <span>{prix} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -82,7 +83,7 @@ const CardJachete = () => {
                                         }
                                     >
                                         <span>pack2</span>
-                                        <span>200 MAD</span>
+                                        <span>{parseInt(prix) + 100} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -94,7 +95,7 @@ const CardJachete = () => {
                                         }
                                     >
                                         <span>pack3</span>
-                                        <span>300 MAD</span>
+                                        <span>{parseInt(prix) + 200} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -106,7 +107,7 @@ const CardJachete = () => {
                                         }
                                     >
                                         <span>pack4</span>
-                                        <span>400 MAD</span>
+                                        <span>{parseInt(prix) + 300}</span>
                                     </div>
                                 </motion.div>
                             }
@@ -147,7 +148,7 @@ const CardJachete = () => {
                     </div>
 
                     <div className={styles.counter}>
-                        <CountDownDL2 name="younes" month="9" day="30" />
+                        <CountDownDL2 name="younes" month={month} day={day} />
                     </div>
                     <h4>PARTAGEZ CET ÉVÉNEMENT</h4>
                     <div className={styles.social_media}>

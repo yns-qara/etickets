@@ -52,7 +52,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     <a className={styles.card__button_sold}>SOLD</a>
 
                     :
-                    <Link href={link} >
+                    <Link href={link}>
                         <a className={styles.card__button}>
                             J&apos;achéte
                         </a>
