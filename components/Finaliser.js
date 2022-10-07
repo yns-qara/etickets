@@ -2,7 +2,7 @@ import styles from '../styles/finaliser.module.css'
 import Cross from '../components/SVGs/cross'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-const Finaliser = ({ toggle, setToggle }) => {
+const Finaliser = ({ toggle, setToggle ,detailsImg ,title ,price ,increment}) => {
 
     return (
 
@@ -14,10 +14,10 @@ const Finaliser = ({ toggle, setToggle }) => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: .4 }}
             >
-                <h1>FIFA World Cup QATAR 2022</h1>
+                <h1>{title}</h1>
                 <div className={styles.container}>
                     <div className={styles.left}>
-                        <Image src="/qatar.png" width={461} height={263} alt="finaliser" />
+                        <Image src={detailsImg} width={693} height={351} alt="finaliser" />
                     </div>
                     <div className={styles.right}>
                         <div className={styles.header}>
@@ -26,9 +26,9 @@ const Finaliser = ({ toggle, setToggle }) => {
                             <span>Total</span>
                         </div>
                         <div className={styles.infos}>
-                            <span>30MAD</span>
-                            <span>1</span>
-                            <span>30MAD</span>
+                            <span>{price} MAD</span>
+                            <span>{increment}</span>
+                            <span>{price * increment}MAD</span>
                         </div>
                         <div className={styles.buttons}>
                             <button>CONTINUER MES ACHATS</button>

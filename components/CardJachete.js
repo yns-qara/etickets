@@ -11,14 +11,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Finaliser from './Finaliser'
 import Image from 'next/image'
 
-const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
+const CardJachete = ({ month, day, date, lieu, prix, detailsImg ,title}) => {
     const [show, setShow] = useState(false)
     const [pack, setPack] = useState("pack1")
     const [price, setPrice] = useState("100")
     const [increment, setIncrement] = useState(1)
     const [toggle, setToggle] = useState(false)
-    const [count, setCount] = useState(0);
-
     const rightPack = () => {
         if (pack === "pack1") return "Pack1"
         else if (pack === "pack2") return "Pack2"
@@ -188,7 +186,10 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
                 <Finaliser
                     toggle={toggle}
                     setToggle={setToggle}
-
+                    detailsImg={detailsImg}
+                    title={title}
+                    price={price}
+                    increment={increment}
                 />
             }
         </>

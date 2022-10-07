@@ -53,14 +53,14 @@
 }
 
 .left {
-    max-width: 461px;
-    max-height: 263px;
+    max-width: 693px;
+    max-height: 351px;
 
 }
 
 .left img {
     width: 100%;
-
+    border-radius: 20px;
 }
 
 .right {
@@ -143,6 +143,10 @@
     padding: 1vw 1.6vw;
     border: 0;
     cursor: pointer;
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease;
+    border: 2px solid #4B2A7B;
+
 }
 
 .buttons button:last-child {
@@ -152,6 +156,15 @@
     border-radius: 40px;
 }
 
+.buttons button:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+.buttons button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
 
 .background {
     width: 100vw;
@@ -162,4 +175,3 @@
     top: 0;
     left: 0;
 }
-

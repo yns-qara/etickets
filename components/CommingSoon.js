@@ -1,7 +1,7 @@
 
 import styles from '../styles/CommingSoon.module.css'
 
-const CommingSoon = ({ setActive , title }) => {
+const CommingSoon = ({ setActive, title }) => {
     return (
         <>
             <div className={styles.container}>
@@ -9,7 +9,7 @@ const CommingSoon = ({ setActive , title }) => {
                 <p id={styles.par}>{title}</p>
                 <button onClick={() => setActive(false)}>got it</button>
             </div>
-            <div className={styles.shadow}>
+            <div className={styles.shadow} onClick={() => setActive(false)}>
             </div>
         </>
     )

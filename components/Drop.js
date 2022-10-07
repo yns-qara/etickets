@@ -120,7 +120,6 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
       <div className={styles.drop__container}>
         <div className={styles.drop__element}>
           <motion.div
-            initial={{ zIndex: 1001 }}
 
             className={activeVille === "" ? styles.drop__element_container : styles.active}
             onClick={villeClick}
@@ -137,7 +136,6 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
         </div>
         <div className={styles.drop__element}>
           <motion.div
-            initial={{ zIndex: 99 }}
             className={styles.drop__element_container}
             onClick={dateClick}
           >
@@ -149,7 +147,6 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
         </div>
         <div className={styles.drop__element}>
           <motion.div
-            initial={{ zIndex: 97 }}
             className={activePrix === 0 ? styles.drop__element_container : styles.active}
             onClick={prixClick}
           >
@@ -168,7 +165,6 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
          onClick={()=> setActive(true)}
         >
           <motion.div
-            initial={{ zIndex: 95 }}
 
             className={expriredSoon ? styles.active : styles.drop__element_container}>
             <span>Bientôt expiré</span>
