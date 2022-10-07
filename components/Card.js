@@ -41,7 +41,7 @@ const Card = ({ imgURL, title, genre, date, city, lieu, month, day, price, sold,
                     <Image src="/goldLogo.png" width={68} height={13} alt="logo" />
                     <div className={styles.card__price_item}>
                         <span>À partir de :</span>
-                        <div>{price} <span>MAD</span></div>
+                        <div>{price.pack1} <span>MAD</span></div>
                     </div>
                 </div>
             </div>

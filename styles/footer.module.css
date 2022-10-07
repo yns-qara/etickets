@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: space-between;
     background: #EDEDED;
+    position: relative;
+    z-index: 999;
 }
 
 
@@ -79,6 +81,8 @@
     padding: 70px 60px;
     justify-content: space-around;
     overflow: hidden;
+    position: relative;
+    z-index: 999;
 }
 
 .left_middle {
@@ -183,11 +187,14 @@
 /*---------------LOWER FOOTER----------------*/
 
 .lower__footer {
+    background: #EDEDED;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 82px;
     padding: 24px 34px;
+    position: relative;
+    z-index: 999;
 }
 
 .lower__footer h1 {

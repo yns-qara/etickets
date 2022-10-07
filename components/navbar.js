@@ -35,7 +35,7 @@ const Navbar = () => {
                     <ul className={styles.menu__left}>
                         <li className="logo">
                             <Link href="/">
-                                <a><LogoNav /></a>
+                                <LogoNav />
                             </Link>
                         </li>
                         <li className={styles.disapear}>
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <Shop />
                             </Link>
                         </li>
-                      
+
                         <li className={styles.menu__buttons}>
                             <Link href="#">
                                 <a onClick={show}>Connexion</a>

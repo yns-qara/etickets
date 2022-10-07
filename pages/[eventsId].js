@@ -4,9 +4,6 @@ import JachetHead from '../components/JachetHead'
 import CardJachete from "../components/CardJachete"
 import BodyJachete from "../components/BodyJachete"
 import { motion} from 'framer-motion'
-import { useRouter } from "next/router"
-import { useEffect } from "react"
-// replace this with an api fetch to get the specific details based on the ID
 
 
 
@@ -24,15 +21,13 @@ export const getServerSideProps = async (context) => {
 
 const Jachete = ({evenement}) => {
 
-  // const router = useRouter();
-  // const eventsId = router.query.eventsId;
-
 
   return (
     <>
       <animatePresense>
 
         <Navbar />
+        
         <motion.div
           initial={{ y: 150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -50,11 +45,14 @@ const Jachete = ({evenement}) => {
                prix={evenement.price}
                city={evenement.city}
                imgURL={evenement.url}
+               detailsImg={evenement.detailsImg}
             />
           </JachetHead>
           
-          <BodyJachete />
+          <BodyJachete description={evenement.description} />
+
           <Footer />
+
         </motion.div>
       </animatePresense>
 

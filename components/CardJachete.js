@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Finaliser from './Finaliser'
 import Image from 'next/image'
 
-const CardJachete = ({month,day,date,lieu,prix}) => {
+const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
     const [show, setShow] = useState(false)
     const [pack, setPack] = useState("pack1")
     const [price, setPrice] = useState("100")
@@ -26,7 +26,7 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
         else if (pack === "pack4") return "Pack4"
     }
     const rightPrice = () => {
-        if (price === "100") return prix
+        if (price === "100") return prix.pack1
         else if (price === "200") return "200"
         else if (price === "300") return "300"
         else if (price === "400") return "400"
@@ -37,7 +37,7 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
         <>
             <div className={styles.container}>
                 <div className={styles.left}>
-                    <Image src="/qatar.png" width={784} height={478} alt="bigCard" />
+                    <Image src={detailsImg} width={784} height={478} alt={detailsImg} />
                 </div>
                 <div className={styles.right}>
                     <h1>{date}</h1>
@@ -65,13 +65,13 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
                                         onClick={
                                             () => {
                                                 setPack("pack1");
-                                                setPrice("100");
+                                                setPrice(prix.pack1);
                                                 setShow(!show);
                                             }
                                         }
                                     >
                                         <span>pack1</span>
-                                        <span>{prix} MAD</span>
+                                        <span>{prix.pack1} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -83,7 +83,7 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
                                         }
                                     >
                                         <span>pack2</span>
-                                        <span>{parseInt(prix) + 100} MAD</span>
+                                        <span>{prix.pack2} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -95,7 +95,7 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
                                         }
                                     >
                                         <span>pack3</span>
-                                        <span>{parseInt(prix) + 200} MAD</span>
+                                        <span>{prix.pack3} MAD</span>
                                     </div>
                                     <div
                                         onClick={
@@ -107,7 +107,7 @@ const CardJachete = ({month,day,date,lieu,prix}) => {
                                         }
                                     >
                                         <span>pack4</span>
-                                        <span>{parseInt(prix) + 300}</span>
+                                        <span>{prix.pack4}</span>
                                     </div>
                                 </motion.div>
                             }

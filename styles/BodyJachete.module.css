@@ -2,11 +2,18 @@
     margin-top: 65px;
     padding: 49px 70px;
     background: #F7F7F7;
+    position: relative;
+    z-index: 99;
+}
+
+.container div{
+    max-width: 76vw;
+    margin: auto;
+
 }
 
 .container h1 {
     font-family: 'Montserrat';
-    font-style: italic;
     font-weight: 900;
     font-size: 40px;
     line-height: 49px;
@@ -14,15 +21,16 @@
 }
 
 .container p {
+    margin-top: 25px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height: 29px;
-
+    line-height: 45px;
     color: #000000;
+    text-align: justify;
 }
-
+/* 
 .container h2 {
     margin-top: 35px;
     font-family: 'Roboto';
@@ -80,7 +88,7 @@
     font-size: 25px;
     line-height: 35px;
     color: #000000;
-}
+} */
 
 @media all and (max-width: 922px) {
     .container h1 {
@@ -90,7 +98,7 @@
     .container p {
         font-size: 20px;
     }
-    
+/*     
     .container h2 {
         font-size: 29px;
     }
@@ -113,5 +121,5 @@
     
     .list li {
         font-size: 19px;
-    }
+    } */
 }
