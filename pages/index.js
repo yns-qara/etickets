@@ -50,7 +50,6 @@ export default function Home({ fetchedData }) {
     setAllEvents(fetchedData);
     setFiltredEvents(fetchedData);
   }, [fetchedData]);
-  // add fetchedData as a dependency to the useeffect above when fetching from an api
 
 
 

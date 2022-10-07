@@ -17,7 +17,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
     const [price, setPrice] = useState("100")
     const [increment, setIncrement] = useState(1)
     const [toggle, setToggle] = useState(false)
-
+    const [count, setCount] = useState(0);
 
     const rightPack = () => {
         if (pack === "pack1") return "Pack1"
@@ -31,6 +31,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
         else if (price === "300") return "300"
         else if (price === "400") return "400"
     }
+
 
 
     return (
@@ -61,6 +62,29 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: .4 }}
                                 >
+
+                                    {/* {
+                                        prix.map((price) => {
+                                            setCount(count + 1);
+                                            return (
+                                                <div
+                                                    key={count}
+                                                    onClick={
+                                                        () => {
+                                                            setPack("pack" + count);
+                                                            setPrice(price`.pack${count}`);
+                                                            setShow(!show);
+                                                        }
+                                                    }
+                                                >
+                                                    <span>{"pack" + count}</span>
+                                                    <span>{price`.pack${count}`} MAD</span>
+                                                </div>
+                                            )
+                                        })
+                                    } */}
+
+
                                     <div
                                         onClick={
                                             () => {
@@ -107,7 +131,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg }) => {
                                         }
                                     >
                                         <span>pack4</span>
-                                        <span>{prix.pack4}</span>
+                                        <span>{prix.pack4} MAD</span>
                                     </div>
                                 </motion.div>
                             }
