@@ -6,7 +6,7 @@
     z-index: 99;
 }
 
-.container div{
+.container div {
     max-width: 76vw;
     margin: auto;
 
@@ -30,6 +30,10 @@
     color: #000000;
     text-align: justify;
 }
+
+
+
+
 /* 
 .container h2 {
     margin-top: 35px;
@@ -94,11 +98,12 @@
     .container h1 {
         font-size: 35px;
     }
-    
+
     .container p {
         font-size: 20px;
     }
-/*     
+
+    /*     
     .container h2 {
         font-size: 29px;
     }
@@ -122,4 +127,24 @@
     .list li {
         font-size: 19px;
     } */
+}
+
+
+@media all and (max-width: 785px) {
+    .container p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .container div {
+        max-width: 85vw;
+    }
+
+    .container {
+        padding: 49px 25px;
+        background: #F7F7F7;
+        position: relative;
+        z-index: 99;
+    }
+
 }
