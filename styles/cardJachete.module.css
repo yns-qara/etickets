@@ -269,6 +269,12 @@
 
 @media all and (max-width: 797px) {
     .left {
-        display: none;
+        /* display: none; */
+    }
+}
+
+@media all and (max-width: 1110px) {
+    .container{
+        flex-direction: column;
     }
 }

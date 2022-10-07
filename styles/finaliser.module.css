@@ -13,14 +13,11 @@
 .parent {
     background: #F7F7F7;
     border-radius: 30px;
-    max-width: 89vw;
-    padding: 61px 51px;
-    padding: 5vw 4vw;
-
-
+    max-width: 1100px;
+    padding: 25px 15px;
 
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     top: 50%;
     left: 0;
     right: 0;
@@ -34,8 +31,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
-    font-size: 30px;
     font-size: 3vw;
+    font-size: 29px;
     line-height: 37px;
     color: #000000;
     text-align: center;
@@ -43,8 +40,8 @@
 
 
 .container {
-    margin-top: 62px;
     margin-top: 4.8vw;
+    margin-top: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,8 +50,8 @@
 }
 
 .left {
-    max-width: 693px;
-    max-height: 351px;
+    max-width: 500px;
+    max-height: 251px;
 
 }
 
@@ -64,22 +61,18 @@
 }
 
 .right {
-    max-width: 635px;
-    max-width: 45vw;
-    max-height: 263px;
-    max-height: 45vw;
+    max-width: 435px;
+    /* max-height: 45vw; */
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 32px;
-    gap: 2vw;
 }
 
 .header {
     background: #FFFFFF;
-    padding: 20px;
-    padding: 1.5vw;
+    padding: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,16 +82,16 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
     font-size: 1.5vw;
+    font-size: 14px;
     line-height: 23px;
     color: #000000;
 }
 
 
 .infos {
-    padding: 20px;
     padding: 1.5vw;
+    padding: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,8 +101,8 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 19px;
     font-size: 1.4vw;
+    font-size: 14px;
     line-height: 22px;
 
     color: #464646;
@@ -117,30 +110,25 @@
 
 .buttons {
     margin-top: 40px;
-    margin-top: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 52px;
-    gap: 3.5vw;
-
+    /* gap: 52px;
+    gap: 3.5vw; */
+    gap: 25px;
 
 }
 
 .buttons button {
     background: #4B2A7B;
-    border-radius: 40px;
-    border-radius: 4vw;
+    border-radius: 25px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
-    font-size: 1.2vw;
-    line-height: 23px;
-    line-height: 1.6vw;
+    font-size: 12px;
+    line-height: 15px;
     color: #FFFFFF;
-    padding: 14px 30px;
-    padding: 1vw 1.6vw;
+    padding: 11px 25px;
     border: 0;
     cursor: pointer;
     box-shadow: 0 0px 0 #2a1052;
@@ -166,12 +154,40 @@
     transform: translateY(0px);
 }
 
+
+
+
 .background {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     top: 0;
     left: 0;
+}
+
+.cross svg {
+    color: #3d3d3d;
+    transition: all .5s ease;
+}
+
+.cross svg:hover {
+    color: #000000;
+}
+
+
+@media all and (max-width: 952px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .buttons {
+        margin-top: 5px;
+    }
+
+    .right {
+        gap: 26px;
+    }
+
 }

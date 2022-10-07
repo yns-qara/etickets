@@ -8,13 +8,6 @@
     text-align: center;
 }
 
-.wrapper{
-    
-    position: fixed;
-    z-index: 9;
-    top: 15vh;
-}
-
 .jachete__container {
     padding: 15vh 0 0 0;
     display: flex;
@@ -22,5 +15,5 @@
     align-items: center;
     justify-content: center;
     gap: 5vh;
-    height: 90vh;
+
 }

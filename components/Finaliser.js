@@ -17,7 +17,7 @@ const Finaliser = ({ toggle, setToggle ,detailsImg ,title ,price ,increment}) =>
                 <h1>{title}</h1>
                 <div className={styles.container}>
                     <div className={styles.left}>
-                        <Image src={detailsImg} width={693} height={351} alt="finaliser" />
+                        <Image src={detailsImg} width={500} height={251} alt="finaliser" />
                     </div>
                     <div className={styles.right}>
                         <div className={styles.header}>
@@ -28,7 +28,7 @@ const Finaliser = ({ toggle, setToggle ,detailsImg ,title ,price ,increment}) =>
                         <div className={styles.infos}>
                             <span>{price} MAD</span>
                             <span>{increment}</span>
-                            <span>{price * increment}MAD</span>
+                            <span>{price * increment} MAD</span>
                         </div>
                         <div className={styles.buttons}>
                             <button>CONTINUER MES ACHATS</button>
@@ -36,7 +36,7 @@ const Finaliser = ({ toggle, setToggle ,detailsImg ,title ,price ,increment}) =>
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setToggle(!toggle)}>
+                <div className={styles.cross} onClick={() => setToggle(!toggle)}>
                     <Cross />
                 </div>
 
