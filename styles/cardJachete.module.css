@@ -7,6 +7,7 @@
 .left {
     max-width: 784px;
     max-height: 478px;
+    padding: 15px;
 }
 
 .left img {
@@ -271,10 +272,27 @@
     .left {
         /* display: none; */
     }
+
+
+
+    .left img {
+        border-radius: 25px;
+    }
+
+
+    .right {
+        border-radius: 25px;
+
+    }
+
 }
 
 @media all and (max-width: 1110px) {
-    .container{
+    .container {
         flex-direction: column;
+    }
+
+    .right {
+
     }
 }
