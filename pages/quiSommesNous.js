@@ -5,7 +5,7 @@ const quiSommesNous = () => {
 
     return (
         <>
-            <Nav />
+             <Nav />
 
             <div className={styles.container}>
                 <h1>Qui sommes nous ?</h1>
