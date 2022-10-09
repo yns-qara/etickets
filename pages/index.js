@@ -25,7 +25,7 @@ export const getServerSideProps = async () => {
 }
 
 
-
+// test the comit
 
 export default function Home({ fetchedData }) {
 
