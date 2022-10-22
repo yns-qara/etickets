@@ -33,7 +33,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
 
     const handleReservation = async () => {
         // post a request to the server /reservations
-        
+
     }
 
     return (
@@ -42,9 +42,9 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
             <div className={styles.container}>
 
                 <div className={styles.left}>
-                    <div 
-                    onClick={handleReservation}
-                    className={styles.reserver}>reserver maintenant</div>
+                    <div
+                        onClick={handleReservation}
+                        className={styles.reserver}><span>reserver maintenant</span></div>
                     <Image src={detailsImg} width={784} height={478} alt={detailsImg} />
                 </div>
                 <div className={styles.right}>

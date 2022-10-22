@@ -36,6 +36,8 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     opacity: 0;
+    text-align: center;
+
 }
 
 .reserver:hover {
@@ -335,9 +337,13 @@
 
     }
 
-    .reserver {
+    .left div.reserver {
         font-size: 16px;
         line-height: 12px;
+        width: 300px;
+    }
+    .reserver span{
+        margin: auto;
     }
 
     .reserver:hover {
