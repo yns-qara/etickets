@@ -140,7 +140,7 @@ const Navbar = () => {
                             <Link href="/informations">
                                 <div>profile</div>
                             </Link>
-                            <Link href="/commandes">
+                            <Link href="/commands">
                                 <div>Mes Commandes</div>
                             </Link>
                             <Link href="/">
