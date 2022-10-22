@@ -1,7 +1,18 @@
 @media all and (max-width: 1440px) {
     .container {
+        width: 100%;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
+    }
+}
+
+@media all and (max-width: 847px) {
+    .container{
+        flex-direction: column ;
+        gap: 25px;
+    }
+    .container div{
+        width: 100%;
     }
 }

@@ -1,5 +1,4 @@
 import styles from '../styles/jacheteH.module.css'
-import {notion,useScroll} from 'framer-motion'
 
 const JachetHead = ({ title, children }) => {
   return (

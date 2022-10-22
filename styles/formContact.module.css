@@ -49,6 +49,7 @@
     background: #4285F4;
     padding: 12px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .social_media svg:first-child {
@@ -61,6 +62,10 @@
 
 }
 
+
+.social_media svg:hover {
+    padding: 5px;
+}
 
 .right {
     max-width: 530px;
@@ -163,8 +168,40 @@
     border: 0;
     cursor: pointer;
     margin: auto;
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .3s ease;
 }
 
+.right button:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+.right button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
+
+
+.right div input:focus {
+    box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -webkit-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -moz-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+}
+
+.right input:focus {
+    box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -webkit-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -moz-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+
+}
+
+.right textarea:focus {
+    box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -webkit-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+    -moz-box-shadow: 0px 0px 1px 3px rgba(75, 42, 123, 0.75);
+
+}
 
 @media all and (max-width: 1034px) {
     .left {
@@ -200,17 +237,17 @@
         padding: 10px 25px;
         font-size: 20px;
     }
-    
+
     .right div input::placeholder {
         font-size: 20px;
     }
-    
+
     .right input {
         padding: 10px 25px;
         font-size: 20px;
     }
-    
-    
+
+
     .right input::placeholder {
         font-size: 20px;
     }

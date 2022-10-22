@@ -1,23 +1,66 @@
 .container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
 .left {
     max-width: 784px;
     max-height: 478px;
-    padding: 15px;
+    /* padding: 15px; */
+    position: relative;
+}
+
+.reserver {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 12px;
+    color: #4B2A7B;
+    background: #FFFFFF;
+    border-radius: 77px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+}
+
+.reserver:hover {
+    padding: 16px 35px;
+
 }
 
 .left img {
     width: 100%;
     height: 100%;
     border-radius: 50px;
+    transition: all .4s ease;
+    filter: brightness(1);
 }
 
-.right_cont{
-   background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
+.left:hover .reserver {
+    opacity: 1;
+}
+
+.left:hover img {
+    filter: brightness(15%);
+}
+
+.right_cont {
+    background: linear-gradient(180deg, #784BBB 0%, #4C2B7C 100%);
     border-radius: 50px;
     max-width: 466px;
     padding: 77px 29px;
@@ -27,11 +70,6 @@
     align-items: center;
     justify-content: center;
     gap: 28px;
-}
-
-.right {
- 
-
 }
 
 .right h1 {
@@ -118,6 +156,7 @@
     border-width: 0 0 1px 0;
     border-color: #784BBB;
     padding: 5px 5px 15px;
+    font-weight: 500;
     transition: all .3s ease;
 }
 
@@ -134,8 +173,8 @@
 }
 
 .hidden div:hover {
-    background: #a16eee;
-    border-radius: 15px;
+    color: antiquewhite;
+    font-weight: 700;
 }
 
 .button_holder {
@@ -210,7 +249,12 @@
     align-items: center;
     border: 0;
     cursor: pointer;
+    transition: all .3s ease;
+}
 
+.button_holder button:hover {
+    padding: 10px 25px;
+    gap: 15px;
 }
 
 .button_holder button span {
@@ -221,6 +265,8 @@
     line-height: 12px;
     color: #4B2A7B;
 }
+
+
 
 
 
@@ -268,15 +314,16 @@
     height: 36px;
     padding: 10px;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+.social_media svg:hover {
+    padding: 5px;
+
 }
 
 
 @media all and (max-width: 797px) {
-    .left {
-        /* display: none; */
-    }
-
-
 
     .left img {
         border-radius: 25px;
@@ -288,14 +335,22 @@
 
     }
 
+    .reserver {
+        font-size: 16px;
+        line-height: 12px;
+    }
+
+    .reserver:hover {
+        padding: 15px 25px;
+        background-color: #ceb2f7;
+        color: #090214;
+    }
+
+
 }
 
 @media all and (max-width: 1110px) {
     .container {
         flex-direction: column;
-    }
-
-    .right {
-
     }
 }

@@ -29,10 +29,26 @@
     transform: translateY(0px);
 }
 
-.parent{
+.parent {
     margin-top: 43px;
-   display: flex; 
-   gap: 82px;
+    display: flex;
+    gap: 82px;
+
 }
 
+@media all and (max-width: 662px) {
+    .parent {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    .container {
+        font-size: 20px;
+        line-height: 25px;
+        padding: 14px 15px;
+        text-align: center;
+
+    }
+
+
+}

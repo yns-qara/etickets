@@ -6,6 +6,7 @@
     line-height: 55px;
     color: #000000;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .jachete__container {
@@ -14,6 +15,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5vh;
-
+    gap: 15vh;
 }

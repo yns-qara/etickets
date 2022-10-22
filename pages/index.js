@@ -1,4 +1,5 @@
 import Navbar from '../components/navbar'
+import Navbar2 from '../components/Navbar2'
 import Hero from '../components/Hero'
 import Drop from '../components/Drop'
 import Header from '../components/Header'
@@ -10,8 +11,9 @@ import CardMini from '../components/CardMini'
 import CardMiniHolder from '../components/CardMiniHolder'
 import Qualities from '../components/Qualities'
 import Footer from '../components/Footer'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { UserContext } from '../context/UserContext'
 
 
 export const getServerSideProps = async () => {
@@ -25,7 +27,6 @@ export const getServerSideProps = async () => {
 }
 
 
-// test the comit
 
 export default function Home({ fetchedData }) {
 
@@ -52,13 +53,17 @@ export default function Home({ fetchedData }) {
   }, [fetchedData]);
 
 
+  const [logedIn] = useContext(UserContext);
 
   return (
     <>
 
 
       <Header>
-        <Navbar />
+
+        {
+          logedIn ? <Navbar2 /> : <Navbar />
+        }
         <Hero />
       </Header>
       <Drop
@@ -117,7 +122,7 @@ export default function Home({ fetchedData }) {
 
       {
         // this logic .lenght migh change cause the data fetched is .json maybe
-        (limit <  fetchedData.length) &&
+        (limit < fetchedData.length) &&
         <VoirPlusButton limit={limit} setLimit={setLimit} />
       }
 

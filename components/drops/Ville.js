@@ -8,7 +8,7 @@ const Ville = ({ showVille, setActiveVille, setShowVille }) => {
                 showVille
                 &&
                 <motion.div className={styles.drop__hidden}
-                    initial={{ opacity: 0, zIndex: 100 }}
+                    initial={{ opacity: 0, zIndex: "9999" }}
                     animate={{ opacity: 1 }}
                     transition={{ ease: "easeInOut" }}
                     exit={{ opacity: 0 }}

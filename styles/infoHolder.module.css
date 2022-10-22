@@ -36,19 +36,28 @@
 .button__holder button {
     border-radius: 95px;
     padding: 14px 65px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
-
     cursor: pointer;
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .5s ease;
+}
+
+.button__holder button:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+.button__holder button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
 }
 
 .button__holder button:first-child {
-
     border: 0;
     background: #4B2A7B;
 }
@@ -87,7 +96,7 @@
         padding: 10px 40px;
     }
 
-    .button__holder{
+    .button__holder {
         flex-direction: column;
     }
 }

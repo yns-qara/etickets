@@ -1,5 +1,5 @@
 .cont {
-    padding: 204px 0;
+    padding: 204px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,26 @@
 }
 
 .flex_start {
-    padding: 0 46px;
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    max-width: 920px;
+
 }
 
+
+@media all and (max-width: 1037px) {
+
+    .flex_start {
+        align-self: flex-start;
+
+    }
+
+}
+
+@media all and (max-width: 662px) {
+    .flex_start{
+        align-self: center;
+    }
+    .cont {
+        padding: 204px 15px;
+    }
+}

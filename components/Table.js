@@ -3,7 +3,17 @@ import Undo from './SVGs/undo'
 import Details from './Details'
 import { useState } from 'react'
 import Link from 'next/link'
-const Table = props => {
+
+// getServerSideProps here
+// pass the data as props to Table
+// map the rows with the correspondin data
+// expected data from the /mescomands endpoint :
+// {event title , event date , status , payement method , date of purchase , price}
+
+
+
+const Table = () => {
+
     const [visible, setVisible] = useState(false)
     return (
         <>
@@ -21,7 +31,7 @@ const Table = props => {
                         <th>Prix</th>
                         <th></th>
                     </tr>
-
+                    {/* start maping from here */}
                     <tr>
                         <td>Marrakech du rire</td>
                         <td>27/04/2022 </td>
@@ -73,6 +83,8 @@ const Table = props => {
 
             {
                 visible && <Details
+                    // send the details variables from here
+                    // maybe use Ids for dynamique rendering
                     visible={visible}
                     setVisible={setVisible}
                 />

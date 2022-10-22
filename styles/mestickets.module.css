@@ -1,7 +1,6 @@
-
 .container::-webkit-scrollbar {
     width: 19px;
-    
+
 }
 
 .container::-webkit-scrollbar-track {
@@ -19,6 +18,7 @@
 
 .container {
     height: 596px;
+    max-width: 920px;
     overflow-y: auto;
     overflow-x: hidden;
     background: #FAFAFA;
@@ -26,4 +26,6 @@
 }
 
 
+@media all and (max-width: 967px) {
 
+}

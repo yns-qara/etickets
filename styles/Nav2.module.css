@@ -32,17 +32,28 @@
     gap: 46px;
 }
 
+.menu__left li.hide {
+    background-color: #ebddff00;
+    padding: 10px 17px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu__left li.hide:hover {
+    background-color: #ebddff;
+}
+
+
 
 .menu__right {
     gap: 46px;
 }
 
-
-
-
-
-
-
+.menu__right li a {
+    cursor: pointer;
+}
 
 
 .pannier {
@@ -50,7 +61,7 @@
     align-items: center;
     justify-content: center;
     gap: 29px;
-    padding: 12px 17.5px;
+    padding: 11px 29px;
     background: #4B2A7B;
     border-radius: 95px;
     box-shadow: 0 0px 0 #2a1052;
@@ -78,6 +89,26 @@
     color: #FFFFFF;
 }
 
+.logout {
+    background: #ffffff;
+    border: 2px solid #4B2A7B;
+    border-radius: 95px;
+    padding: 11px 29px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000 !important;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #4B2A7B;
+    color: #FFFFFF !important;
+}
 
 
 .popupParent {
@@ -100,8 +131,9 @@
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
@@ -117,12 +149,40 @@
     color: #281641;
     border: 1px solid #a6a6a659;
     border-width: 1px 0 0;
+    width: 100%;
     padding: 21px;
+    transition: all .3s ease;
 }
 
-.profile a{
-    border-width:  0;
+.popup a:hover {
+    color: rgb(225, 0, 255);
 }
+
+.profile {
+    padding: 21px 0;
+}
+
+
+.profile a {
+    border-width: 0;
+}
+
+.cross {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+.cross svg {
+    width: 15px;
+    transition: all .3s ease;
+}
+
+.cross svg:hover {
+    color: red;
+}
+
 
 /*------MOBILE--------------*/
 
@@ -171,6 +231,7 @@
     display: none;
 }
 
+
 /*---------------hamberger---------*/
 
 .hamburger {
@@ -198,6 +259,22 @@
 }
 
 
+@media all and (max-width: 1137px) {
+
+    .menu__left {
+        gap: 10px;
+    }
+
+    .menu__right {
+        gap: 18px;
+    }
+
+    .menu__left li.hide {
+        padding: 10px 5px;
+    }
+
+}
+
 @media all and (max-width: 1037px) {
     .navmenu {
         padding: 25px 15px;
@@ -209,7 +286,12 @@
 
 }
 
-@media all and (max-width: 732px) {
+
+@media all and (max-width: 855px) {
+    /* your content here */
+}
+
+@media all and (max-width: 855px) {
     .hamburger {
         display: block;
     }
@@ -219,8 +301,29 @@
     .disapear {
         display: none;
     }
+
+    .menu__left li:nth-child(2),
+    .menu__left li:nth-child(3),
+    .menu__buttons,
+    .disapear {
+        display: none;
+    }
+
+    .container ul.menu__right {
+        gap: 20px;
+    }
+
+    .menu__right li:nth-child(3) {
+        display: none;
+    }
+
+    .mobile nav div:first-child,
+    .mobile nav div:nth-child(2) {
+        display: block;
+    }
 }
 
+/* 
 @media all and (max-width: 654px) {
 
     .menu__left li:nth-child(2),
@@ -229,7 +332,7 @@
     .disapear {
         display: none;
     }
-}
+} */
 
 
 @media all and (max-width: 579px) {

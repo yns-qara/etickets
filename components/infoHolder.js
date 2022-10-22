@@ -1,8 +1,12 @@
 import styles from '../styles/infoHolder.module.css'
 const InfoHolder = props => {
+
     return (
         <div className={styles.container}>
-            <form className={styles.form__container}>
+            <form
+                onSubmit={props.handleSubmit}
+                onReset={props.handleReset}
+                className={styles.form__container}>
                 <h1 className={styles.h}>Mes informations</h1>
                 {props.children}
                 <div className={styles.button__holder}>

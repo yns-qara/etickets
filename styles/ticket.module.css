@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     gap: 22px;
-
     padding: 35px 93px;
 
 }
@@ -49,12 +48,12 @@
     color: #000000;
 }
 
-.right div {
+.right div.right_c {
     margin-top: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    /* gap: 50px; */
 }
 
 .right div input {
@@ -63,7 +62,8 @@
     border: 2px solid #BABABA;
     border-radius: 77px;
     margin-right: auto;
-
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }
 
 .right div input::placeholder {
@@ -89,3 +89,108 @@
 }
 
 
+
+
+
+
+.button_holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 29px;
+}
+
+.button_holder div {
+    position: relative;
+}
+
+.button_holder div div,
+.button_holder div span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+.button_holder div span {
+    color: #2e2e2e;
+    right: 90%;
+}
+
+.button_holder input {
+    border: 2px solid #FFFFFF;
+    border-radius: 77px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    background-color: transparent;
+    padding: 5px;
+
+    max-width: 190px;
+    appearance: none;
+    margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.button_holder input::-webkit-outer-spin-button,
+.button_holder input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.button_holder input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.button_holder input::placeholder {
+    color: #202020;
+}
+
+
+
+
+@media all and (max-width: 831px) {
+    .container {
+        flex-direction: column;
+    }
+
+
+    .right {
+        min-width: 340px;
+    }
+
+    .right h1 {
+        font-size: 23px;
+    }
+
+
+
+    .right h5 {
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .right p {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+
+    
+
+}
+
+
+@media all and (max-width: 610px) {
+    .container {
+        padding: 35px 25px;
+    }
+}

@@ -42,12 +42,9 @@ const CardMiniHolder = ({ children, visible1, setVisible1, visible2, setVisible2
         <>
             <div className={styles.parent}>
 
-                <motion.div className={styles.container}
-                    exit={{ x: -50 }}
-                    layout
-                >
+                <div className={styles.container} >
                     {children}
-                </motion.div>
+                </div>
             </div>
             <div className={styles.rects}>
                 <div className={visible1 ? styles.active : styles.rect1} onClick={show1}></div>
@@ -55,7 +52,7 @@ const CardMiniHolder = ({ children, visible1, setVisible1, visible2, setVisible2
                 <div className={visible3 ? styles.active : styles.rect3} onClick={show3}></div>
             </div>
             <div className={styles.buttonH}>
-                <button className={styles.button}>Voir plus</button>
+                {/* <button className={styles.button}>Voir plus</button> */}
             </div>
         </>
     )

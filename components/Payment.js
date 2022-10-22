@@ -3,6 +3,7 @@ const Payment = props => {
   return (
     <div className={styles.container}>
         {props.children}
+        
     </div>
   )
 }

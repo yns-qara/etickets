@@ -2,21 +2,21 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from '../styles/Drop.module.css'
 import ArrowDown from './SVGs/arrowDown'
-import CommingSoon from './CommingSoon'
+import CommingSoon2 from './CommingSoon2'
 
 import Ville from './drops/Ville'
 import DateDrop from './drops/Date'
 import Prix from './drops/Prix'
 
-const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, activeDate, setActiveDate, activePrix, setActivePrix, expriredSoon, setExpriredSoon , active , setActive }) => {
+const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, activeDate, setActiveDate, activePrix, setActivePrix, expriredSoon, setExpriredSoon }) => {
   /* -------------------------------------------------------------------------------- */
 
   const [showVille, setShowVille] = useState(false);
   const [showDate, setShowDate] = useState(false);
   const [showPrix, setShowPrix] = useState(false);
+  const [active2, setActive2] = useState(false);
 
-
-  const villeClick = () => {  
+  const villeClick = () => {
     setShowVille(!showVille);
 
     if (showDate === false && showPrix === false)
@@ -116,73 +116,77 @@ const Drop = ({ AllEvents, setFiltredEvents, activeVille, setActiveVille, active
 
 
   return (
-    <section className={styles.drop}>
-      <div className={styles.drop__container}>
-        <div className={styles.drop__element}>
-          <motion.div
+    <>
+      <section className={styles.drop}>
+        <div className={styles.drop__container}>
+          <div className={styles.drop__element}>
+            <motion.div
+              animate={{ zIndex: "99999" }}
+              className={activeVille === "" ? styles.drop__element_container : styles.active}
+              onClick={villeClick}
+            >
+              <span>
+                {
+                  rightCity()
+                }
+              </span>
+              <ArrowDown />
+            </motion.div>
 
-            className={activeVille === "" ? styles.drop__element_container : styles.active}
-            onClick={villeClick}
+            <Ville showVille={showVille} setShowVille={setShowVille} setActiveVille={setActiveVille} />
+          </div>
+          <div className={styles.drop__element}>
+            <motion.div
+              animate={{ zIndex: "999" }}
+              className={styles.drop__element_container}
+              onClick={dateClick}
+            >
+              <span>Date</span>
+              <ArrowDown />
+            </motion.div>
+
+            <DateDrop showDate={showDate} setActiveDate={setActiveDate} />
+          </div>
+          <div className={styles.drop__element}>
+            <motion.div
+              animate={{ zIndex: "99" }}
+              className={activePrix === 0 ? styles.drop__element_container : styles.active}
+              onClick={prixClick}
+            >
+              <span>
+                {
+                  rightPrice()
+                }
+              </span>
+              <ArrowDown />
+            </motion.div>
+            <Prix showPrix={showPrix} setActivePrix={setActivePrix} setShowPrix={setShowPrix} />
+          </div>
+          <div className={styles.drop__element}
+
+            //  onClick={expiredClick}
+            onClick={() => setActive2(true)}
           >
-            <span>
-              {
-                rightCity()
-              }
-            </span>
-            <ArrowDown />
-          </motion.div>
+            <motion.div
 
-          <Ville showVille = { showVille} setShowVille={setShowVille} setActiveVille={setActiveVille} />
-        </div>
-        <div className={styles.drop__element}>
-          <motion.div
-            className={styles.drop__element_container}
-            onClick={dateClick}
-          >
-            <span>Date</span>
-            <ArrowDown />
-          </motion.div>
-
-          <DateDrop showDate={showDate} setActiveDate={setActiveDate} />
-        </div>
-        <div className={styles.drop__element}>
-          <motion.div
-            className={activePrix === 0 ? styles.drop__element_container : styles.active}
-            onClick={prixClick}
-          >
-            <span>
-              {
-                rightPrice()
-              }
-            </span>
-            <ArrowDown />
-          </motion.div>
-          <Prix showPrix={showPrix} setActivePrix={setActivePrix} setShowPrix={setShowPrix} />
-        </div>
-        <div className={styles.drop__element} 
-        
-        //  onClick={expiredClick}
-         onClick={()=> setActive(true)}
-        >
-          <motion.div
-
-            className={expriredSoon ? styles.active : styles.drop__element_container}>
-            <span>Bientôt expiré</span>
-            <div className={styles.circle}>
-              {/* {
+              className={expriredSoon ? styles.active : styles.drop__element_container}>
+              <span>Bientôt expiré</span>
+              <div className={styles.circle}>
+                {/* {
                 expriredSoon &&
                 <div className={styles.inner_c}></div>
               } */}
 
-
-              {
-                active && <CommingSoon setActive={setActive} title="this feature is not yet implemented" />
-              }
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+
+      </section>
+      {
+        active2 && <CommingSoon2 setActive2={setActive2} title="this feature is not yet implemented" />
+      }
+    </>
 
   )
 }

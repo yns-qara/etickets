@@ -15,7 +15,13 @@ import Cbutton from '../components/Cbutton'
 import s from '../styles/s.module.css'
 
 
+// we should get the cart items here from a get request along with order_id
 
+// when the client is ready to purchase the cart
+// we pass the order id to the payement page
+// after the client enters the correct identity informations
+// then we post a request to /payment endpoint with the folowing data:
+// {order_id , description , card_number , exp_month , exp_year , cvc}
 
 
 const monPanier = () => {
@@ -45,7 +51,7 @@ const monPanier = () => {
                 <div className={s.flex_start}>
                     <Payment>
                         <ModeDePayment />
-                        <ControlButtons>
+                        <ControlButtons >
                             <Vbutton />
                             <Cbutton />
                         </ControlButtons>

@@ -33,7 +33,6 @@ const Jachete = ({evenement}) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: .8, ease: 'easeInOut' }}
-
         >
           <JachetHead title={evenement.title}>
             <CardJachete 

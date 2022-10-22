@@ -142,6 +142,23 @@
   left: 0;
 }
 
+.logo {
+  cursor: pointer;
+}
+
+
+.menu__left li.disapear {
+  background-color: #ebddff00;
+  padding: 10px 17px;
+  border-radius: 10px;
+  transition: all .3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu__left li.disapear:hover {
+  background-color: #ebddff;
+}
 
 
 /* 
@@ -225,7 +242,7 @@
 
 .mobile {
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
   height: 100vh;
   background-color: rgb(213, 206, 235);
   top: 0;
@@ -332,6 +349,10 @@
   .hamburger {
     display: block;
   }
+  .mobile nav a:first-child,
+  .mobile nav a:nth-child(2) {
+    display: block;
+  }
 }
 
 
@@ -347,5 +368,16 @@
   .mobile nav div:first-child,
   .mobile nav div:nth-child(2) {
     display: block;
+  }
+}
+
+
+
+
+@media all and (max-width: 798px) {
+
+
+  .menu__left li.disapear {
+    padding: 10px 5px;
   }
 }

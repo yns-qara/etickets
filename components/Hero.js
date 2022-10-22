@@ -85,37 +85,39 @@ const Hero = () => {
                     <h1>
                         Plus d’<span>evenements</span> que tu aimes
                     </h1>
-                    <div className={styles.hero__buttons}>
-                        <a href="#" className={styles.btn}>
-                            sport
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            THEATRE
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            HUMOUR
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            CONCERT
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            FESTIVAL
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            FORMATION
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            EVENEMENT
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            CINEMA
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            LOISIRS
-                        </a>
-                        <a href="#" className={styles.btn}>
-                            SHOPPING
-                        </a>
+                    <div className={styles.button_parent}>
+                        <div className={styles.hero__buttons}>
+                            <a href="#" className={styles.btn}>
+                                sport
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                THEATRE
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                HUMOUR
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                CONCERT
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                FESTIVAL
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                FORMATION
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                EVENEMENT
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                CINEMA
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                LOISIRS
+                            </a>
+                            <a href="#" className={styles.btn}>
+                                SHOPPING
+                            </a>
+                        </div>
                     </div>
                 </div>
 

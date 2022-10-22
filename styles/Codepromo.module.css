@@ -70,3 +70,26 @@
     box-shadow: 0 0px 0 #2a1052;
     transform: translateY(0px);
 }
+
+
+@media all and (max-width: 1440px) {
+    .container {
+        margin-top: 0px;
+        padding: 38px;
+    }
+    .container h1{
+        margin-top: 25px;
+    }
+    .entries{
+        margin-top: 60px;
+        flex-direction: column ;
+        gap: 15px;
+        margin-bottom: 60px;
+    }
+    .entries button{
+        /* width: 100%; */
+    }
+    .entries input{
+        width: 100%;
+    }
+}

@@ -27,3 +27,14 @@
     box-shadow: 0 0px 0 #2a1052;
     transform: translateY(0px);
 }
+
+@media all and (max-width: 662px) {
+    .container {
+        font-size: 20px;
+        line-height: 25px;
+        padding: 14px 15px;
+
+    }
+
+
+}

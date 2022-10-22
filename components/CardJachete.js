@@ -24,18 +24,27 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
         else if (pack === "pack4") return "Pack4"
     }
     const rightPrice = () => {
-        if (price === "100") return prix.pack1
+        if (price === "100") return "100"
         else if (price === "200") return "200"
         else if (price === "300") return "300"
         else if (price === "400") return "400"
     }
 
 
+    const handleReservation = async () => {
+        // post a request to the server /reservations
+        
+    }
 
     return (
         <>
+
             <div className={styles.container}>
+
                 <div className={styles.left}>
+                    <div 
+                    onClick={handleReservation}
+                    className={styles.reserver}>reserver maintenant</div>
                     <Image src={detailsImg} width={784} height={478} alt={detailsImg} />
                 </div>
                 <div className={styles.right}>
@@ -88,7 +97,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
                                             onClick={
                                                 () => {
                                                     setPack("pack1");
-                                                    setPrice(prix.pack1);
+                                                    setPrice("100");
                                                     setShow(!show);
                                                 }
                                             }
@@ -169,6 +178,7 @@ const CardJachete = ({ month, day, date, lieu, prix, detailsImg, title }) => {
                                 <span>ACHETER MAINTENANT</span>
                             </button>
                         </div>
+
 
                         <div className={styles.counter}>
                             <CountDownDL2 name="younes" month={month} day={day} />

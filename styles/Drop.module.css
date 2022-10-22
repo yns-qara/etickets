@@ -28,6 +28,7 @@
   padding: 13px 33px;
   cursor: pointer;
   position: relative;
+  /* z-index: 999; */
   transition: all .5s ease;
   color: #000000;
 
@@ -56,7 +57,7 @@
 
 .drop__hidden {
   position: absolute;
-  z-index: 19;
+  /* z-index: 19; */
   top: 50%;
   left: 50%;
   transform: translateX(-50%);

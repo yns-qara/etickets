@@ -9,17 +9,34 @@ import Twitter from './SVGs/twitter'
 import Link from 'next/link'
 import CommingSoon from './CommingSoon'
 import { useState } from 'react'
+import Login from './Login'
+import { motion } from 'framer-motion'
+
 const Footer = () => {
     const [active, setActive] = useState(false);
+    const [toggle, setToggle] = useState(false);
+    const [activateLogin, setActivateLogin] = useState(false);
+    const [passedEmail, setPassedEmail] = useState("");
 
+    const handleFocus = () => {
+        setToggle(!toggle);
+    }
     return (
         <>
             <div className={styles.upper__footer}>
                 <h1>Inscrivez-vous à la newsletter Etickets</h1>
-                <div className={styles.text_input}>
+                <div className={toggle ? styles.text_input_focus : styles.text_input}>
                     <Envoloppe />
-                    <input type="email" className={styles.input} placeholder="email@gmail.com" />
-                    <button className={styles.button}>S&apos;INSCRIRE</button>
+                    <input
+                        onChange={(e) => setPassedEmail(e.target.value)}
+                        onFocus={handleFocus}
+                        type="email"
+                        className={styles.input}
+                        placeholder="email@gmail.com" />
+                    <button
+                        // 
+                        onClick={() => setActivateLogin(true)}
+                        className={styles.button}>S&apos;INSCRIRE</button>
                 </div>
             </div>
 
@@ -77,6 +94,20 @@ const Footer = () => {
             </div>
 
 
+            {
+                activateLogin &&
+                <>
+                    <Login passedEmail={passedEmail} />
+                    <motion.div
+                        onClick={() => setActivateLogin(false)}
+                        className={styles.wrapper}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        exit={{ x: 200 }}
+                    ></motion.div>
+                </>
+            }
         </>
     )
 }

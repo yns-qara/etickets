@@ -1,11 +1,24 @@
 import styles from '../styles/cardMini.module.css'
-import SvgHour from '../components/SVGs/hour'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import CountDownDL from '../components/CountDownDL';
+
+
+// todo : add dynamique title , date , genra ...
+// todo : add sold out logic from the counter
 
 const CardMini = ({ imgURL }) => {
 
+    const month = 12;
+    const day = 1;
+
+
     return (
-        <div className={styles.card__container}>
+        <motion.div
+            initial={{ opacity: 0 , x: -50}}
+            animate={{ opacity: 1, x: 0 }}
+            className={styles.card__container}>
+
             <div className={styles.card__container}>
 
                 <div className={styles.card__upper}>
@@ -22,13 +35,7 @@ const CardMini = ({ imgURL }) => {
                             <strong>Marrakech,</strong> Cinéma megarama
                         </div>
                         <div className={styles.counter}>
-                            <SvgHour />
-                            <span>
-                                <span className={styles.counter_j} id={styles.change_c}>19</span><span>j</span>
-                                <span className={styles.counter_h} id={styles.change_c}>00</span><span>h</span>
-                                <span className={styles.counter_m} id={styles.change_c}>19</span><span>m</span>
-                                <span className={styles.counter_s} id={styles.change_c}>41</span><span>s</span>
-                            </span>
+                            <CountDownDL  name="younes" month={month} day={day} />
                         </div>
                     </div>
                     <div className={styles.card__lower_right}>
@@ -40,7 +47,7 @@ const CardMini = ({ imgURL }) => {
                 </div>
                 <a className={styles.card__button} href="#">J’achéte</a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

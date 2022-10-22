@@ -8,6 +8,7 @@ import Hamberger from './SVGs/hamberger';
 import Profile from './SVGs/profile';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
+import Cross from './SVGs/cross'
 
 
 
@@ -19,6 +20,26 @@ const Navbar = () => {
     }
     const showMenuHandle = () => {
         setShowMenu(!showMenu);
+    }
+
+    const handleLogOut = async () => {
+
+        const response = await fetch('http://127.0.0.1:8000/api/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'accept': 'application/json'
+            },
+            body: JSON.stringify({
+                email: 'y@gmail.com',
+                password: '111111'
+            })
+
+        }
+        )
+
+
+        return response.json();
     }
     return (
         <menu className={styles.navmenu}>
@@ -43,17 +64,12 @@ const Navbar = () => {
 
                 <ul className={styles.menu__right}>
                     <li>
-                        <Link href="/panier">
-                            <a><Pannier /></a>
-                        </Link>
+                        <Link href="/"><a><Pannier /></a></Link>
                     </li>
+
                     <li>
-                            <Link href="/informations">
-                                <a>
-                                    <Profile />
-                                </a>
-                            </Link>
-                        </li>
+                        <Link href="/informations"><a><Profile /></a></Link>
+                    </li>
                     <li>
                         <div className={styles.popupParent}>
                             <div onClick={togleView}>
@@ -65,7 +81,7 @@ const Navbar = () => {
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        transition={{ duration: .3 }}
+                                        transition={{ duration: .2 }}
                                         exit={{ opacity: 0 }}
                                         className={styles.popup}>
                                         <div className={styles.profile}>
@@ -75,16 +91,19 @@ const Navbar = () => {
                                             Mes commandes
                                         </Link>
                                         <Link href="/panier">
-                                            Pannierr
+                                            Panier
                                         </Link>
-                                        <Link href="/mesCommands">
+                                        <Link href="/">
                                             Shop
                                         </Link>
-
+                                        <div
+                                            onClick={togleView}
+                                            className={styles.cross}>
+                                            <Cross />
+                                        </div>
                                     </motion.div>
                                 }
                             </AnimatePresence>
-
                         </div>
                     </li>
                     <li className={styles.menu__buttons}>
@@ -95,6 +114,7 @@ const Navbar = () => {
                             </a>
                         </Link>
                     </li>
+                    <li className={styles.logout} onClick={handleLogOut}>Logout</li>
                     <li className={styles.hamburger} onClick={showMenuHandle}>
                         <div></div>
                         <div></div>

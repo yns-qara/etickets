@@ -65,7 +65,15 @@
     max-width: 987px;
 }
 
+.arrow svg{
+    transform: rotate(0deg);
+    transition: all .2s ease;
+}
 
+.active_arrow svg{
+    transform: rotate(-180deg);
+    transition: all .2s ease;
+}
 
 
 

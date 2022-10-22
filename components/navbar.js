@@ -2,7 +2,6 @@
 import styles from '../styles/Nav.module.css';
 import Link from 'next/link';
 import Shop from './SVGs/ShopIcon';
-import Profile from './SVGs/profile';
 import LogoNav from './SVGs/logoNav';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
@@ -26,6 +25,8 @@ const Navbar = () => {
         setShowMenu(!showMenu);
     }
 
+
+
     return (
 
         <>
@@ -33,9 +34,11 @@ const Navbar = () => {
             <menu className={styles.navmenu}>
                 <nav className={styles.menu__container}>
                     <ul className={styles.menu__left}>
-                        <li className="logo">
+                        <li className={styles.logo}>
                             <Link href="/">
-                                <LogoNav />
+                                <a>
+                                    <LogoNav />
+                                </a>
                             </Link>
                         </li>
                         <li className={styles.disapear}>
@@ -46,7 +49,7 @@ const Navbar = () => {
                         </li>
                         <li className={styles.disapear}>
                             <Link href="/quiSommesNous">
-                                <a >Qui nous sommes?</a>
+                                <a>Qui nous sommes?</a>
                             </Link>
                         </li>
                     </ul>
@@ -64,6 +67,8 @@ const Navbar = () => {
                             <Link href="#">
                                 <a onClick={toggleSignUp}>Inscription</a>
                             </Link>
+
+
 
                         </li>
                         <li className={styles.hamburger} onClick={showMenuHandle}>
@@ -84,13 +89,8 @@ const Navbar = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-
                         exit={{ x: 200 }}
-                    >
-
-
-
-                    </motion.div>
+                    ></motion.div>
                 </div>
             }
 

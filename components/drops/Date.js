@@ -9,7 +9,7 @@ const Date = ({showDate,setActiveDate}) => {
                 showDate
                 &&
                 <motion.div className={styles.drop__hidden}
-                    initial={{ opacity: 0, zIndex: 98 }}
+                    initial={{ opacity: 0, zIndex: "998" }}
                     animate={{ opacity: 1 }}
                     transition={{ ease: "easeInOut" }}
                     exit={{ opacity: 0 }}

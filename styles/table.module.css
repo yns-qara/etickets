@@ -77,7 +77,12 @@
     cursor: pointer;
     background: #4B2A7B;
     border-radius: 50px;
-    padding: 8px 13px;
+    padding: 8px 19px;
+    transition: all .2s ease;
+}
+
+.buttons_holder button:first-child:hover {
+    padding: 10px 19px;
 }
 
 
@@ -92,10 +97,13 @@
     background: #FFFFFF;
     border: 2px solid #4B2A7B;
     border-radius: 50px;
-
+    transition: all .2s ease;
     padding: 8px 27px;
-
-
+    
+    
+}
+.buttons_holder button:last-child:hover {
+    padding: 10px 27px;
 }
 
 .buttons_holder svg {
@@ -105,6 +113,10 @@
     width: 33px;
     height: 33px;
     cursor: pointer;
+    transition: all .2s ease;
+}
+.buttons_holder svg:hover {
+    padding: 3px;
 }
 
 

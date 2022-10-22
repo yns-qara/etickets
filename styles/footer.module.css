@@ -2,13 +2,13 @@
 
 
 .upper__footer {
-    padding: 34px 70px;
+    padding: 25px 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #EDEDED;
     position: relative;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 
@@ -33,6 +33,21 @@
 
 }
 
+.text_input_focus {
+    background: #FFFFFF;
+    border-radius: 100px;
+    max-width: 557px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 0px 0px 0px 25px;
+
+    box-shadow: 0px 0px 5px 2px rgba(75, 42, 123, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(75, 42, 123, 0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(75, 42, 123, 0.75);
+
+}
 
 
 .input {
@@ -40,11 +55,10 @@
     padding: 19px;
     background-color: #FFFFFF;
     font-family: 'Roboto';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 17px;
     line-height: 19px;
-    color: #707070;
+    color: #000000;
 }
 
 .input::placeholder {
@@ -68,6 +82,25 @@
     background: #4B2A7B;
     border-radius: 100px;
     padding: 19px 25px;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    padding: 19px 40px;
+}
+
+.button:active {
+    padding: 19px 25px;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+
 }
 
 
@@ -82,7 +115,7 @@
     justify-content: space-around;
     overflow: hidden;
     position: relative;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 .left_middle {
@@ -98,7 +131,7 @@
     line-height: 22px;
     color: #FFFFFF;
     width: 100%;
-
+    text-align: justify;
 }
 
 .left_middle h3 {
@@ -122,7 +155,7 @@
 
 .buttonHolder button {
     box-shadow: 0 0px 0 #979797;
-    transition: all .5s ease;
+    transition: all .3s ease;
     display: flex;
     align-items: center;
     gap: 44px;
@@ -192,9 +225,9 @@
     justify-content: flex-end;
     align-items: center;
     gap: 82px;
-    padding: 24px 34px;
+    padding: 15px 34px;
     position: relative;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 .lower__footer h1 {
@@ -210,11 +243,16 @@
     margin-left: 36px;
     background: #4B2A7B;
     border-radius: 39px;
-    padding: 14px;
-    width: 52px;
-    height: 52px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .2s ease;
 }
 
+.social_media svg:hover{
+    padding: 5px;
+}
 
 
 

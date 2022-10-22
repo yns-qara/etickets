@@ -97,31 +97,3 @@
     cursor: pointer;
 }
 
-.inpt{
-    display: flex;
-    align-items: center;
-    gap: 11px;
-}
-
-.circle {
-    width: 12.24px;
-    height: 12.24px;
-    background: #FAFAFA;
-    border: 1px solid #707070;
-    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
-}
-
-.inner_circle {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(-50%);
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #707070;
-}

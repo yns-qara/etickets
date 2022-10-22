@@ -3,6 +3,10 @@
     padding: 30px 38px;
     background: #FAFAFA;
     border-radius: 40px;
+    /* width: 100%; */
+}
 
-    /* width: 820px; */
+
+@media all and (max-width: 662px) {
+    
 }
