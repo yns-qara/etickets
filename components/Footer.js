@@ -10,6 +10,7 @@ import Link from 'next/link'
 import CommingSoon from './CommingSoon'
 import { useState } from 'react'
 import Login from './Login'
+import SignUp from './SignUp'
 import { motion } from 'framer-motion'
 
 const Footer = () => {
@@ -97,7 +98,8 @@ const Footer = () => {
             {
                 activateLogin &&
                 <>
-                    <Login passedEmail={passedEmail} />
+                    {/* <Login passedEmail={passedEmail} /> */}
+                    <SignUp passedEmail={passedEmail} />
                     <motion.div
                         onClick={() => setActivateLogin(false)}
                         className={styles.wrapper}

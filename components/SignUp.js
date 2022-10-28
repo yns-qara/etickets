@@ -9,7 +9,7 @@ import Eye from "./SVGs/eye"
 import EyeOpen from './SVGs/eyeOpen'
 
 
-const SignUp = () => {
+const SignUp = ({passedEmail}) => {
 
 
     const [showPassword, setShowPassword] = useState(false)
@@ -74,6 +74,7 @@ const SignUp = () => {
             </div>
             <input
                 className={styles.em}
+                defaultValue={passedEmail} 
                 type="email"
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
