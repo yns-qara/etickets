@@ -97,8 +97,21 @@
     cursor: pointer;
 
     margin-top: 25px;
+
+    box-shadow: 0 0px 0 #2a1052;
+    transition: all .3s ease;
 }
 
+
+.form button:hover {
+    box-shadow: 0 7px 0 #2a1052;
+    transform: translateY(-7px);
+}
+
+.form button:active {
+    box-shadow: 0 0px 0 #2a1052;
+    transform: translateY(0px);
+}
 
 
 .woman {
