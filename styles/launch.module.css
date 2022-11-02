@@ -1,0 +1,38 @@
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fefefe;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 55px;
+    padding: 45px;
+
+}
+
+.container h1 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    max-width: 65%;
+
+}
+
+.container h1 span {
+    color: #4a2b7a;
+}
+
+.container div {
+    align-self: flex-end;
+}
+
+
+@media all and (max-width: 1187px) {
+    .container h1 {
+        font-size: 60px;
+        max-width: 100%;
+    
+    }
+    
+}

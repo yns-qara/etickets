@@ -14,6 +14,7 @@ import Footer from '../components/Footer'
 import { useState, useEffect, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { UserContext } from '../context/UserContext'
+import Launch from '../components/Launch'
 
 
 export const getServerSideProps = async () => {
@@ -29,6 +30,8 @@ export const getServerSideProps = async () => {
 
 
 export default function Home({ fetchedData }) {
+
+
 
 
 
@@ -56,123 +59,126 @@ export default function Home({ fetchedData }) {
   const [logedIn] = useContext(UserContext);
 
   return (
-    <>
+
+    <Launch />
+
+    // <>
 
 
-      <Header>
+    //   <Header>
 
-        {
-          logedIn ? <Navbar2 /> : <Navbar />
-        }
-        <Hero />
-      </Header>
-      <Drop
-        AllEvents={AllEvents}
-        setAllEvents={setAllEvents}
-        filtredEvents={FiltredEvents}
-        setFiltredEvents={setFiltredEvents}
-        activeVille={activeVille}
-        setActiveVille={setActiveVille}
-        activeDate={activeDate}
-        setActiveDate={setActiveDate}
-        activePrix={activePrix}
-        setActivePrix={setActivePrix}
-        expriredSoon={expriredSoon}
-        setExpriredSoon={setExpriredSoon}
-        active={active}
-        setActive={setActive}
-      />
-
-
-      <motion.div
-        layout
-      >
-        <CardContainer>
-          <AnimatePresence>
-            {
-              FiltredEvents.slice(0, limit).map((card) => {
-                return (
-                  <div
-                    key={card.id}>
-                    <Card
-                      title={card.title}
-                      genre={card.genre}
-                      date={card.date}
-                      city={card.city}
-                      lieu={card.lieu}
-                      month={card.month}
-                      day={card.day}
-                      price={card.price}
-                      sold={card.sold}
-                      reserved={card.reserved}
-                      imgURL={card.url}
-                      link={'/' + card.id}
-
-                    />
-                  </div>
-                )
-              })
-            }
-          </AnimatePresence>
+    //     {
+    //       logedIn ? <Navbar2 /> : <Navbar />
+    //     }
+    //     <Hero />
+    //   </Header>
+    //   <Drop
+    //     AllEvents={AllEvents}
+    //     setAllEvents={setAllEvents}
+    //     filtredEvents={FiltredEvents}
+    //     setFiltredEvents={setFiltredEvents}
+    //     activeVille={activeVille}
+    //     setActiveVille={setActiveVille}
+    //     activeDate={activeDate}
+    //     setActiveDate={setActiveDate}
+    //     activePrix={activePrix}
+    //     setActivePrix={setActivePrix}
+    //     expriredSoon={expriredSoon}
+    //     setExpriredSoon={setExpriredSoon}
+    //     active={active}
+    //     setActive={setActive}
+    //   />
 
 
-        </CardContainer>
-      </motion.div>
+    //   <motion.div
+    //     layout
+    //   >
+    //     <CardContainer>
+    //       <AnimatePresence>
+    //         {
+    //           FiltredEvents.slice(0, limit).map((card) => {
+    //             return (
+    //               <div
+    //                 key={card.id}>
+    //                 <Card
+    //                   title={card.title}
+    //                   genre={card.genre}
+    //                   date={card.date}
+    //                   city={card.city}
+    //                   lieu={card.lieu}
+    //                   month={card.month}
+    //                   day={card.day}
+    //                   price={card.price}
+    //                   sold={card.sold}
+    //                   reserved={card.reserved}
+    //                   imgURL={card.url}
+    //                   link={'/' + card.id}
+
+    //                 />
+    //               </div>
+    //             )
+    //           })
+    //         }
+    //       </AnimatePresence>
 
 
-      {
-        // this logic .lenght migh change cause the data fetched is .json maybe
-        (limit < fetchedData.length) &&
-        <VoirPlusButton limit={limit} setLimit={setLimit} />
-      }
+    //     </CardContainer>
+    //   </motion.div>
 
-      <Marketplace>
-        <AnimatePresence>
-          <CardMiniHolder
-            visible1={visible1}
-            visible2={visible2}
-            visible3={visible3}
 
-            setVisible1={setVisible1}
-            setVisible2={setVisible2}
-            setVisible3={setVisible3}
+    //   {
+    //     // this logic .lenght migh change cause the data fetched is .json maybe
+    //     (limit < fetchedData.length) &&
+    //     <VoirPlusButton limit={limit} setLimit={setLimit} />
+    //   }
 
-          >
-            {
-              visible1 &&
-              <>
-                <CardMini imgURL="/cardB8.png" />
-                <CardMini imgURL="/cardB8.png" />
-                <CardMini imgURL="/cardB8.png" />
-                <CardMini imgURL="/cardB8.png" />
-              </>
-            }
-            {
-              visible2 &&
-              <>
-                <CardMini imgURL="/cardB9.png" />
-                <CardMini imgURL="/cardB9.png" />
-                <CardMini imgURL="/cardB9.png" />
-                <CardMini imgURL="/cardB9.png" />
-              </>
-            }
-            {
-              visible3 &&
-              <>
-                <CardMini imgURL="/cardB3.png" />
-                <CardMini imgURL="/cardB3.png" />
-                <CardMini imgURL="/cardB3.png" />
-                <CardMini imgURL="/cardB3.png" />
+    //   <Marketplace>
+    //     <AnimatePresence>
+    //       <CardMiniHolder
+    //         visible1={visible1}
+    //         visible2={visible2}
+    //         visible3={visible3}
 
-              </>
-            }
+    //         setVisible1={setVisible1}
+    //         setVisible2={setVisible2}
+    //         setVisible3={setVisible3}
 
-          </CardMiniHolder>
-        </AnimatePresence>
-      </Marketplace>
-      <Qualities />
-      <Footer active={active} setActive={setActive} />
+    //       >
+    //         {
+    //           visible1 &&
+    //           <>
+    //             <CardMini imgURL="/cardB8.png" />
+    //             <CardMini imgURL="/cardB8.png" />
+    //             <CardMini imgURL="/cardB8.png" />
+    //             <CardMini imgURL="/cardB8.png" />
+    //           </>
+    //         }
+    //         {
+    //           visible2 &&
+    //           <>
+    //             <CardMini imgURL="/cardB9.png" />
+    //             <CardMini imgURL="/cardB9.png" />
+    //             <CardMini imgURL="/cardB9.png" />
+    //             <CardMini imgURL="/cardB9.png" />
+    //           </>
+    //         }
+    //         {
+    //           visible3 &&
+    //           <>
+    //             <CardMini imgURL="/cardB3.png" />
+    //             <CardMini imgURL="/cardB3.png" />
+    //             <CardMini imgURL="/cardB3.png" />
+    //             <CardMini imgURL="/cardB3.png" />
 
-    </>
+    //           </>
+    //         }
+
+    //       </CardMiniHolder>
+    //     </AnimatePresence>
+    //   </Marketplace>
+    //   <Qualities />
+    //   <Footer active={active} setActive={setActive} />
+
+    // </>
   )
 }

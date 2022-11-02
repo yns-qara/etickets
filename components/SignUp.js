@@ -8,7 +8,6 @@ import { useState } from "react"
 import Eye from "./SVGs/eye"
 import EyeOpen from './SVGs/eyeOpen'
 
-
 const SignUp = ({passedEmail}) => {
 
 
@@ -25,10 +24,8 @@ const SignUp = ({passedEmail}) => {
     const [password, setPassword] = useState('testtest');
 
 
-
-
     const handleSignUp = async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/signUp', {
+        const response = await fetch('http://127.0.0.1:8000/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
