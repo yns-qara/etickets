@@ -11,8 +11,14 @@ const Launch = () => {
 
     const [success, setSuccess] = useState(false)
 
-    const handleSignUp = async () => {
-        setSuccess(true);
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        addPosts(nom, prenom, email);
+    }
+
+
+
+    const addPosts = async (nom, prenom , email) => {
         const response = await fetch('https://6340100ad1fcddf69cb045a9.mockapi.io/api/v1/emails', {
             method: 'POST',
             headers: {
@@ -25,8 +31,7 @@ const Launch = () => {
             })
         });
         return response.json();
-    }
-
+    };
 
 
     return (
