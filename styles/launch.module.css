@@ -148,6 +148,9 @@
 
 
 @media all and (max-width: 589px) {
+    .container h1{
+        margin-top: 75px;
+    }
     .form div {
         flex-direction: column;
         gap: 15px;
