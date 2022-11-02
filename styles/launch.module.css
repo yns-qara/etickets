@@ -1,38 +1,160 @@
 .container {
-    min-height: 100vh;
-    width: 100vw;
-    background-color: #fefefe;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 55px;
-    padding: 45px;
 
+    background-color: #fafafa;
+    padding: 25px;
+}
+
+.logo {
+    margin-top: 60px;
 }
 
 .container h1 {
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4vw;
-    max-width: 65%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50.4px;
+    line-height: 112.52%;
+    text-transform: capitalize;
+    color: #000000;
+
+    margin-top: 161px;
+}
+
+.container p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20.461px;
+    line-height: 112.52%;
+    text-transform: capitalize;
+    color: #000000;
+
+
+    margin-top: 9px;
+}
+
+.form {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+}
+
+.form input {
+    background: #FFFFFF;
+    border-radius: 60px;
+    padding: 18px 30px;
+    width: 250px;
+    border: 0;
+
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.form input::placeholder {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #8D8D8D;
+}
+
+.form>input {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.form button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+
+    padding: 18px 72px;
+    background: #4B2A7B;
+    border-radius: 60px;
+    border: 0;
+    cursor: pointer;
+
+    margin-top: 25px;
+}
+
+
+
+.woman {
+    align-self: flex-start;
+    padding-left: 260px;
+}
+
+.footer {
+    background: #4B2A7B;
+    height: 67px;
+    width: 100%;
+
 
 }
 
-.container h1 span {
-    color: #4a2b7a;
-}
-
-.container div {
-    align-self: flex-end;
-}
-
-
-@media all and (max-width: 1187px) {
+@media all and (max-width: 1009px) {
     .container h1 {
-        font-size: 60px;
-        max-width: 100%;
-    
+        font-size: 5vw;
     }
-    
+
+    .container p {
+        font-size: 2vw;
+
+    }
+
+    .woman {
+        align-self: center;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+
+}
+
+
+
+@media all and (max-width: 589px) {
+    .form div {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .form div input {
+        width: 100%;
+    }
+
+    .form>input {
+        margin-top: 15px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .container p {
+        font-size: 15px;
+
+    }
 }
