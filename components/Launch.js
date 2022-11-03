@@ -18,7 +18,7 @@ const Launch = () => {
 
 
 
-    const addPosts = async (nom, prenom , email) => {
+    const addPosts = async (nom, prenom, email) => {
         const response = await fetch('https://6340100ad1fcddf69cb045a9.mockapi.io/api/v1/emails', {
             method: 'POST',
             headers: {
@@ -30,6 +30,7 @@ const Launch = () => {
                 email: email
             })
         });
+        await setSuccess(true);
         return response.json();
     };
 
@@ -70,7 +71,15 @@ const Launch = () => {
                         placeholder='Email'
                         required
                     />
-                    <button type='submit'>Envoyer</button>
+                    <button
+
+                        className={success ? styles.button_active : styles.button}
+                        type='submit'>
+
+                            { success ? <span>Done</span> : <span>Envoyer</span>}
+                            
+                            </button>
+
                 </form>
 
                 <div className={styles.woman}>
